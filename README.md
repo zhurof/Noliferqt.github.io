@@ -1,3 +1,6 @@
 # Noliferqt.github.io 
 
-Sedona it's project 4 HtmlAcademy
+-- Nyaboron it's my training project for self --
+
+"#Sedona" it's my personal project 4 HtmlAcademy.
+
