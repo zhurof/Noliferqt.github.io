@@ -75,7 +75,7 @@ $(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("callback").submit(function() { //Change
+	$("popup-with-zoom-anim").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
