@@ -1,0 +1,65 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.page-title
+	margin: 100px 0 50px 0
+	text-align: center
+.def-table
+	max-width: 100%
+	width: auto
+	margin: 0 auto
+	border-collapse: separate
+	border-spacing: 8px
+	td
+		position: relative
+		max-width: 60px
+		width: 60px
+		height: 60px
+		font-family: "Hiragana", sans-serif
+		font-size: 30px
+		font-weight: bold
+		border: 1px solid #f2f2f2
+		line-height: 1
+		text-align: center
+	caption
+		caption-side: top
+
+#form
+	width: 300px
+	margin: 0 auto
+	margin-top: 200px		
+@import "media" // Always at the end
