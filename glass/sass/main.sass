@@ -1,0 +1,1638 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: "Open Sans"
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+h3.sect-title
+	position: relative
+	font-size: 28px
+	font-weight: 800
+	line-height: 1
+	color: #202e45
+span.sect-subtitle
+	font-size: 22px
+	font-weight: normal
+	line-height: 1
+	color: #202e45
+
+.hidden
+	display: none
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-right
+	text-align: right
+
+	
+
+/*Header customize*/
+.header
+	padding: 14px 0 30px 0
+	position: relative
+	min-height: 868px
+	background: url(../img/backgrounds/header-bg.jpg) #131316 no-repeat center
+	background-size: cover
+	color: #fff
+	&::before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: linear-gradient(to bottom, #103244, #131316)
+		opacity: .2
+.mobile-menu
+	display: none
+.logo
+	display: flex
+	align-items: center
+	color: #fff
+	&-img
+		margin-right: 16px
+	&-text
+		font-size: 13px
+		text-transform: uppercase
+		line-height: 1.3
+	&:hover
+		color: $accent
+		text-decoration: none
+.header-navigation
+	margin-top: 14px
+	width: 100%	
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	.col-md-3
+		padding-right: 0
+.header-top-line
+	min-height: 98px
+	width: 100%
+	margin-bottom: 56px
+.location
+	position: relative
+	padding-left: 20px
+	&::before
+		content: "\e902"
+		color: #ffdd00
+		font-family: icomoon
+		display: block
+		position: absolute
+		left: 0
+		top: -5px
+		font-size: 20px
+.location-left,
+.location-right,
+.location-left-addres,
+.location-right-addres
+	cursor: pointer
+	transition: all .2s ease
+.location-left,
+.location-right
+	&:hover
+		color: $accent
+.location-left.active,
+.location-right.active
+	display: none
+.location-left-addres,
+.location-right-addres
+	display: none
+.location-left-addres.active,
+.location-right-addres.active
+	display: block
+.contacts
+	padding-left: 56px
+	a
+		color: #fff
+		display: block
+		position: relative
+		&::before
+			font-family: icomoon
+			color: #ffdd00
+			display: block
+			position: absolute
+			top: 0px
+			left: -25px
+		&:hover
+			color: $accent
+			text-decoration: none
+	[href^="tel:"]::before
+		content: "\e901"
+	[href^="mailto:"]::before
+		content: "\e904"
+		font-size: 12px
+	[href^="tel:"]
+		font-size: 18px
+	.worktime
+		font-size: 10px
+		display: block
+.callback
+	display: inline-block
+	border-bottom: 1px dotted
+	color: $accent
+	transition: border-bottom .2s ease
+	cursor: pointer
+	&:hover
+		border-bottom: 1px solid transparent
+		color: $accent
+		text-decoration: none
+.header-content
+	&-title
+		margin-bottom: 18px
+		font-size: 48px
+		font-weight: 800
+		line-height: 1.2
+		text-transform: uppercase
+	&-subtitle
+		margin-bottom: 35px
+		font-size: 28px
+		text-transform: uppercase
+		strong
+			font-weight: 800
+			color: $accent
+	&-description
+		margin-bottom: 58px
+		font-size: 20px
+		line-height: 1.2
+.header-content-advantages
+	padding-left: 80px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: content
+	.advantage
+		margin-bottom: 28px
+		&-icon
+			display: inline-block
+			position: relative
+			width: 42px
+			height: 42px
+			font-size: 22px
+			background: rgba(000,000,000,.4)
+			border: 1px solid transparent
+			border-radius: 5px
+			transform: rotate(45deg)
+			&::before			
+				position: absolute
+				font-family: "icomoon"
+				color: $accent
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%) rotate(-45deg)
+		&-icon.clock::before
+			content: "\e905"
+		&-icon.gear::before
+			content: "\e903"
+			font-size: 22px
+		&-icon.schield::before
+			content: "\e900"
+		&-text
+			margin-left: 24px
+			display: inline-block
+			width: 80%
+			font-size: 18px
+			line-height: 1.2
+			strong
+				display: block
+				font-size: 18px
+				font-weight: 800
+.header-content-form,
+.sect-twelve-callback-form
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 470px
+		left: 30px
+		top: 90px
+		border: 4px solid $accent
+	.callback-form
+		top: 120px
+		padding: 22px 30px 34px 30px
+		background: #fff
+		position: absolute
+		color: #000000
+		z-index: 10
+		&-title
+			font-weight: 800
+			text-transform: uppercase
+			text-align: center
+			margin-bottom: 30px
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 80px
+			width: 100%
+			height: 1px
+			background: #cccccc
+		&-advantages
+			margin-bottom: 38px
+			p
+				position: relative
+				padding-left: 15px
+				margin-bottom: 12px
+				font-size: 13px
+				line-height: 1.4
+				&::before
+					content: "\e906"
+					position: absolute
+					left: -3px
+					top: 2px
+					font-family: "icomoon"
+					font-size: 10px
+					color: #000000
+		&-info
+			padding: 0 15px
+			input
+				margin-bottom: 8px
+				padding: 0 30px
+				width: 100%
+				height: 42px
+				border: 1px solid #cecece
+				border-radius: 4px
+				&:focus
+					border: 1px solid #4d73b2
+			button
+				margin-bottom: 15px
+				width: 100%
+				height: 52px
+				border-radius: 4px
+				border: none
+				background: linear-gradient(to bottom, #527abd, #213048)
+				color: #fff
+				cursor: pointer
+				transition: all .2s ease
+				&:hover
+					opacity: .9
+.mfp-close-btn-in .mfp-close
+	color: $accent
+	right: -33px
+	top: -33px
+.header-hidden-form
+	margin: 0 auto
+	padding: 30px
+	max-width: 368px
+	width: 100%
+	background: #fff
+	position: relative
+	.callback-form-info
+		padding: 0 20px
+	.callback-form-title
+		font-weight: 800
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 23px
+		span
+			display: none
+		span.active
+			display: inline-block
+	.title-hr
+		width: 368px
+		height: 1px
+		margin-bottom: 23px
+		position: relative
+		left: -30px
+		background: #cccccc
+	.callback-form-advantages
+		margin-bottom: 22px
+		font-size: 13px
+		color: #000000
+		text-align: center
+		p
+			line-height: 1.3
+	input
+		margin-bottom: 8px
+		padding: 0 20px
+		width: 100%
+		height: 42px
+		border: 1px solid #cecece
+		border-radius: 4px
+		&:focus
+			border: 1px solid #4d73b2
+	button.btn-hidden
+		margin-bottom: 15px
+		width: 100%
+		height: 52px
+		border-radius: 4px
+		border: none
+		background: linear-gradient(to bottom, #527abd, #213048)
+		color: #fff
+		cursor: pointer
+		transition: all .2s ease
+		&:hover
+			opacity: .9
+	label
+		position: relative
+		padding-left: 25px
+		font-size: 12px
+		line-height: 1.2
+		color: #747474
+		cursor: pointer
+		input
+			width: 100%
+			display: none
+	.accept-box
+		position: absolute
+		left: 0
+		top: 0
+		width: 14px
+		height: 14px
+		background: #e2e2e2
+		border-top: 1px solid #8a8a8a
+		border-left: 1px solid #8a8a8a
+		border-radius: 2px
+		cursor: pointer
+.header-hidden-form input[type="checkbox"]:checked + .accept-box::before
+	position: absolute
+	content: ""
+	width: 4px
+	height: 1px
+	background: #4d73b2
+	left: 2px
+	top: 50%
+	transform: rotate(45deg)
+.header-hidden-form input[type="checkbox"]:checked + .accept-box::after
+	position: absolute
+	content: ""
+	width: 6px
+	height: 1px
+	background: #4d73b2
+	right: 3px
+	top: 40%
+	transform: rotate(-50deg)
+
+.callback-form 
+	label
+		position: relative
+		padding-left: 25px
+		font-size: 12px
+		line-height: 1.2
+		color: #747474
+		cursor: pointer
+		input
+			width: 100%
+			display: none
+	.accept-box
+		position: absolute
+		left: 0
+		top: 0
+		width: 14px
+		height: 14px
+		background: #e2e2e2
+		border-top: 1px solid #8a8a8a
+		border-left: 1px solid #8a8a8a
+		border-radius: 2px
+		cursor: pointer
+.callback-form input[type="checkbox"]:checked + .accept-box::before
+	position: absolute
+	content: ""
+	width: 4px
+	height: 1px
+	background: #4d73b2
+	left: 2px
+	top: 50%
+	transform: rotate(45deg)
+.callback-form input[type="checkbox"]:checked + .accept-box::after
+	position: absolute
+	content: ""
+	width: 6px
+	height: 1px
+	background: #4d73b2
+	right: 3px
+	top: 40%
+	transform: rotate(-50deg)
+.arrow-bottom-wrap
+	position: relative
+	z-index: 2
+	top: 15px
+	text-align: center
+	.arrow-bottom
+		display: inline-block
+		width: 35px
+		height: 35px
+		cursor: pointer
+		background: url(../img/arrow-bottom.svg) no-repeat center
+		transition: all .2s ease
+		&:hover
+			opacity: .7
+.arrow-top-wrap
+	position: fixed
+	z-index: 10
+	bottom: 55px
+	left: 55px
+	text-align: center
+	.arrow-top
+		display: inline-block
+		width: 35px
+		height: 35px
+		cursor: pointer
+		background: url(../img/arrow-top.svg) no-repeat center
+		transform: rotate(180deg)
+		transition: all .2s ease
+		&:hover
+			opacity: .7
+
+/*Main customize*/
+
+/*Customize sect-one*/
+.sect-one
+	padding: 85px 0 60px 0
+	.present-img
+		width: 570px
+		height: 514px
+		min-height: 250px
+		background: url(../img/sect-one/present-img.jpg) #202e45  no-repeat center
+		background-size: cover
+	.sect-title
+		margin: 63px 0 44px 0
+		&:before
+			content: ""
+			position: absolute
+			left: -190px
+			top: 14px
+			width: 166px
+			height: 5px
+			background: $accent
+	.sect-description
+		padding: 0 20px 0 30px
+		font-size: 16px
+		color: #38404e
+		p
+			position: relative
+			margin-bottom: 55px
+			line-height: 1.3
+			&::before
+				content: "\e906"
+				position: absolute
+				left: -25px
+				top: 8px
+				font-family: "icomoon"
+				font-size: 10px
+				color: #000000
+/*Customize sect-second*/
+.sect-second
+	padding: 25px 0 65px 0
+	text-align: center
+	.sect-title
+		display: inline-block
+		text-align: center
+		margin-bottom: 5px
+		&:before
+			content: ""
+			position: absolute
+			top: 14px
+			left: -95px
+			width: 80px
+			height: 5px
+			background: $accent
+	.sect-subtitle
+		display: block
+		text-align: center
+		padding-left: 180px
+		margin-bottom: 50px
+	.sect-item
+		position: relative
+		width: 100%
+		height: 408px
+		background-size: cover !important
+		cursor: pointer
+		margin-bottom: 32px
+		&-description
+			position: absolute
+			padding: 10px 28px
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 70px
+			background: #27292c
+			opacity: .83
+			text-align: left
+			transition: all .3s ease-out
+			p
+				font-size: 16px
+				font-weight: 100
+				color: #fff
+				text-transform: uppercase
+				margin-bottom: 5px
+				height: 24px
+				overflow: hidden
+			strong
+				font-size: 18px
+				line-height: 1
+				color: $accent
+				height: 26px
+				overflow: hidden
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					left: 0
+					bottom: -14px
+					width: 80px
+					height: 5px
+					background: $accent
+			.item-info
+				margin-top: 25px
+				max-height: 210px
+				overflow: hidden
+				color: #fff
+				display: none
+		&:hover
+			.sect-item-description
+				padding-top: 15px
+				height: 100%
+				.item-info
+					display: block
+	.btn.sect-items-view
+		display: block
+		margin: 0 auto
+		margin-bottom: 60px
+		width: 270px
+		height: 54px
+		line-height: 54px
+		background: linear-gradient(to bottom, #527abd, #213048)
+		border-radius: 4px
+		color: #fff
+		text-decoration: none
+		transition: all .2s ease
+		&:hover
+			opacity: .9
+	.summ-test
+		position: relative
+		padding: 38px 0
+		width: 100%
+		min-height: 565px
+		background: url(../img/sect-second/test-bg.jpg) #202e45 no-repeat center
+		background-size: cover
+		color: #fff
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: #202e45
+			opacity: .77
+		&-title
+			position: relative
+			font-size: 28px
+			font-weight: 800
+			text-transform: uppercase
+			margin-bottom: 5px
+			z-index: 3
+		&-subtitle
+			margin-bottom: 28px
+			display: block
+			position: relative
+			font-size: 24px
+			z-index: 3
+		&-content
+			position: relative
+			z-index: 3
+		.total-questions
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 500px
+			margin: auto
+			justify-content: space-between
+			margin-bottom: 67px
+			a
+			.question
+				width: 50px
+				height: 50px
+				font-size: 24px
+				border: 3px solid #fff
+				border-radius: 50%
+				color: #fff
+				line-height: 45px
+				background: #b8bfc9
+				text-outline: none
+				position: relative
+				cursor: pointer
+				&::before
+					content: ""
+					position: absolute
+					width: 100px
+					height: 3px
+					left: 45px
+					top: 50%
+					background: #fff
+					transform: translateY(-50%)
+				&:last-of-type
+					&::before
+						display: none
+				&-title
+					position: absolute
+					left: 50%
+					top: 100%
+					width: 100px
+					font-size: 16px
+					color: #fff
+					line-height: 1
+					transform: translate(-50%, 100%)
+				&:hover
+					text-decoration: none
+			.question.active
+				background: $accent
+				color: #202e45
+		.summ-test-form
+			margin: 0 auto
+			padding: 10px 0
+			width: 362px
+			min-height: 170px
+			background: rgba(255,255,255,.75)
+			border-radius: 5px
+			color: #202e45
+			font-size: 16px
+			&-title
+				margin-bottom: 15px
+			ul
+				list-style-type: none
+				text-align: left
+				padding-left: 77px
+				margin: 0
+				li
+					padding-left: 15px
+					display: block
+					line-height: 1.2
+				label
+					line-height: 1
+					position: relative
+					cursor: pointer
+			.radio:not(checked)
+				position: absolute
+				opacity: 0
+			.radio:not(checked) + label::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -25px
+				width: 16px
+				height: 16px
+				background: #fff
+				border-top: 2px solid #868686
+				border-left: 2px solid #868686
+				box-sizing: border-box
+				border-radius: 50%
+			.radio:not(checked) + label::after
+				content: ''
+				position: absolute
+				top: 4px
+				left: -21px
+				width: 9px
+				height: 9px
+				background: #fff
+				box-sizing: border-box
+				border-radius: 50%
+			.radio:checked + label:hover::after,
+			.radio:checked + label::after
+				background: #202e45
+				transition: all .2s ease
+			button
+				position: absolute
+				width: 272px
+				height: 54px
+				left: 50%
+				bottom: -90px
+				background: $accent
+				border: none
+				border-radius: 5px
+				font-size: 14px
+				transform: translateX(-50%)
+				cursor: pointer
+				color: #202e45
+				&:hover
+					background: linear-gradient(to bottom, #ffdd00, #aa7800)
+
+.summ-test-form h4.active,
+.summ-test-form ul.active
+	display: block
+.summ-test-form h4,
+.summ-test-form ul
+	display: none	
+.summ-test-form .questbtn.active
+	display: block
+.summ-test-form .questbtn
+	display: none	 
+/*Customize sect-third*/
+.sect-third
+	padding: 45px 0 75px 0
+	background: #f4f4f7
+	.sect-title,
+	.sect-subtitle
+		padding-left: 98px
+	.sect-title
+		margin-bottom: 4px
+		position: relative
+	.sect-subtitle
+		margin-bottom: 60px
+		display: block
+		&::before
+			content: ""
+			position: absolute
+			left: 15px
+			top: 12px
+			width: 80px
+			height: 5px
+			background: $accent
+	.sect-tabs
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		min-height: 65px
+		margin-bottom: 35px
+		flex-wrap: wrap
+		a
+			border-bottom: 1px dashed
+			color: #202e45
+			line-height: 1
+			text-decoration: none
+			transition: all .3s ease
+			cursor: pointer
+			&:hover
+				border-bottom: 1px dashed transparent
+		a.active
+			padding: 17px 35px
+			border: 1px solid #202e45
+			border-radius: 4px
+	.slider
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+	.slide-content
+		margin-top: 40px
+		padding: 56px 66px
+		width: 50%
+		min-height: 432px
+		background: #fff
+		.slide-title
+			margin-bottom: 30px
+			font-size: 24px
+			font-weight: 800
+			color: #202e45
+			line-height: 1.2
+		.slide-description
+			line-height: 1.2
+	.sect-third-slider
+		position: relative
+		width: 50%
+		.slide
+			width: 100%
+			height: 472px
+			background: #000
+			&-bg
+				width: 100%
+				height: 100%
+				background-size: cover
+				background-position: center 
+		.owl-nav
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 120px
+			height: 62px
+			background: #fff
+			padding-left: 25px
+			.owl-prev,
+			.owl-next
+				display: inline-block
+				width: 45%
+				height: 62px
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					left: 50%
+					top: 50%
+					width: 10px
+					height: 16px
+					background: url(../img/sect-third/arrow-right.png) no-repeat center
+					background-size: cover
+					transform: translate(-50%, -50%)
+			.owl-prev
+				&::before
+					transform: translate(-50%, -50%) rotate(180deg)
+
+.sect-third .slider.active
+	display: flex
+.sect-third .slider
+	display: none
+
+/*Customize sect-fourth*/
+.sect-fourth
+	padding: 115px 0 25px 0
+	.sect-content
+		position: relative
+		width: 100%
+		min-height: 484px
+		.sect-bg
+			width: 100%
+			height: 484px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			position: absolute
+			left: 0
+			top: 0
+			&::before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				background: #202e45
+				opacity: .45
+		.sect-main-image
+			position: relative
+			text-align: right
+			img
+				position: relative
+				top: -40px
+.sect-fourth-form
+	padding: 68px 60px 60px 52px
+	width: 100%
+	color: #fff
+	.form-title
+		font-size: 28px
+		font-weight: 800
+		line-height: 1.3
+		margin-bottom: 42px
+		strong
+			display: block
+			color: $accent
+	.form-text
+		font-size: 18px
+		line-height: 1
+		margin-bottom: 0
+		&:last-of-type
+			margin-bottom: 70px
+	input,
+	button
+		display: block
+		margin: 0 0 10px 10px
+		width: 270px
+	input
+		padding: 0 28px
+		height: 44px
+		border-radius: 4px
+		&:focus
+			border-color:  #202e45
+	button
+		height: 54px
+		background: $accent
+		border: none
+		border-radius: 4px
+		cursor: pointer
+		&:hover
+			background: linear-gradient(to bottom, #ffdd00, #aa7800)
+
+/*Customize sect-five*/			
+.sect-five
+	padding: 45px 0
+	margin-bottom: 156px
+	.slider
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 70px
+	.slider.second
+		.slide-content
+			order: 1
+	.slide-content
+		margin-top: 40px
+		padding: 48px 48px 0 116px
+		width: 50%
+		min-height: 432px
+		background: #f4f4f7
+		order: 2
+		.slide-title
+			font-size: 22px
+			font-weight: normal
+			color: #202e45
+			margin-bottom: 3px
+			line-height: 1.2
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				left: -80px
+				top: 12px
+				width: 65px
+				height: 5px
+				background: $accent
+		.slide-subtitle
+			display: block
+			margin-bottom: 45px
+			font-size: 28px
+			font-weight: 800
+			line-height: 1
+			color: #202e45
+		.slide-description
+			margin-bottom: 5px
+			font-size: 14px
+			color: #202e45
+			&:last-of-type
+				margin-bottom: 88px
+		.btn-download
+			display: inline-block
+			padding: 16px 19px
+			background: linear-gradient(to bottom, #527abd, #213048)
+			border-radius: 4px
+			color: #fff
+			text-decoration: none
+			transition: all .2s ease
+			&:hover
+				text-decoration: none
+				opacity: .9
+	.sect-five-slider
+		width: 50%
+		position: relative
+		order: 1
+		.slide
+			width: 100%
+			height: 472px
+			background: #000
+			&-bg
+				width: 100%
+				height: 100%
+				background-size: cover
+		.owl-nav
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 120px
+			height: 62px
+			background: #fff
+			padding-left: 25px
+			.owl-prev,
+			.owl-next
+				display: inline-block
+				width: 45%
+				height: 62px
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					left: 50%
+					top: 50%
+					width: 10px
+					height: 16px
+					background: url(../img/sect-third/arrow-right.png) no-repeat center
+					background-size: cover
+					transform: translate(-50%, -50%)
+			.owl-prev
+				&::before
+					transform: translate(-50%, -50%) rotate(180deg)
+	.sect-five-slider.second
+		.owl-nav
+			left: 0
+	.slider.second
+		.slide-content
+			padding: 62px 62px 0 68px
+			.slide-title
+				&::before
+					display: none
+			.slide-subtitle
+				margin-bottom: 32px
+			.slide-description
+				margin-bottom: 8px
+				&:nth-of-type(2)
+					margin-bottom: 40px
+
+/*Customize sect-six*/
+.sect-six
+	padding: 45px 0 105px 0
+	background: #f4f4f7
+	.sect-heading
+		margin-top: -194px
+		padding-left: 98px
+	.sect-title
+		margin-bottom: 28px
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			left: -95px
+			top: 12px
+			width: 80px
+			height: 5px
+			background: $accent
+	.sect-tabs
+		a
+			display: inline-block
+			margin-right: 6px
+			width: 192px
+			height: 48px
+			border: 1px solid #202e45
+			border-radius: 4px
+			line-height: 48px
+			color: #202e45
+			text-align: center
+			vertical-align: middle
+			transition: all .2s ease
+			&:last-of-type
+				margin-right: 0
+			&:hover
+				background: #202e45
+				color: #fff
+				text-decoration: none
+		a.active 
+			background: #202e45
+			color: #fff
+	
+.sect-six-slider
+	position: relative
+	.slide
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		.slide-content
+			margin-top: 60px
+			padding: 40px 115px 30px 65px
+			width: 50%
+			min-height: 452px
+			background: #fff
+			.slide-title
+				font-size: 24px
+				font-weight: 800
+				line-height: 1
+				color: #202e45
+				margin-bottom: 28px
+			.slide-target
+				margin-bottom: 4px
+			p
+				color: #202e45
+			.slide-description
+				line-height: 1.6
+				margin-bottom: 35px
+				max-height: 112px
+				overflow: hidden
+			.slide-time
+				margin-bottom: 25px
+			.slide-price
+				margin-bottom: 35px
+			.btn-callback
+				display: inline-block
+				padding: 15px 62px
+				background: $accent
+				border-radius: 3px
+				color: #202e45
+				text-align: center
+				&:hover
+					text-decoration: none
+					background: linear-gradient(to bottom, #ffdd00, #aa7800)
+		.slide-image
+			margin-top: 5px
+			width: 50%
+			height: 509px
+			background: #000
+			position: relative
+			.slide-bg
+				width: 100%
+				height: 100%
+				background-size: cover
+	.owl-dots
+		padding-left: 25px
+		width: 358px
+		height: 60px
+		background: #202e45
+		position: absolute
+		bottom: -60px
+		left: 65px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.owl-dot
+			width: 8px
+			height: 8px
+			background: transparent
+			border-radius: 50%
+			border: 1px solid #fff
+			margin-right: 8px
+			&:last-of-type
+				margin-right: 0
+		.owl-dot.active
+			background: #fff
+	.owl-nav
+		position: absolute
+		left: 305px
+		bottom: -60px
+		width: 120px
+		height: 60px
+		background: #202e45
+		padding-left: 25px
+		z-index: 5
+		.owl-prev,
+		.owl-next
+			display: inline-block
+			width: 45%
+			height: 60px
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				width: 10px
+				height: 16px
+				background: url(../img/sect-six/arrow-right.png) no-repeat center
+				background-size: cover
+				transform: translate(-50%, -50%)
+		.owl-prev
+			&::before
+				transform: translate(-50%, -50%) rotate(180deg)
+
+/*Customize sect-seven*/
+.sect-seven
+	margin-bottom: 120px
+	padding: 80px 0
+	text-align: center
+	.sect-title
+		display: inline-block
+		line-height: 1
+		&::before
+			content: ""
+			position: absolute
+			left: -95px
+			top: 12px
+			width: 80px
+			height: 5px
+			background: $accent
+.sect-seven-item
+	position: relative
+	.item-step
+		font-size: 68px
+		font-weight: 800
+		line-height: 1
+		color: #e3e3eb
+	.item-content
+		position: relative
+		padding: 10px 
+		top: -18px
+		left: 0
+		width: 100%
+		min-height: 140px
+		z-index: 2
+		background: #fff
+
+		&::after
+			content: "\e907"
+			position: absolute
+			right: 0%
+			top: 35%
+			font-family: "icomoon"
+			color: #697892	
+			transform: translateY(-35%)	
+		.request
+			margin-left: 12px
+		.item-text
+			margin-top: 20px
+			font-size: 20px
+			color: #202e45
+		.image-wrap
+			min-height: 81px
+	.item-content.last
+		&::after
+			display: none
+
+/*Customize sect-eight*/
+.sect-eight
+	min-height: 445px
+	background: #f4f4f7
+	margin-bottom: 80px
+	.slider-container
+		margin-top: -25px
+		position: relative
+		z-index: 5
+	.sect-heading
+		padding-left: 95px
+		margin-top: -118px
+	.sect-title
+		margin-bottom: 12px
+		&::before
+			content: ""
+			position: absolute
+			left: -95px
+			top: 12px
+			width: 80px
+			height: 5px
+			background: $accent
+.sect-eight-slider
+	.slide
+		width: 99.90%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		color: #202e45
+		&-text
+			margin-top: 85px
+			padding: 86px 28px
+			width: 40%
+			min-height: 300px
+			h3
+				margin-bottom: 28px
+				font-size: 24px
+				font-weight: 800
+				line-height: 1
+		&-video-wrap
+			width: 60%
+			height: 410px
+			position: relative
+			iframe
+				width: 100%
+				height: 100%
+	.owl-nav
+		display: block
+		.owl-prev,
+		.owl-next
+			position: absolute
+			top: 50%
+			width: 66px
+			height: 66px
+			display: block
+			background: rgba(000,000,000,0.3)
+			transform: translateY(-50%)
+			transition: all .2s ease
+			&:hover
+				opacity: .8
+			&::before
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				width: 10px
+				height: 16px
+				background: url(../img/sect-six/arrow-right.png) no-repeat center
+				background-size: cover
+				transform: translate(-50%, -50%)
+		.owl-prev
+			left: -100px
+			&::before
+				transform: translate(-50%, -50%) rotate(180deg)
+		.owl-next
+			right: -95px
+
+/*Customize sect-nine*/
+.sect-nine
+	padding-bottom: 28px
+	.sect-heading
+		padding-left: 96px
+		.sect-title
+			margin-bottom: 5px
+			&::before
+				content: ""
+				position: absolute
+				left: -95px
+				top: 12px
+				width: 80px
+				height: 5px
+				background: $accent
+		.sect-subtitle
+			display: block
+			margin-bottom: 40px
+	.sect-item
+		display: block
+		margin-bottom: 26px
+		width: 100%
+		height: 350px
+		padding: 15px
+		box-shadow: 0 0 15px rgba(000,000,000,0.2)
+		color: #202e45
+		cursor: pointer
+		transition: all .3s ease
+		text-decoration: none
+		&:hover
+			transform: scale(1.1)
+			text-decoration: none
+			color: #202e45
+		&-bg
+			width: 100%
+			height: 265px
+			background-size: cover
+			background-color: #202e45
+			background-repeat: no-repeat
+			background-position: center
+			margin-bottom: 18px
+		&-text
+			padding: 0 18px
+			margin-bottom: 0
+			max-height: 37px
+			overflow: hidden
+			line-height: 1.3
+			text-transform: uppercase
+
+/*Customize sect-ten*/
+.sect-ten
+	margin-bottom: 92px
+	width: 100%
+	min-height: 740px
+	background: url(../img/sect-ten/sect-bg.jpg) #000 no-repeat center
+	background-size: cover
+	.sect-content-wrapper
+		width: 100%
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+	.sect-content
+		width: 50%
+		min-height: 740px
+		padding: 160px 130px 60px 100px
+		&-title
+			margin-bottom: 54px
+			font-size: 28px
+			font-weight: 800
+			line-height: 1
+			color: #fff
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				left: -95px
+				top: 12px
+				width: 80px
+				height: 5px
+				background: $accent
+		&-text
+			color: #fff
+			line-height: 1.7
+			margin-bottom: 24px
+	.sect-video-wrap
+		width: 50%
+		min-height: 740px
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			width: 432px
+			height: 444px
+			left: 168px
+			top: 144px
+			border: 1px solid $accent
+		iframe
+			width: 90%
+			height: 360px
+			position: absolute
+			top: 184px
+			left: 42px
+
+/*Customize sect-eleven*/
+.sect-eleven
+	margin-bottom: 95px
+	width: 100%
+	min-height: 405px
+	background: url(../img/sect-eleven/sect-bg.png) #202e45 no-repeat center
+	background-size: cover
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: #202e45
+		opacity: .67
+	.sect-content-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		min-height: 405px
+		position: relative
+		flex-wrap: wrap
+		&::before
+			content: ""
+			position: absolute
+			left: -7%
+			top: 50px
+			width: 107%
+			height: 315px
+			border: 1px solid $accent
+		.sect-video-wrap
+			width: 57%
+			height: 480px
+			position: absolute
+			left: 0
+			top: -32px
+			iframe
+				width: 100%
+				height: 100%
+		.sect-content
+			padding: 100px 60px
+			width: 43%
+			min-height: 405px
+			position: absolute
+			right: 0
+			&-text
+				margin-bottom: 60px
+				font-size: 28px
+				font-weight: 800
+				color: #fff
+				p
+					line-height: 1
+					margin-bottom: 6px
+					strong
+						color: $accent
+			.btn-callback
+				padding: 16px 24px
+				display: inline-block
+				background: $accent
+				border-radius: 4px
+				color: #202e45
+				&:hover
+					text-decoration: none
+					background: linear-gradient(to bottom, #ffdd00, #aa7800)
+
+/*Customize sect-twelve*/
+.sect-twelve
+	position: relative
+	min-height: 624px
+	background: url(../img/sect-twelve/sect-bg.jpg) #131316 no-repeat center
+	background-size: cover
+.sect-twelve-callback-form 
+	.callback-form
+		top: 68px
+	&::before
+	 top: 43px	
+
+/*Customize sect-contacts*/
+.sect-contacts
+	.sect-content-wrap
+		width: 100%
+		height: 490px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		.map
+			width: 50%
+			height: 100%
+		.contacts
+			width: 50%
+			height: 100%
+			background: #f4f4f7
+			padding: 68px 0 0 110px
+			.sect-tabs
+				margin-bottom: 55px
+			.sect-tabs a
+				display: inline-block
+				margin-right: 8px
+				width: 192px
+				height: 48px
+				border: 1px solid #202e45
+				border-radius: 4px
+				background: transparent
+				color: #202e45
+				line-height: 48px
+				text-align: center
+				vertical-align: middle
+				tansition: all .2s ease
+				&:hover
+					background: #202e45
+					color: #fff
+			.sect-tabs a.active
+				background: #202e45
+				color: #fff
+		.contacts-wrap
+			max-width: 500px
+		.contacts-content
+			padding: 0 72px
+			color: #202e45
+			a
+				color: #202e45
+				font-size: 14px
+				&::before
+					color: #202e45
+					left: -29px
+			.location
+				margin-bottom: 42px
+				&::before
+					font-size: 17px
+					left: -29px
+					color: #202e45
+			.phone
+				margin-bottom: 40px
+	.sect-title
+		margin-bottom: 28px
+		&::before
+			content: ""
+			position: absolute
+			left: -95px
+			top: 12px
+			width: 80px
+			height: 5px
+			background: $accent
+
+/*Customize footer*/
+.main-footer
+	padding: 35px 0 45px 0
+	background: #202e45
+	text-align: center
+	color: #fff
+	text-transform: uppercase
+	.footer-title
+		font-size: 18px
+		font-weight: 800
+		line-height: 1
+	.footer-subtitle
+		display: block
+		margin-bottom: 25px
+		text-transform: none
+	.footer-text
+		p
+			margin-bottom: 2px
+			a
+				color: $accent
+				font-weight: 800
+	.footer-form-wrap
+		margin-top: 26px
+	.footer-callback-form
+		input, button
+			width: 270px
+			height: 43px
+			border-radius: 4px
+		input
+			margin-right: 3px
+			padding: 0 20px
+		button
+			background: $accent
+			border: none
+			cursor: pointer
+			&:hover
+				background: linear-gradient(to bottom,#fd0,#aa7800)
+
+/*Copyright*/
+.copyright
+	height: 50px
+	line-height: 50px
+	font-size: 12px
+	text-align: center
+	background: #fff
+	color: #202e45
+
+@import "media" // Always at the end

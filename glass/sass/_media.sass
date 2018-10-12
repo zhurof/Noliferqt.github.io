@@ -1,0 +1,766 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
+	.arrow-bottom-wrap 
+		position: absolute
+		top: auto
+		bottom: 20px
+		left: 50%
+		transform: translateX(-50%)
++media-breakpoint-down(lg)
+	.sect-eleven .sect-content-wrap .sect-content .btn-callback
+		padding: 0 
+		width: 100%
+		height: 53px
+		line-height: 53px
+		text-align: center
+	.footer-text
+		font-size: 13px
+	.sect-contacts .sect-content-wrap .contacts .sect-tabs
+		margin-bottom: 35px
+	.sect-contacts .sect-content-wrap .contacts-content .location,
+	.sect-contacts .sect-content-wrap .contacts-content .phone
+		margin-bottom: 32px
+	.sect-contacts .sect-content-wrap
+		height: 450px
+	.sect-contacts .sect-title::before
+		top: 10px
+	.sect-contacts .sect-content-wrap .contacts .sect-tabs a
+		width: 152px
+	.sect-eleven .sect-content-wrap .sect-content-text
+		font-size: 24px
+		margin-bottom: 40px
+	.sect-eleven .sect-content-wrap .sect-content .btn-callback span
+		display: none
+	.sect-ten .sect-content-title
+		font-size: 24px
+		margin-bottom: 35px
+	.sect-ten .sect-content
+		padding-right: 70px
+	.sect-ten .sect-content-title::before
+		top: 10px
+	.sect-ten .sect-video-wrap::before
+		width: 332px
+	.sect-nine .sect-item
+		height: 300px
+	.sect-nine .sect-item-bg
+		height: 215px
+	.sect-eight-slider .slide-text h3
+		font-size: 22px
+	.sect-seven
+		padding: 40px
+	.sect-seven .sect-title
+		margin-bottom: 25px
+	.sect-seven .sect-title::before
+		top: 10px
+	.sect-seven-item .item-content .item-text
+		font-size: 18px
+	.sect-six-slider .slide .slide-content .slide-title
+		margin-bottom: 22px
+		font-size: 20px
+	.sect-six-slider .slide .slide-content .slide-description
+		margin-bottom: 25px
+	.sect-five .slide-content .slide-title
+		font-size: 20px
+	.sect-five .slide-content .slide-subtitle
+		font-size: 22px
+		margin-bottom: 30px
+	.sect-five .slide-content .slide-description
+		line-height: 1.2
+	.sect-five .slide-content .slide-description:last-of-type
+		margin-bottom: 45px
+	.sect-five .slide-content .btn-download span
+		display: none
+	.sect-five .slide-content .btn-download
+		padding: 0
+		width: 100%
+		height: 53px
+		line-height: 53px
+		text-align: center
+	.sect-fourth-form .form-title
+		font-size: 24px
+	.sect-fourth-form .form-text
+		font-size: 16px
+	.sect-third .slide-content .slide-title
+		font-size: 20px
+	.sect-second .summ-test-title,
+	.sect-second .summ-test-subtitle
+		font-size: 24px
+	.sect-second .summ-test-subtitle
+		margin-bottom: 24px
+	.sect-second .sect-title::before
+		top: 10px
+	.sect-second .sect-item
+		height: 380px
+	.sect-second .sect-item-description
+		padding: 10px 22px
+	.sect-second .sect-item-description p,
+	.sect-second .sect-item-description .item-info
+		font-size: 13px
+	.sect-second .sect-item-description strong
+		font-size: 16px
+	.sect-one .present-img
+		max-width: 570px
+		max-height: 514px
+		width: 100%
+		height: 100%
+	.sect-one .sect-title 
+	  margin: 40px 0 38px 0
+	  padding-left: 20px
+	h3.sect-title
+		font-size: 24px
+	span.sect-subtitle
+		font-size: 20px
+	.sect-one .sect-title::before
+		width: 80px
+		left: -80px
+	.sect-one .sect-description p
+		margin-bottom: 45px
+	.logo-img
+		margin-right: 12px
+		width: 59px
+		height: 60px
+	.logo-text
+		text-transform: none
+	.header-navigation
+		margin-top: 5px
+		font-size: 13px
+	.header-content-title
+		margin-top: 70px
+		font-size: 36px
+	.header-content-subtitle
+		font-size: 25px
+		margin-bottom: 20px
+	.header-content-description
+		font-size: 16px
+		margin-bottom: 45px
+	.header-content-advantages
+		padding-left: 60px
+	.header-content-advantages .advantage
+		margin-bottom: 24px
+	.header-content-advantages .advantage-text
+		font-size: 15px
+	.header-content-advantages .advantage-text strong
+		font-size: 16px
+	.header-navigation
+		flex-wrap: wrap
++media-breakpoint-down(md)
+	.sect-contacts .sect-content-wrap .contacts-content
+		padding: 0 42px
+	.sect-contacts .sect-content-wrap .contacts .sect-tabs a
+		width: 80%
+		margin-bottom: 10px
+		margin-right: 0
+		&:last-of-type
+			margin-bottom: 0
+	.sect-contacts .sect-content-wrap .contacts-content .location,
+	.sect-contacts .sect-content-wrap .contacts-content .phone
+		margin-bottom: 20px
+	.sect-contacts .sect-content-wrap .contacts
+		padding: 48px 0 0 90px
+	.sect-contacts .sect-title::before
+		left: -75px
+		width: 60px
+	.sect-eleven .sect-content-wrap .sect-video-wrap
+		height: 350px
+		top: 32px
+	.sect-eleven .sect-content-wrap .sect-content-text
+		font-size: 18px
+	.sect-eleven .sect-content-wrap .sect-content .btn-callback
+		padding: 0
+		width: 100%
+		height: 53px
+		line-height: 53px
+		text-align: center
+	.sect-ten
+		background: url(../img/sect-ten/sect-bg-mob.jpg) #000 no-repeat center
+		background-size: cover
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background: #202e45
+			opacity: .85
+	.sect-ten .sect-content-wrapper
+		text-align: center
+	.sect-ten .sect-content
+		margin-bottom: 30px
+		padding: 60px 0 0 0
+		width: 100%
+		min-height: 240px
+	.sect-ten .sect-video-wrap
+		width: 100%
+		min-height: 240px
+	.sect-ten .sect-video-wrap iframe
+		position: relative
+		top: auto
+		left: auto
+	.sect-ten .sect-video-wrap::before
+		width: 100%
+		height: 400px
+		left: 0
+		top: -20px
+	.sect-ten .sect-content-title
+		display: inline-block
+		font-size: 22px
+		margin-bottom: 26px
+	.sect-ten .sect-content-text
+		margin-bottom: 18px
+	.sect-eight-slider .slide-text,
+	.sect-eight-slider .slide-video-wrap
+		width: 100%
+	.sect-eight-slider .slide-video-wrap
+		order: -1
+	.sect-eight-slider .slide-text
+		order: 1
+		margin-top: 0
+		margin-bottom: 20px
+		padding: 30px 20px 20px 20px
+		min-height: 150px
+	.sect-eight-slider .owl-nav .owl-next, .sect-eight-slider .owl-nav .owl-prev
+		top: 40%
+		transform: translateY(-40%)
+	.sect-seven .sect-title::before
+		top: 8px
+	.sect-seven-item .item-content .item-text
+		font-size: 16px
+	.sect-six-slider .slide .slide-content
+		padding: 40px 65px 30px 65px
+	.sect-six-slider .slide .slide-content .slide-title
+		font-size: 18px
+		margin-bottom: 20px
+	.sect-five
+		margin-bottom: 110px
+	.sect-five .slider.second .slide-content .slide-description:nth-of-type(2)
+		margin-bottom: 20px
+	.sect-five .slide-content
+		padding: 48px 48px 0 48px
+	.sect-five .slide-content .slide-title
+		font-size: 18px
+	.sect-five .slide-content .slide-title::before
+		display: none
+	.sect-five .slide-content .slide-subtitle
+		font-size: 20px
+		margin-bottom: 28px
+	.sect-fourth .sect-content
+		min-height: 354px
+	.sect-fourth .sect-content .sect-bg
+		height: 354px
+	.sect-fourth-form .form-title
+		margin-bottom: 22px
+		font-size: 20px
+	.sect-fourth-form .form-text
+		font-size: 14px
+	.sect-fourth-form .form-text:last-of-type
+		margin-bottom: 40px
+	.sect-fourth-form button
+		height: 50px
+	.sect-fourth-form button,
+	.sect-fourth-form input
+		width: 100%
+	.sect-fourth .sect-content .sect-main-image img
+		width: 240px
+		height: 424px
+		top: 0
+	.sect-fourth .sect-content .sect-main-image
+		top: -30px
+	.sect-fourth-form
+		padding: 20px
+	.sect-fourth
+		padding-top: 85px
+	.sect-third .slide-content
+		padding: 36px 50px
+	.sect-third .sect-tabs
+		margin-bottom: 40px
+	.sect-third .sect-tabs a
+		margin: 11px 8px
+		font-size: 13px
+	.sect-third .sect-subtitle
+		margin-bottom: 30px
+	.sect-second .summ-test-title,
+	.sect-second .summ-test-subtitle
+		font-size: 22px
+	.sect-second .summ-test-subtitle
+		margin-bottom: 22px
+	.sect-second .summ-test .summ-test-form,
+	.sect-second .summ-test .total-questions .question-title
+		font-size: 15px
+	.sect-one .sect-title 
+	  margin: 30px 0 38px 0
+	.sect-one .sect-description p
+		margin-bottom: 35px
+		font-size: 14px
+		line-height: 1.2
+	h3.sect-title
+		font-size: 22px
+	span.sect-subtitle
+		font-size: 19px
+	.logo
+		margin-bottom: 25px
+	.header-content-title
+		margin: 0 0 13px 0
+		font-size: 26px
+	.header-content-subtitle
+		font-size: 20px
+		margin-bottom: 10px
+	.header-content-description
+		font-size: 15px
+		margin-bottom: 30px
+	.header-content-advantages
+		padding-left: 50px
+	.header-content-advantages .advantage-text
+		vertical-align: top
+	.header-content-form::before
+		top: 20px
+		height: 450px
+	.header-content-form .callback-form
+		top: 0
+	.header
+		min-height: 1200px
++media-breakpoint-down(sm)
+	.arrow-top-wrap
+		left: 25px
+		bottom: 25px
+	.main-footer .footer-callback-form input
+		margin: 0 0 10px 0
+	.sect-contacts .sect-content-wrap .map,
+	.sect-contacts .sect-content-wrap .contacts
+		width: 100%
+	.sect-contacts .sect-content-wrap
+		min-height: 600px
+		height: 100%
+	.sect-contacts .sect-content-wrap .map
+		height: 300px
+	.sect-contacts .sect-content-wrap .contacts
+		padding: 45px 0
+	.sect-contacts .sect-content-wrap .contacts-wrap
+		margin: 0 auto
+		text-align: center
+	.sect-contacts .sect-title
+		display: inline-block
+	.sect-eleven .sect-content-wrap .sect-video-wrap,
+	.sect-eleven .sect-content-wrap .sect-content
+		width: 100%
+		position: relative
+		text-align: center
+	.sect-eleven .sect-content-wrap::before
+		left: -1%
+		width: 102%
+	.sect-eleven .sect-content-wrap .sect-content
+		padding: 0
+		margin-top: 70px
+		min-height: 105px
+	.sect-eleven .sect-content-wrap .sect-content-text
+		margin-bottom: 30px
+	.sect-eleven .sect-content-wrap .sect-video-wrap iframe
+		width: 90%
+	.sect-eleven
+		min-height: 605px
+	.sect-nine .sect-heading .sect-title::before
+		width: 60px
+		left: -75px
+	.sect-eight
+		margin-bottom: 50px
+	.sect-eight-slider .slide-text h3
+		font-size: 20px
+	.sect-eight-slider .owl-nav
+		position: relative
+		width: 10px
+		height: 10px
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+	.sect-eight-slider .owl-nav .owl-next, .sect-eight-slider .owl-nav .owl-prev
+		top: -50px
+		width: 44px
+		height: 44px
+	.sect-eight-slider .owl-nav .owl-next
+		right: -250px
+	.sect-eight-slider .owl-nav .owl-prev
+		left: -250px
+	.sect-eight-slider .slide-video-wrap
+		height: 310px
+		text-align: center
+	.sect-eight-slider .slide
+		justify-content: center
+	.sect-eight-slider .slide-text
+		text-align: center
+	.sect-seven-item .item-content::after
+		display: none
+	.sect-seven .sect-title
+		margin-bottom: 35px
+	.sect-seven-item .item-content .item-text
+		font-size: 15px
+	.sect-six-slider .slide .slide-content p
+		font-size: 13px
+	.sect-six-slider .slide .slide-content .slide-description
+		max-height: 125px
+	.sect-six-slider .slide .slide-content
+		width: 45%
+		padding: 30px 20px 20px 20px
+	.sect-six-slider .slide .slide-content .btn-callback
+		padding: 0
+		width: 100%
+		height: 52px
+		line-height: 52px
+	.sect-six-slider .slide .slide-image
+		width: 55%
+	.sect-five .slider.second .slide-content
+		padding: 30px 20px 20px 20px
+	.sect-five .slide-content
+		width: 45%
+		padding: 30px 20px 20px 20px
+	.sect-five .sect-five-slider
+		width: 55%
+	.sect-five .slide-content .slide-subtitle
+		font-size: 18px
+	.sect-five .slide-content .slide-description
+		font-size: 13px
+	.sect-five .slide-content .btn-download
+		margin-top: 30px
+	.sect-fourth-form
+		padding: 10px
+		margin-top: 20px
+	.sect-fourth-form .form-text
+		font-size: 13px
+		margin-bottom: 10px
+		line-height: 1.2
+	.sect-third .slide-content
+		width: 45%
+		padding: 30px 20px 20px 20px
+	.sect-third .slide-content .slide-title
+		margin-bottom: 20px
+		font-size: 18px
+	.sect-third .slide-content .slide-description
+		font-size: 13px
+	.sect-third .sect-third-slider
+		width: 55%
+	.sect-second .summ-test-title,
+	.sect-second .summ-test-subtitle
+		font-size: 18px
+	.sect-second .summ-test-subtitle
+		margin-bottom: 35px
+	.sect-second .summ-test .summ-test-form,
+	.sect-second .summ-test .total-questions .question-title
+		font-size: 14px
+	span.sect-subtitle
+		font-size: 16px
+	.sect-second .sect-subtitle
+		padding-left: 135px
+	.sect-second .sect-item
+		height: 340px
+	.sect-one .sect-title 
+	  margin: 20px 0 20px 0
+	h3.sect-title
+		font-size: 20px
+	.sect-one .sect-title::before
+		top: 8px
+		left: -60px
+		width: 60px
+	.sect-one .sect-description p
+		margin-bottom: 25px
+		font-size: 13px
+	.text-right
+		text-align: center
+	.logo
+		justify-content: center
+	.header-navigation .col-md-3
+		padding-right: 15px
+	.header .callback
+		margin-top: 20px
+	.header-top-line
+		margin-bottom: 54px
+	.header-content-title
+		margin: 0 0 12px 0
+		font-size: 24px
+	.header-content-subtitle
+		font-size: 18px
+		margin-bottom: 9px
+	.header-content-description
+		margin-bottom: 28px
+		font-size: 14px
+	.header-content-advantages .advantage-icon
+		width: 32px
+		height: 32px
+		font-size: 20px
+	.header-content-advantages .advantage-icon.gear::before
+		font-size: 18px
+	.header-content-advantages
+		padding-left: 45px
+	.header-content-advantages .advantage-text strong
+		font-size: 15px
+	.header-content-form::before
+		top: 30px
+		height: 470px
+		display: none
++media-breakpoint-down(xs)
+	.sect-twelve-callback-form::before
+		display: none
+	.main-footer .footer-title
+		font-size: 15px
+	.main-footer .footer-subtitle
+		font-size: 13px
+		margin-bottom: 20px
+	.sect-twelve-callback-form .callback-form-info button span
+		display: none
+	.sect-eleven,
+	.sect-ten
+		margin-bottom: 42px
+	.sect-ten .sect-content-title
+		font-size: 20px
+		margin-bottom: 20px
+	.sect-ten .sect-content-text
+		margin-bottom: 15px
+		font-size: 13px
+		line-height: 1.5
+	.sect-ten .sect-content-title::before
+		width: 60px
+		left: -75px
+		top: 8px
+	.sect-nine .sect-item
+		height: 340px
+	.sect-nine .sect-item-bg
+		height: 255px
+	.sect-eight-slider .slide-text h3
+		margin-bottom: 14px
+		font-size: 18px
+	.sect-eight-slider .owl-nav .owl-next
+		right: 10%
+	.sect-eight-slider .owl-nav .owl-prev
+		left: 10%
+	.sect-eight-slider .owl-nav
+		width: 100%
+	.sect-eight .sect-title::before
+		width: 60px
+		left: -75px
+	.sect-seven .sect-title
+		display: block
+		text-align: left
+		padding-left: 75px
+	.sect-seven .sect-title::before
+		width: 60px
+		left: 0
+		top: 8px
+	.sect-six-slider .slide .slide-content .slide-description
+		max-height: 500px
+	.sect-six-slider .slide .slide-content
+		margin-top: 0
+		width: 100%
+		min-height: 200px
+		order: 1
+	.sect-six-slider .slide .slide-content .slide-title
+		margin-bottom: 15px
+	.sect-six-slider .slide .slide-content .slide-time
+		margin-bottom: 15px
+	.sect-six-slider .slide .slide-content .slide-price
+		margin-bottom: 20px
+	.sect-six-slider .slide .slide-image
+		width: 100%
+		height: 372px
+		margin-top: 0
+		order: -1
+	.sect-six-slider .owl-dots
+		left: 0
+		width: 50%
+	.sect-six-slider .owl-nav
+		left: 50%
+		width: 30%
+	.sect-six .sect-tabs
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+	.sect-six .sect-tabs	a
+		width: 100%
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+	.sect-six .sect-heading
+		margin-top: -224px
+	.sect-six .sect-title::before
+		width: 60px
+		left: -75px
+		top: 8px
+	.sect-six .sect-title
+		margin-bottom: 15px
+	.sect-five .slider.second .slide-content .slide-subtitle
+		margin-bottom: 15px
+	.sect-five .slide-content,
+	.sect-five .sect-five-slider
+		width: 100%
+	.sect-five .sect-five-slider .slide
+		height: 372px
+	.sect-five .slide-content
+		margin-top: 0
+		min-height: 200px
+	.sect-five .slide-content .slide-subtitle
+		margin-bottom: 15px
+	.sect-five .slide-content .slide-description:last-of-type
+		margin-bottom: 20px
+	.sect-five .slide-content .btn-download
+		margin-top: 0
+	.sect-five
+		padding-top: 15px
+	.sect-fourth-form button, 
+	.sect-fourth-form input
+		width: 100%
+		margin-left: 0
+	.sect-fourth-form
+		position: relative
+		margin-top: 0
+	.sect-third .slide-content,
+	.sect-third .sect-third-slider
+		width: 100%
+	.sect-fourth-form .form-text,
+	.sect-fourth-form .form-title
+		text-shadow: 3px 3px 3px #000
+	.sect-callback-form
+		position: relative
+	.sect-third .slide-content
+		min-height: 200px
+		margin-top: 0
+	.sect-third .sect-third-slider .slide
+		height: 372px
+	.sect-third .sect-tabs a
+		margin: 10px 11px
+	.sect-third .sect-subtitle,
+	.sect-third .sect-title
+		padding-left: 75px
+	.sect-third .sect-subtitle::before
+		top: 8px
+		width: 60px
+	.sect-second .summ-test-title,
+	.sect-second .summ-test-subtitle
+		font-size: 15px
+	.sect-second .summ-test-subtitle
+		margin-bottom: 35px
+	.sect-second .summ-test .summ-test-form,
+	.sect-second .summ-test .total-questions .question-title
+		font-size: 13px
+	.sect-second .summ-test .summ-test-form ul
+		padding-left: 57px
+	.sect-second .summ-test .summ-test-form
+		width: 255px
+		height: 155px
+	.sect-second .summ-test .summ-test-form button
+		width: 245px
+	.sect-second .summ-test .total-questions
+		width: 250px
+	.sect-second .summ-test .total-questions .question::before
+		width: 50px
+		left: 25px
+	.sect-second .summ-test .total-questions .question
+		width: 30px
+		height: 30px
+		font-size: 16px
+		line-height: 23px
+	.sect-second .btn.sect-items-view
+		margin-bottom: 40px
+	.sect-second .sect-title::before
+		left: 0px
+		width: 60px
+	.sect-second .sect-title
+		display: block
+		padding-left: 75px
+		text-align: left
+	.sect-second .sect-subtitle
+		padding-left: 0
+		margin-bottom: 30px
+	.sect-one .sect-title
+		padding-left: 75px
+	.sect-one .sect-title::before
+		left: 0
+	.sect-one .sect-description p
+		margin-bottom: 20px
+	.sect-one .sect-description p::before
+		top: 5px
+	.sect-one
+		padding-top: 45px
+		padding-bottom: 35px
+	.header-navigation
+		justify-content: center
+		text-align: center
+	.header .contacts
+		padding-left: 0
+	.header .contacts,
+	.header .location
+		margin-bottom: 15px
+	.header .contacts a::before
+		top: 2px 
+		left: 20px
+	.header-top-line
+		margin-bottom: 36px
+	.header .callback
+		margin-top: 14px
+	.header-content-title
+		margin: 0px 0 10px 0
+		font-size: 20px
+	.header-content-subtitle
+		margin-bottom: 8px
+		font-size: 16px
+	.header-content-description
+		margin-bottom: 26px
+		font-size: 13px
+	.header-content-advantages
+		padding-left: 25px
+	.header-content-advantages .advantage
+		margin-bottom: 15px
+	.header-content-advantages .advantage-text
+		margin-left: 14px
+		font-size: 13px
+	.header-content-advantages .advantage-text strong
+		font-size: 14px
+	.header-content-form::before
+		display: none
+	.header-content-form .callback-form-info button span
+		display: none
+	.sect-twelve-callback-form .callback-form-title,
+	.header-content-form .callback-form-title
+		margin-bottom: 30px
+		line-height: 1.2
+	.sect-twelve-callback-form .callback-form::before,
+	.header-content-form .callback-form::before
+		top: 70px
+	.header-content-form .callback-form-advantages
+		margin-bottom: 20px
+	.sect-twelve-callback-form .callback-form-advatages p,
+	.header-content-form .callback-form-advantages p
+		margin-bottom: 10px
+		line-height: 1.2
+	.sect-twelve-callback-form .callback-form-info input,
+	.header-content-form .callback-form-info input
+		margin-bottom: 10px
+	.sect-twelve-callback-form .callback-form,
+	.header-content-form .callback-form
+		padding-bottom: 20px
+	.header
+		min-height: 1250px
+	.header .location
+		padding-left: 15px
+	.header-hidden-form
+		width: 90%
+	.header-hidden-form
+		padding: 20px
+	.header-hidden-form .callback-form-title
+		margin-bottom: 36px
+	.header-hidden-form::before
+		top: 60px
+	.header-hidden-form .btn-hidden span
+		display: none
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)

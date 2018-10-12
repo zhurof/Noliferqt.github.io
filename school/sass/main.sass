@@ -1,0 +1,1726 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 18px
+	font-family: $default-font
+	min-width: 320px
+	position: relative
+	line-height: 1.65	
+	overflow-x: hidden 
+
+
+
+
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+
+/*Global styles*/
+.btn
+	display: inline-block
+	width: 258px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	text-transform: uppercase
+	font-size: 16px
+	font-family: "FuturaBold", sans-serif
+	background-color: $accent
+	color: #fff
+h3
+	font-family: "FuturaHeavy", sans-serif
+	font-size: 23px
+	line-height: 1
+	color: #474747
+
+a.btn-view-all
+	display: block
+	margin-bottom: 30px
+	width: 270px
+	height: 50px
+	padding: 0 16px
+	position: relative
+	font-size: 14px
+	font-family: "FuturaMedium", sans-serif
+	font-weight: 700
+	background: #fff
+	border: 2px solid $accent
+	color: $accent
+	line-height: 45px
+	text-align: left
+	text-transform: uppercase
+	transition: all .2s ease
+	&:hover
+		text-decoration: none
+		background: $accent
+		color: #fff
+	i
+		position: absolute
+		font-size: 10px
+		right: 18px
+		left: auto
+		top: 17px
+
+/*Customize header*/
+.page-header
+.header-contacts
+	width: 100%
+	min-height: 30px
+	font-size: 12px
+	background-color: #093454
+.header-contacts-list
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex	
+	flex-wrap: wrap
+	justify-content: flex-end
+	align-items: center
+	margin: 0
+	padding: 0
+	list-style-type: none
+	a
+		display: block
+		margin-left: 35px
+		position: relative
+		color: #ffffff
+		line-height: 30px
+		.fas, .far
+			position: relative
+			left: -6px
+	a.location,
+		margin-left: 0
+	a.phone
+		.fas
+			transform: rotate(90deg)
+	a.phone.alt
+		margin-left: 15px
+.header-nav-wrapper
+	min-height: 70px
+	position: relative
+	background: #fff
+	color: #474747
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		bottom: -10px
+		width: 100%
+		height: 10px
+		background-color: rgba(255,255,255,.7)
+		box-shadow: 0 0 2px rgba(000,000,000,.2)
+		z-index: 10
+	a
+		color: #474747
+	.homepage-link
+		height: 70px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: center
+		line-height: 1.1
+		&:hover
+			text-decoration: none
+		span
+			font-size: 12px
+		h1
+			font-size: 20px
+			font-family: "FuturaHeavy", sans-serif
+			margin-bottom: 0
+.header-nav-list
+	height: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.nav-link
+		margin-right: 30px
+		font-size: 15px
+		font-family: "FuturaMedium", sans-serif
+		letter-spacing: 0
+		text-transform: uppercase
+		&:last-of-type
+			margin-right: 0
+.header-join-menu
+	width: 100%
+	height: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	a
+		margin-left: 20px
+		font-size: 15px
+		font-family: "FuturaMedium", sans-serif
+		letter-spacing: 0
+		text-transform: uppercase
+		&:first-of-type
+			margin-left: 0
+/*Customize mobile menu*/
+.mobile-menu-btn
+	display: none
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	width: 30px
+	height: 20px
+	text-align: center
+	cursor: pointer
+	&:hover
+		span,
+		span::before,
+		span::after
+			background-color: $accent
+	span,
+	span::before,
+	span::after
+		display: block
+		content: ""
+		width: 100%
+		height: 1px
+		background-color: #093454
+		transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+	span::before
+		transform: translateY(-8px)
+	span::after
+		transform: translateY(6px)
+	span
+		position: relative
+		top: 8px
+.mobile-menu-btn.active span::before,
+.mobile-menu-btn.active span::after
+	width: 100%
+	background-color: $accent
+.mobile-menu-btn.active span 
+	background-color: transparent!important
+.mobile-menu-btn.active span::before
+	transform: rotate(45deg) translate(2px,1px)
+.mobile-menu-btn.active span::after
+	transform: rotate(-45deg) translate(0px,1px)
+
+.mobile-menu
+	display: none
+	position: fixed
+	height: calc(-48px + 100vh)
+	width: 100%
+	left: 0
+	right: 0
+	top: 70px
+	z-index: 200
+	background: -webkit-linear-gradient(to right, #182848, #4b6cb7)  
+	background: linear-gradient(to right, #182848, #4b6cb7) 
+	transition: all .4s ease
+	.mobile-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		width: 100%
+		a, .link
+			position: relative
+			padding: 15px 15px 15px 42px
+			display: block
+			font-size: 14px
+			line-height: 1.5
+			color: #fff
+			font-family: "Montserrat-ExtraBold", sans-serif
+			border-left: 1px solid transparent
+			border-right: 1px solid transparent
+			border-bottom: 1px solid rgba(255,255,255,0.2)
+			transition: all .2s ease
+			position: relative
+			cursor: pointer
+			&:hover, &:active, &.active
+				border-left: 1px solid #fff
+				border-right: 1px solid #fff
+			i
+				position: absolute
+				left: 12px
+				top: 18px
+				-webkit-transition: all 0.4s ease
+				-o-transition: all 0.4s ease
+				transition: all 0.4s ease
+			.fa-chevron-down
+				left: auto
+				right: 25px
+				top: 20px
+				font-size: 12px
+		.open
+			.fa-chevron-down
+				transform: rotate(180deg)
+				color: #fff
+.mobile-menu.active
+	display: block
+.mobile-menu
+	.submenu
+		padding: 0
+		border-bottom: none
+		list-style-type: none
+		li
+			border-bottom: none
+		a
+			position: relative
+			padding: 11px
+			padding-left: 55px
+			font-size: 12px
+			background: #fff
+			border-bottom: 1px solid rgba(000,000,000,0.1)
+			border-left: none
+			border-right: none
+			color: #474747
+			&:before
+				content: ""
+				position: absolute
+				left: 18px
+				top: 50%
+				width: 0px
+				height: 1px
+				background: $accent
+				transition: all .2s ease
+				transform: translateY(-50%)
+			&:hover, &:active, &.active
+				border-left: none
+				border-right: none
+				background: #fff
+				color: #474747
+		a:hover:before
+			width: 20px
+	.submenu.inner
+		a
+			padding: 11px
+			padding-left: 55px
+			font-size: 12px
+			border-bottom: 1px solid rgba(000,000,000,0.1)
+			color: #474747
+			i
+				left: 22px
+				top: 45%
+				font-size: 13px
+				transform: translateY(-45%)
+			&:before
+				display: none
+			&:hover
+				i
+					color: $accent
+/*Customize main-slider*/
+.page-section.slider
+	width: 100%
+	min-height: 360px
+.owl-carousel.main-slider
+	min-height: 360px
+	position: relative
+	.owl-dots
+		display: flex
+		position: relative
+		bottom: 40px
+		justify-content: center
+		.owl-dot
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background: transparent
+			border: 1px solid #fff		
+			transition: all .2s ease	
+			&:not(:last-child)
+				margin-right: 4px
+		.owl-dot.active
+			background: #fff
+.slide
+	width: 100%
+	min-height: 360px
+	background-repeat: no-repeat
+	background-position: center 
+	background-size: cover
+	color: #fff
+	text-align: center
+	padding-top: 55px
+	h1
+		margin-bottom: 10px
+		font-size: 40px
+		font-family: "FuturaHeavy", sans-serif
+		line-height: 1
+	p
+		font-size: 20px
+		line-height: 1.5
+		margin-bottom: 2px
+	.btn
+		margin: 22px 0 50px 0
+		transition: all .3s ease
+		&:hover
+			background: #fff
+			box-shadow: 5px 5px $accent
+			color: $accent
+			text-decoration: none
+		&:active
+			transform: scale(.96)
+
+/*Customize main-content*/
+.page-content
+	padding: 20px 0 50px 0
+
+/*Customize sidebar*/
+.page-sidebar
+	ul
+		list-style-type: none
+		padding: 0
+	h3
+		margin-bottom: 18px
+.sidebar-main-nav
+	margin-bottom: 30px
+/*Dropdown-menu*/
+.accordion
+	width: 100%
+	max-width: 360px
+	background: #FFF
+	border: 1px solid #f2f2f2
+	box-shadow: 0 0 15px rgba(000,000,000,0.1)
+	li
+		i
+			position: absolute
+			top: 15px
+			left: 12px
+			font-size: 16px
+			color: #474747
+			-webkit-transition: all 0.4s ease
+			-o-transition: all 0.4s ease
+			transition: all 0.4s ease
+			&.fa-chevron-down
+				right: 12px
+				top: 18px
+				left: auto
+				font-size: 12px
+		&:last-child
+			.link
+				border-bottom: 0
+		&.open
+			.link
+				color: $accent
+				background: #fff
+				&:hover
+					color: $accent
+					background: #fff
+					i
+						color: $accent
+			i
+				color: $accent
+				&.fa-chevron-down
+					-webkit-transform: rotate(180deg)
+					-ms-transform: rotate(180deg)
+					-o-transform: rotate(180deg)
+					transform: rotate(180deg)
+	.link
+		cursor: pointer
+		display: block
+		padding: 12px 15px 12px 42px
+		color: $accent
+		font-size: 15px
+		font-family: "FuturaMedium", sans-serif
+		font-weight: 700
+		border-bottom: 1px solid #CCC
+		position: relative
+		-webkit-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+		&:hover
+			text-decoration: none
+			background: $accent
+			color: #fff
+			i
+				color: #fff
+.submenu
+	display: none
+	background: #fff
+	font-size: 16px
+	font-family: $default-font
+	font-weight: 700
+	li
+		border-bottom: 1px solid #f2f2f2
+	a
+		display: block
+		text-decoration: none
+		color: #474747
+		padding: 10px
+		padding-left: 42px
+		-webkit-transition: all 0.25s ease
+		-o-transition: all 0.25s ease
+		transition: all 0.25s ease
+		&:hover
+			background: $accent
+			color: #FFF
+/*Customize alt-nav*/
+.alt-nav
+	background: #FFF
+	border: 1px solid #f2f2f2
+	box-shadow: 0 0 15px rgba(000,000,000,0.1)
+	li
+		i
+			position: absolute
+			top: 15px
+			left: 12px
+			font-size: 16px
+			color: #474747
+			-webkit-transition: all 0.25s ease
+			-o-transition: all 0.25s ease
+			transition: all 0.25s ease
+		.fa-info
+			left: 16px
+		&:hover
+			i
+				color: $accent
+		&:last-of-type
+			.link
+				border-bottom: none
+	.link
+		cursor: pointer
+		display: block
+		padding: 12px 15px 12px 42px
+		color: $accent
+		font-size: 15px
+		font-family: "FuturaMedium", sans-serif
+		font-weight: 700
+		border-bottom: 1px solid #CCC
+		position: relative
+		-webkit-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+		&:hover
+			background: $accent
+			color: #fff
+			text-decoration: none
+			i
+				color: #fff
+
+/*Customize page-body*/
+
+/*Customize page-section about*/
+.page-section.about
+	color: $accent
+	margin-bottom: 25px
+	.about-title
+		margin-bottom: 15px
+	.about-text
+		margin-bottom: 0
+		font-family: inherit
+		font-size: inherit
+		line-height: 1.5
+		&:last-of-type
+			margin-bottom: 28px
+	strong
+		font-family: "FuturaBold", sans-serif
+		font-size: 17px
+.about-cards
+	margin-bottom: 22px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+.about-card
+	width: 48.2%
+	.card-bg
+		display: block
+		margin-bottom: 26px
+		height: 280px
+		width: 100%
+		background-repeat: no-repeat
+		background-position: center 
+		background-size: cover
+		cursor: pointer
+	.card-title
+		margin-bottom: 24px
+		font-size: 15px
+		font-family: "FuturaMedium", sans-serif
+		line-height: 1
+	.card-text
+		font-size: 16px
+		color: #474747
+		line-height: 1.45
+.about-cards-alt,
+.department-cards-alt
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.about-card,
+	.department-card
+		display: block
+		width: 31%
+		min-height: 260px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	.card-text
+		margin-top: 22px
+		font-size: 16px
+		color: #474747
+		line-height: 1.5
+
+/*Customize page-section departments*/
+.page-section.departments
+	margin-bottom: 30px
+	.department
+		display: block
+		width: 100%
+		min-height: 200px
+		position: relative
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		background-color: #3b3b3b
+	.departments-title
+		margin-bottom: 26px
+	.department-title
+		position: absolute
+		left: 18px
+		bottom: 25px
+		font-size: 24px
+		font-family: "FuturaHeavy", sans-serif
+		line-height: 1
+		color: #fff
+		text-shadow: 0px 5px 5px rgba(000,000,000,0.5)
+	.departments-top-line
+		margin-bottom: 31px
+
+/*Customize page-section news*/
+.page-section.news
+	.section-title
+		margin-bottom: 26px
+	.news-card
+		width: 100%
+		height: 260px
+		position: relative
+		overflow: hidden
+		box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+		transition: all .2s ease-out
+		&:hover
+			box-shadow: 0 0 15px rgba(000,000,000,0.2)
+		a
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			&:hover
+				text-decoration: none
+	.card-bg
+		width: 100%
+		height: 150px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	.card-details
+		padding: 14px 18px
+		max-height: 124px
+		overflow: hidden
+	.card-title
+		margin-bottom: 7px
+		max-height: 20px
+		font-size: 20px
+		font-family: "FuturaHeavy", sans-serif
+		color: $accent
+		line-height: 1
+		overflow: hidden
+	.card-text
+		font-size: 16px
+		font-family: inherit
+		max-height: 52px
+		color: #474747
+		overflow: hidden
+	.news-top-line
+		margin-bottom: 30px
+	.news-bottom-line
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.news-card
+			width: 48%
+	a.btn
+		margin-bottom: 30px
+		width: 230px
+		padding: 0 16px
+		position: relative
+		font-size: 14px
+		font-family: "FuturaMedium", sans-serif
+		background: #fff
+		border: 2px solid $accent
+		color: $accent
+		line-height: 45px
+		text-align: left
+		transition: all .2s ease
+		&:hover
+			text-decoration: none
+			background: $accent
+			color: #fff
+		i
+			position: absolute
+			font-size: 10px
+			right: 18px
+			left: auto
+			top: 17px
+
+/*Customize page-footer*/
+.page-footer
+	padding: 50px 0 30px 0
+	background-color: #f2f2f2
+	a,p
+		color: #474747
+		display: block
+		font-size: 16px
+		font-family: "FuturaBold", sans-serif
+	.footer-address
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: -20px
+			width: 70px
+			height: 5px
+			background-color: $accent
+	.footer-email
+		margin-bottom: 12px
+	.copyright
+		font-family: $default-font
+	.footer-social
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		margin-left: auto
+		width: 130px
+		justify-content: space-between
+		a
+			width: 40px
+			height: 40px
+			position: relative
+			transition: all .3s ease
+			i
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+			&:hover
+				border-radius: 50%
+		.twitter
+			&:hover
+				background: rgba(85, 172, 238, .5)
+		.facebook
+			&:hover
+				background: rgba(59, 89, 152, .5)
+		.vk
+			&:hover
+				background: rgba(42, 88, 133, .5)
+		.social-link.twitter
+			i
+				font-size: 24px
+				color: #55acee
+			&:hover
+				i
+					color: #fff
+		.social-link.facebook
+			i
+				font-size: 21px
+				color: #3b5998
+			&:hover
+				i
+					color: #fff
+		.social-link.vk
+			i
+				font-size: 26px
+				color: #2a5885
+			&:hover
+				i
+					color: #fff
+
+
+/*================Customize inner-pages================*/
+.page-inner
+	.header-nav-wrapper
+		margin-bottom: 10px
+		box-shadow: 0 0 15px rgba(000,000,000,0.1)
+		&::before
+			display: none
+	.page-body-title
+		margin-bottom: 26px
+	.breadcrumb
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		list-style-type: none
+		margin: 0
+		padding: 0
+		font-size: 13px
+		font-family: "FuturaBold", sans-serif
+		margin-bottom: 20px
+		a
+			color: #474747
+	.breadcrumb-item + .breadcrumb-item
+		padding-left: 13px	
+	.breadcrumb-item + .breadcrumb-item::before
+		display: inline-block
+		padding-right: 13px
+		color: #474747
+		font-size: 9px
+		font-family: "Font Awesome 5 Free" 
+		font-weight: 900 
+		content: "\f054"
+	.breadcrumb-item.active
+		color: $accent
+
+/*Inner page our teachers*/
+.page-section.our-teachers
+	.teacher-card
+		width: 100%
+		height: 270px
+		box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+		margin-bottom: 30px
+		overflow: hidden
+		a
+			display: block
+			width: 100%
+			height: 100%
+			text-align: center
+			color: $accent
+			&:hover
+				text-decoration: none
+		.card-bg
+			height: 160px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+		.card-details
+			padding: 15px 15px 5px 15px
+		.card-text
+			max-height: 80px
+			overflow: hidden
+		p
+			font-size: 19px
+			font-family: "FuturaHeavy", sans-serif
+			line-height: 1
+			margin-bottom: 0
+		.patronymic
+			margin-bottom: 11px
+		.position
+			font-size: 16px
+			font-family: $default-font
+			color: #474747
+			line-height: 1
+
+/*Inner page teacher*/
+.page-section.teacher,
+.page-section.department
+	.teacher-info,
+	.boss-info
+		padding-top: 22px
+		font-family: "FuturaHeavy", sans-serif
+		a,p
+			margin-bottom: 14px
+			display: block
+			color: #474747
+			font-size: 16px
+			line-height: 1
+		.teacher-position,
+		.boss-position
+			font-size: 18px
+			margin-bottom: 23px
+	.teacher-name,
+	.boss-name
+		font-size: 20px
+		color: $accent
+		line-height: 1
+		margin-bottom: 13px
+	.teacher-image,
+	.boss-image
+		width: 100%
+		height: 200px
+		background-repeat: no-repeat
+		background-position: center 
+		background-size: cover
+	.teacher-bio,
+	.department-bio
+		margin-top: 40px
+		h3
+			margin-bottom: 18px
+		p
+			margin-bottom: 25px
+			font-family: $default-font
+			font-size: 16px
+			line-height: 1.5
+
+/*Inner page departments*/
+.page-inner.departments
+	.department
+		margin-bottom: 30px
+		transition: all .2s ease
+		&:hover
+			box-shadow: 0 0 15px rgba(000,000,000,0.3)
+
+/*Inner page department*/
+.page-inner.department
+	.department-projects
+		margin: 40px 0 
+		h3
+			margin: 15px 0 26px 0
+	.department-timetable
+		h3
+			margin-bottom: 30px
+	.department-plan
+		h3
+			margin: 16px 0
+	.department-table
+		width: 100%
+		margin-bottom: 22px
+		tr,th,td
+			width: 33.33%
+		th
+			font-family: "FuturaHeavy", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			padding: 15px 0
+		td
+			padding: 10px 18px
+			font-size: 16px
+			font-weight: 900
+			border: 1px solid #f2f2f2
+		td.accent
+			color: $accent
+	.department-lessons
+		margin-bottom: 32px
+		font-family: "FuturaHeavy", sans-serif
+		font-size: 16px
+	.department-faq
+		.faq-inner
+			margin-bottom: 36px
+		h3
+			margin-bottom: 14px
+		p
+			line-height: 1
+/*Inner page history*/			
+.page-inner.history
+	.history-text
+		margin-bottom: 28px
+		font-size: 16px
+		line-height: 1.45
+		strong
+			font-size: 18px
+			font-family: "FuturaBold", sans-serif
+			color: $accent
+	.history-text.accent
+		color: $accent
+		font-size: 18px
+	.history-images
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 28px
+	.history-image
+		width: 48%
+		height: 280px
+		background-repeat: no-repeat
+		background-position: center 
+		background-size: cover
+
+/*Customize inner page article*/
+.inner-page.article
+
+.article-card
+	margin-bottom: 30px
+	box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+	.event-bg
+		width: 100%
+		height: 300px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		background-color: $accent
+	.event-details
+		padding: 28px 30px 22px 30px
+	.event-cathegory
+		margin-bottom: 18px
+		font-size: 14px
+		font-family: "FuturaHeavy", sans-serif
+		text-transform: uppercase
+		color: $accent
+		line-height: 1
+	.event-title
+		margin-bottom: 6px
+	.event-location
+		margin-bottom: 10px
+	.event-time,
+	.event-subcathegory
+		strong
+			margin-right: 30px
+			font-size: 14px
+			font-family: "FuturaHeavy", sans-serif
+			text-transform: uppercase
+.article-text
+	p
+		margin-bottom: 25px
+		font-size: 16px
+		line-height: 1.5
+		&:last-of-type
+			margin-bottom: 35px
+.article-comm-form
+	margin-bottom: 35px
+	padding: 30px
+	background-color: #fafafa
+	.form-heading
+		margin-bottom: 34px
+		font-size: 14px
+		font-family: "FuturaBold", sans-serif
+		color: #474747
+		line-height: 1
+		text-transform: uppercase
+	.form-login
+		margin-bottom: 17px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.join
+			margin-right: 25px
+			font-size: 16px	
+			font-family: "FuturaBold", sans-serif
+			color: #474747
+		.login-socialnetwork
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			width: 105px
+			a
+				display: block
+				position: relative
+				width: 28px
+				height: 28px
+				transition: all .2s ease
+				i
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+				&:hover
+					border-radius: 50%
+					background: rgba(187,151,93,.5)
+					i
+						color: #fff
+				.fa-twitter
+					font-size: 19px
+					color: #55acee
+				.fa-vk
+					font-size: 20px
+					color: #2a5885
+				.fa-facebook-f
+					color: #3b5998
+.form-panel
+	.comm-name
+		margin-bottom: 11px
+		input
+			padding: 0 14px
+			width: 100%	
+			height: 38px
+			border: 1px solid #f2f2f2
+			transition: all .3s ease
+			&:focus
+				box-shadow: 0 0 12px rgba(000,000,000,0.1)
+	.comm-commentary
+		textarea
+			margin-bottom: 28px
+			padding: 4px 14px
+			width: 100%
+			min-height: 100px
+			border: 1px solid #f2f2f2		
+			transition: all .3s ease
+			&:focus
+				box-shadow: 0 0 12px rgba(000,000,000,0.1)
+	.comm-submit
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		button
+			margin-right: 30px
+			font-size: 13px
+			font-family: "FuturaMedium", sans-serif
+			line-height: 1
+			min-width: 240px
+			height: 40px
+			border: none
+			cursor: pointer
+			transition: all .3s ease
+			&:hover
+				background: #fff
+				box-shadow: 5px 5px $accent
+				color: $accent
+				text-decoration: none
+			&:active
+				transform: scale(.96)
+		p
+			font-size: 12px
+			line-height: 1.6
+			color: #474747
+
+/*Customize inner page contacts*/
+.page-section.contacts
+	.facility-panel
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 38px
+	.facility-contacts
+		width: 42%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		a,p
+			display: block
+			font-size: 16px
+			font-family: "FuturaBold", sans-serif 
+			color: #474747
+			span
+				margin-left: 15px
+				font-size: 14px
+				font-family: $default-font
+		.facility-email
+			margin-top: 15px
+			margin-bottom: 18px
+		.facility-web
+			color: #c4c4c4 
+	.facility-socials
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		a
+			width: 30px
+			height: 30px
+			position: relative
+			margin-right: 15px
+			transition: all .3s ease
+			&:hover:before
+				display: block
+				border-radius: 50%			
+			&:before
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				width: 50px
+				height: 50px
+				display: none
+			i
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				font-size: 22px
+			&:last-of-type
+				margin-right: 0
+		.twitter
+			color: #55acee
+			&:before
+				background: rgba(85, 172, 238, .2)
+		.facebook
+			color: #3b5998
+			&:before
+				background: rgba(59, 89, 152, .2)
+		.vk
+			color: #2a5885
+			&:before
+				background: rgba(42, 88, 133, .2)
+	.facility-image
+		width: 54%
+		height: 250px
+		background-repeat: no-repeat
+		background-position:  center
+		background-size: cover
+.other-facility
+	margin-bottom: 26px
+
+/*Customize inner page elibrary*/
+.elibrary-title
+	margin-bottom: 15px
+	font-size: 14px
+	font-family: "FuturaMedium", sans-serif
+	color: $accent
+	line-height: 1
+.elibrary-tabs,
+.projects-tabs,
+.timetable-tabs
+	margin-bottom: 32px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.tab
+		display: block
+		width: 204px
+		height: 40px
+		font-family: "FuturaMedium", sans-serif
+		font-size: 15px
+		font-weight: 700
+		background-color: #fff
+		border: 1px solid #f2f2f2
+		box-shadow: 0 0 15px rgba(000,000,000, .1)
+		color: $accent
+		line-height: 38px
+		text-align: center
+		transition: all .25s ease
+		cursor: pointer
+		&:hover
+			background: $accent
+			text-decoration: none
+			color: #fff
+	.tab.active
+		background-color: $accent
+		box-shadow: none
+		border: none
+		color: #fff
+.elibrary-cat
+	display: none
+.elibrary-cat.active
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.elibrary-book
+		width: 150px
+		height: 200px
+		margin-bottom: 30px
+		position: relative
+		box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+		cursor: pointer
+		.book-cover
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+			width: 100%
+			height: 100%
+		.book-info
+			background-color: rgba(71, 71, 71, .9)
+			height: 100%
+			width: 100%
+			position: absolute
+			left: 0
+			top: 0
+			padding: 12px 20px
+			display: none
+		&:hover
+			.book-info
+				display: block
+		.book-name, .book-author
+			font-size: 13px
+			font-family: "FuturaMedium", sans-serif
+			font-weight: 700
+			color: #fff
+		.book-name
+			margin-bottom: 10px
+		.btn.dwn-book
+			position: absolute
+			width: 100%
+			height: 40px
+			bottom: 0
+			left: 0
+			font-family: "FuturaMedium", sans-serif
+			font-weight: 700
+			line-height: 38px
+			text-transform: none
+			&:hover
+				background: darken($accent, 5%)
+				text-decoration: none
+				color: #fff
+
+/*Customize inner page projects*/
+.page-section.projects
+	.project-card
+		margin-bottom: 30px
+		width: 100%
+		height: 260px
+		cursor: pointer
+		box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+		.card-bg
+			display: block
+			width: 100%
+			height: 100%
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+	.projects-var
+		display: none
+	.projects-var.active
+		display: block
+
+/*Customize inner page evcalendar*/
+.page-inner.evcalendar
+	.breadcrumb
+		margin-bottom: 16px
+#calendar
+	margin-bottom: 30px	
+	.fc-left h2
+		font-size: 20px
+		font-family: $default-font
+		color: $accent
+		text-transform: capitalize
+		position: relative
+		&:after
+			content: "Нажмите на дату мероприятия для показа"
+			width: 270px
+			position: absolute
+			left: 150px
+			top: 50%
+			font-size: 14px
+			font-family: $default-font
+			color: #474747
+			transform: translateY(-50%)
+			text-transform: none
+	.fc-today-button
+		display: none
+	.fc-right
+	.fc-state-default
+		background: rgba(187, 151, 93, .8)
+		color: #fff
+		border: none
+		box-shadow: none
+		text-shadow: none
+		outline: none
+		transition: all .2s ease
+		&:hover
+			background: rgba(187, 151, 93, 1)
+		&:active
+			transform: scale(1.1)
+	.fc-button .fc-icon
+		top: -2px
+	.fc-day-header
+		background-color: #f2f2f2
+	td.fc-day
+		transition: all .15s ease
+		cursor: pointer
+		&:hover
+			background: #f2f2f2
+
+#dialog
+	z-index: 10
+	position: relative
+	width: 100% !important
+	width: 320px !important
+	padding: 5px
+	border: 1px solid #f2f2f2
+	background: #fff
+.dialog-form
+	padding: 20px
+	input
+		width: 100%
+		padding: 0 10px
+		border: none
+		border-bottom: 1px solid $accent
+		&:focus ~ .label-box label,
+		&:valid ~ .label-box label
+			transform: translateY(-20px)
+			font-size: 14px
+		&:focus ~ .label-box:before,
+		&:focus ~ .label-box:after
+			width: 50%
+	input#ev-finish-date ~ .label-box label,
+	input#ev-start-date ~ .label-box label
+			transform: translateY(-20px)
+			font-size: 14px
+	.label-box
+		position: relative
+		label
+			position: absolute
+			top: -30px
+			pointer-events: none
+			-webkit-transition-duration: .2s
+			-o-transition-duration: .2s
+			transition-duration: .2s
+			color: $accent
+		&::before, &::after
+    	position: absolute
+    	bottom: 1px
+    	width: 0
+    	height: 2px
+    	background-color: $accent
+    	-webkit-transition: width .3s ease
+    	-o-transition: width .3s ease
+    	transition: width .3s ease
+    	content: ""
+		&::before
+			left: 50%
+		&::after
+			right: 50%
+	.form-group
+		margin-bottom: 50px
+		&:last-of-type
+			margin-bottom: 30px
+	.btn
+		width: 100%
+		font-size: 14px
+		border: none
+		cursor: pointer
+		transition: all .25s ease
+		&:hover
+			background-color: darken($accent, 5%)
+.ui-dialog
+	width: 320px
+	z-index: 10
+	position: absolute
+.ui-button
+	padding: 0 10px
+	background: rgba(187, 151, 93, .8)
+	border: none
+	border-bottom: 1px solid #fff
+	color: #fff
+	cursor: pointer
+	transition: all .25s ease
+	&:hover
+		background: rgba(187, 151, 93, 1)
+.ui-dialog-titlebar
+	width: 320px
+	text-align: right
+.ui-dialog-title
+	display: none
+
+
+/*section after evcalendar*/
+.page-section.events
+	margin-bottom: 50px
+	.event-card
+		box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1)
+		transition: all .25s ease
+		min-height: 290px
+		&:hover
+			box-shadow: 0 1px 15px 0 rgba(12, 12, 13, 0.1)
+		a
+			display: block
+			text-decoration: none
+	.card-bg
+		width: 100%
+		height: 150px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	.card-details
+		padding: 14px 18px
+		position: relative
+		height: 140px
+		max-height: 140px
+		overflow: hidden
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	.card-title
+		margin-bottom: 7px
+		max-height: 20px
+		font-size: 20px
+		font-family: "FuturaHeavy", sans-serif
+		color: $accent
+		line-height: 1
+		overflow: hidden
+	.card-text
+		font-size: 16px
+		font-family: inherit
+		max-height: 52px
+		color: #474747
+		overflow: hidden
+	.card-date
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 0
+		font-family: "FuturaHeavy", sans-serif
+		line-height: 1
+		.date
+			font-size: 16px
+			color: #474747
+		.time
+			font-size: 14px
+			color: $accent
+			line-height: 1
+
+
+/*Custom inner page join and login*/
+.page-inner.join,
+.page-inner.login,
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7)  
+  background: linear-gradient(to right, #2c3e50, #bdc3c7) 
+.page-section.join,
+.page-section.login,
+	padding-top: 70px
+	min-height: 568px
+	text-align: center
+	h3
+		margin-bottom: 25px
+		color: #fff
+.join-form-wrap,
+.login-form-wrap
+	padding: 20px 40px
+	margin: 0 auto
+	max-width: 380px
+	width: 100%
+.join-form,
+.login-form
+	text-align: left
+	color: #fff
+	label
+		display: block
+		line-height: 1
+	input
+		padding: 0 15px
+		width: 100%
+		height: 40px
+		border: 1px solid transparent
+		&:focus
+			border-color: $accent
+			box-shadow: 0 0 25px $accent
+		&:focus:invalid,
+		&:focus:valid
+			border-color: $accent !important
+	input[type="password"]
+		margin-bottom: 25px
+	.field
+		position: relative
+		&::before
+			position: absolute
+			right: 5px
+			top: -5px
+			font-family: "FontAwesome"
+			color: #fff
+	.field.user::before
+		content: '\f007'
+	.field.email::before
+		content: '\f0e0'
+	.field.passw::before
+		content: '\f084'
+	.button-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		button
+			position: relative
+			width: 50px
+			height: 50px
+			background: #fff
+			border-radius: 50%
+			border: none
+			box-shadow: 0 0 15px $accent
+			cursor: pointer
+			transition: all .25s ease
+			outline: none
+			&::before
+				content: '✓'
+				position: absolute
+				left: 50%
+				top: 50%
+				font-size: 25px
+				font-family: "FuturaHeavy", sans-serif
+				font-weight: 900
+				color: $accent
+				transform: translate(-50%,-50%)
+			&:hover
+				background: $accent
+			&:hover:before
+				color: #fff
+.login-form
+	input[type="password"]
+		margin-bottom: 15px
+	.button-wrap
+		justify-content: space-between
+		.login-help
+			color: #fff
+			font-size: 14px
+		button
+			width: 45px
+			height: 45px
+
+/*Custom inner page location*/
+.page-inner.location 
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7)  
+  background: linear-gradient(to right, #2c3e50, #bdc3c7) 
+  position: relative
+	.page-content
+		padding: 0
+	.header-nav-wrapper
+		margin-bottom: 0
+	.page-footer
+		width: 100%
+		position: relative
+		margin-top: -282px
+		background: rgba(255,255,255, .8)
+		z-index: 2
+.page-section.location
+	min-height: 865px
+	.page-section-title
+		margin-bottom: 30px
+		text-align: center
+		color: #fff
+	.map
+		width: 100%
+		height: 865px
+		z-index: 1
+		background: url(../img/map.png) no-repeat center
+		background-size: cover
+
+/*Custom inner page timetable*/
+.page-inner.timetable,
+.page-inner.department
+	.group-title
+		margin-bottom: 30px
+		font-size: 20px
+		font-family: "FuturaHeavy", sans-serif
+		color: $accent
+		line-height: 1
+	.timetable-date
+		margin-bottom: 14px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		.day
+			font-size: 14px
+			font-family: "FuturaHeavy", sans-serif
+			text-transform: uppercase
+		.number
+			font-size: 14px
+			color: #c4c4c4
+.timetable-var
+	display: none
+.timetable-var.active
+	display: block
+.timetable-board
+	margin-bottom: 30px
+	min-height: 250px
+	background: repeating-linear-gradient(-45deg, #ebebeb, #ebebeb 1px, #fff 1px, #fff 8px)
+.lesson-board
+	padding: 14px 18px
+	min-height: 110px
+	background-color: #fff
+	box-shadow: 0 0 12px rgba(000,000,000,0.1)
+	font-weight: 900
+	transition: all .2s ease
+	&:not(:last-of-type)
+		margin-bottom: 30px
+	&:hover
+		box-shadow: 0 0 15px rgba(000,000,000,0.2)
+		transform: scale(1.05)
+	.lesson-info
+		margin-bottom: 15px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		color: $accent
+		line-height: 1
+		.time
+			font-size: 16px
+			line-height: 1.2
+	.lesson-teacher
+		margin-bottom: 15px
+		display: block
+		font-size: 14px
+		color: #c4c4c4
+		line-height: 1
+		text-decoration: none
+	.lesson-location
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		font-size: 14px
+		color: #474747
+		line-height: 1
+/*Customize page-inner achievements*/
+.achievement-card
+	margin-bottom: 30px
+	width: 100%
+	height: 270px
+	box-shadow: 0 0 15px rgba(000,000,000,0.1)
+	cursor: pointer
+	.card-bg
+		display: block
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: top
+		background-size: cover
+
+@import "media" // Always at the end
