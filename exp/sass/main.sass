@@ -1,0 +1,2669 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.5
+  font-family: $MontR
+  overflow-x: hidden
+  color: #323232
+  input, textarea
+      border: #666 1px solid
+      outline: none 
+      &:focus:required:invalid
+        border-color: red
+      &:required:valid
+        border-color: green
+  button, a
+    outline: none !important
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+h1
+  font-size: 56px
+  font-weight: normal
+  text-transform: uppercase
+  line-height: 1.1
+  letter-spacing: 10px
+h2
+  font-size: 30px
+  font-family: $MontL
+  text-transform: uppercase
+button
+  outline: none
+  cursor: pointer
+.page-section
+  padding: 85px 0
+.section-title
+  font-size: 30px
+  font-family: $MontB
+  text-transform: uppercase
+  text-align: center
+.btn
+  display: inline-block
+  padding: 10px 85px
+  border: 2px solid rgb(50, 50, 50)
+  border-radius: 5px
+  font-size: 14px
+  letter-spacing: 1.4px
+  text-align: center
+  text-transform: uppercase
+  transition: all .25s ease-out
+.btn:hover
+  text-decoration: none
+.btn-black
+  background-color: rgb(50, 50, 50)
+  color: #fff 
+.btn-black:hover
+  background-color: #fff
+  color: rgb(50, 50, 50)
+.btn-white
+  background-color: #fff
+  color: rgb(50, 50, 50)
+.btn-white:hover
+  background-color: rgb(50, 50, 50)
+  color: #fff
+
+/*Footer position fix*/
+.page-wrapper
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  height: 100vh
+  background: #fff
+.page-footer
+  margin-top: auto
+/*Page-header*/
+.page-header ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+.page-header ul li
+  display: inline-block
+.page-header li a
+  font-size: 14px
+  text-transform: uppercase
+  color: #323232
+  transition: all .25s ease-out
+  letter-spacing: .7px
+.page-header li a:hover,
+.header-top-contacts .link:hover
+  text-decoration: none
+  color: #c41137
+.header-top
+  background: #fff
+.header-top-nav li a,
+.header-top-contacts .link
+  min-height: 82px
+  line-height: 82px
+  display: inline-block
+.header-top li:not(:last-of-type)
+  margin-right: 27px
+.header-top-contacts
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  min-height: 82px
+  align-items: center
+.header-top-contacts .btn
+  padding: 10px 45px
+.header-top-contacts .link
+  color: inherit
+.logo 
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  height: 100%
+  align-items: center
+.logo img
+  max-width: 100%
+.header-bottom
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  background-color: rgb(244, 244, 244)
+.header-bottom li a
+  min-height: 107px
+  line-height: 107px
+  letter-spacing: 1.4px
+  display: block
+.header-bottom li:not(:last-of-type)
+  margin-right: 48px
+.header-search
+  height: 100%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  justify-content: center
+.header-search .btn-search
+  display: block
+  width: 18px
+  height: 18px
+  background: url(../img/search.svg) no-repeat center
+  background-size: cover
+  border: none
+  cursor: pointer
+  outline: none
+  transition: all .2s ease
+.header-close-btn.active
+  transform: scale(1)
+.header-close-btn
+  position: absolute
+  left: -50%
+  background: 0 0
+  border: none
+  width: 30px
+  height: 30px
+  text-align: center
+  color: #323232
+  cursor: pointer
+  z-index: 2
+  outline: 0
+  -webkit-transform: scale(0)
+  -ms-transform: scale(0)
+  transform: scale(0)
+  -webkit-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+  font-size: 21px
+.header-close-btn:hover
+  opacity: .3
+//.header-search.active .btn-search
+//  background: url(../img/close.svg) no-repeat center
+//  background-size: cover
+.header-search .btn-search:hover
+  opacity: .3
+.header-search
+  position: relative
+.header-search-form
+  position: absolute
+  right: calc(100% + 1px)
+  transition: all .25s ease-out
+  transform-origin: right center
+  height: 34px
+  transform: scale(0)
+.header-search.active .header-search-form
+  transform: scale(1)
+.header-search-form input
+  width: 886px
+  padding: 0 40px 0 10px
+  height: 100%
+  font-size: 14px
+  border: none
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1)
+.navobile-navigation
+  height: 100vh
+  display: none
+  margin: 0
+  padding: 0
+  background: #36383a
+.mobile-menu-btn.active
+  left: auto
+  right: 8%
+.mobile-menu-btn
+  display: none
+  position: fixed
+  left: 8%
+  width: 30px
+  height: 20px
+  text-align: center
+  cursor: pointer
+  z-index: 10
+  margin-right: auto
+  &:hover
+    span,
+    span::before,
+    span::after
+      background-color: $accent
+  span,
+  span::before,
+  span::after
+    display: block
+    content: ""
+    width: 100%
+    height: 1px
+    background-color: #323232
+    transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+  span::before
+    transform: translateY(-8px)
+  span::after
+    transform: translateY(6px)
+  span
+    position: relative
+    top: 8px
+.mobile-menu-btn.active span::before,
+.mobile-menu-btn.active span::after
+  width: 100%
+  background-color: $accent
+.mobile-menu-btn.active span 
+  background-color: transparent!important
+.mobile-menu-btn.active span::before
+  transform: rotate(45deg) translate(2px,1px)
+.mobile-menu-btn.active span::after
+  transform: rotate(-45deg) translate(0px,1px)
+.navobile-navigation li a
+  display: block
+  padding: 14px 15px
+  font-size: 14px
+  color: #ddd
+  text-shadow: 0 -1px rgb(34, 34, 34)
+  transition: all .2s ease-out
+.navobile-navigation li a:hover
+  background: rgba(0,0,0,0.1)
+  text-decoration: none
+.navobile-navigation li
+  border-bottom: 1px solid rgb(34, 34, 34)
+  border-top: 1px solid rgb(83, 83, 83)
+.navobile-navigation li .fa
+  margin-right: 10px
+  width: 15px
+.navobile-content
+  transition: all .25s ease-out
+.navobile-navigation
+  opacity: 0
+  transition: all .25s ease-out
+.navobile-navigation.navobile-navigation-visible
+  opacity: 1
+/*page-section intro*/
+@keyframes scaleimgbig
+  0%
+    transform: scale(1)  translateX(-60%)
+  20%
+    transform: scale(1.05) translateX(-50%)
+    opacity: 1
+  40%
+    transform: scale(1.1) translateX(-40%)
+    opacity: 1
+  60%
+    transform: scale(1.15) translateX(-30%)
+    opacity: 1
+  80%
+    transform: scale(1.2) translateX(-20%)
+    opacity: 1
+  85%
+    transform: scale(1) translateX(0)
+    opacity: 0
+  100%
+    opacity: 1
+@keyframes scaleimgsmall
+  0%
+    transform: scale(1.3)  translateY(-60%) translateX(20%)
+    opacity: 0
+  20%
+    transform: scale(1.3)  translateY(-50%) translateX(24%)
+    opacity: 0
+  40%
+    transform: scale(1.3)  translateY(-30%) translateX(28%)
+    opacity: 1
+  60%
+    transform: scale(1.3)  translateY(-20%) translateX(32%)
+    opacity: 1
+  80%
+    transform: scale(1.3)  translateY(-10%) translateX(36%)
+    opacity: 1
+  85%
+    transform: scale(1.3)  translateY(0) translateX(42%)
+    opacity: 0
+  90%
+    transform: scale(1)  translateY(0) translateX(0)
+    opacity: 0
+  100%
+    transform: scale(1)  translateY(0) translateX(0)
+    opacity: 1
+@keyframes movegrid
+  0%
+    transform: translateY(0) translateX(0)
+  20%
+    transform: translateY(15px) translateX(15px)
+  40%
+    transform: translateY(30px) translateX(30px)
+  60%
+    transform: translateY(45px) translateX(45px)
+  80%
+    transform: translateY(60px) translateX(60px)
+    opacity: 1
+  85%
+    transform: translateY(75px) translateX(75px)
+    opacity: 0
+  90%
+    transform: translateY(0) translateX(0)
+    opacity: 0
+  100%
+    transform: translateY(0px) translateX(0px)
+    opacity: 1
+@keyframes girlorange
+  0%
+    opacity: 0
+  20%
+    opacity: 0
+  40%
+    opacity: .25
+  60%
+    opacity: .5
+  90%
+    opacity: .8
+  100%
+    opacity: 1
+.intro-slide.odd .intro-image    
+  opacity: 0
+.intro-slide.slick-active.odd .intro-image
+  animation: girlorange 1s 1 linear
+  animation-delay: .3s
+  animation-fill-mode: forwards
+.intro-slide.slick-active.odd-second .thumbnail-image
+  animation: scaleimgsmall 7s 1 linear
+  animation-delay: .7s
+  animation-fill-mode: forwards
+.intro-slide.slick-active.odd-second .intro-image
+  animation: scaleimgbig 8s 1 linear
+  animation-fill-mode: forwards
+.intro-slide.slick-active.odd-second
+  position: relative
+  overflow: hidden
+.intro-slide.slick-active.odd-second::before
+  content: ""
+  position: absolute
+  left: -10%
+  top: -15%
+  width: 110%
+  height: 115%
+  background: url(../img/line.png) repeat
+  z-index: 2
+  animation: movegrid 7s 1 linear
+.page-section.intro
+  padding: 0
+.intro-slider
+  height: 100%
+  min-height: 697px
+.intro-slide 
+  min-height: 697px
+  outline: none
+.intro-slide.odd
+  background-color: #ebebeb
+.intro-slide.slick-active h1,
+.intro-slide.slick-active p
+  left: 0
+  opacity: 1
+.intro-content h1
+  margin-top: 132px
+  margin-bottom: 30px
+  position: relative
+  left: -200%
+  opacity: 0
+  transition: all 1s ease
+.intro-content p
+  font-size: 18px
+  line-height: 1.25
+  position: relative
+  left: -200%
+  opacity: 0
+  transition: all 1s ease
+  transition-delay: .15s
+//Counter fade animation
+.course-counter
+  margin-bottom: 40px
+  min-height: 130px
+.course-counter .a,
+.course-counter .b,
+.course-counter .c
+  transition: all 1s ease
+  opacity: 0
+  transform: scale(0)
+.intro-slide.slick-active .course-counter .a,
+.intro-slide.slick-active .course-counter .b,
+.intro-slide.slick-active .course-counter .c
+  transform: scale(1)
+  opacity: 1
+.intro-slide.slick-active .course-counter .b
+  transition-delay: 1s
+.intro-slide.slick-active .course-counter .c
+  transition-delay: 2s
+.course-counter span
+  display: inline-block
+  margin-bottom: 18px
+  font-size: 18px
+  font-family: $MontM
+.course-counter .clock
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+.course-counter .column .timer
+  margin-bottom: 5px
+  font-size: 56px
+  line-height: 1
+.course-counter .column .text
+  letter-spacing: 0.8px
+  text-align: left
+  text-transform: uppercase
+.course-counter .column:not(:last-of-type)
+  margin-right: 30px
+.intro-content .btn:hover
+  background-color: transparent
+.intro-slide.odd .intro-image
+  max-width: 517px
+  height: 517px
+  margin-top: 90px
+  margin-left: auto
+  border-radius: 50%
+.intro-slide.odd .intro-image img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+  border-radius: 50%
+.intro-slider
+  position: relative
+.intro-slider .slider-arrow
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 45px
+  height: 45px
+  background: rgba(0,0,0,0.3)
+  border: none
+  z-index: 2
+  cursor: pointer
+  outline: none
+  transition: all .25s ease-in
+.intro-slider .slider-arrow:hover
+  background: rgba(0,0,0,0.6)
+.intro-slider .slide-arrow-left
+  left: 20px
+.intro-slider .slide-arrow-left::before
+  content: "\f104"
+  position: absolute
+  font-size: 36px
+  font-family: "fontawesome"
+  font-weight: bold
+  top: 50%
+  right: 50%
+  transform: translate(50%,-50%)
+  color: #fff
+.intro-slider .slide-arrow-right::before
+  content: "\f105"
+  position: absolute
+  font-size: 36px
+  font-family: "fontawesome"
+  font-weight: bold
+  top: 50%
+  right: 50%
+  transform: translate(50%,-50%)
+  color: #fff
+.intro-slider .slide-arrow-right
+  right: 20px
+.slider-dots
+  position: absolute
+  width: 100%
+  bottom: 60px
+  margin: 0
+  padding: 0
+  text-align: center
+  list-style-type: none
+.slider-dots li
+  display: inline-block
+  margin: 0 2px
+  width: 16px
+  height: 16px
+  background: rgba(0,0,0,0.2)
+  border-radius: 50%
+.slider-dots li.slick-active
+  background: rgba(0,0,0,0.8)
+.intro-slide.odd-second .thumbnail-image 
+  max-width: 293px
+  height: 293px 
+  margin-bottom: 20px
+  opacity: 0
+.intro-slide.odd-second .thumbnail-image img
+  width: 100%
+  height: 100%
+  object-fit: cover
+.intro-slide.odd-second .intro-image
+  max-width: 260px
+  height: 100px
+  margin-top: 0
+  min-height: 697px
+  border-radius: 0
+.intro-slide.odd-second .intro-image img
+  border-radius: 0
+.intro-event-subtitle
+  font-size: 25px
+  font-family: $MontM
+  color: #fff
+  text-transform: uppercase
+  margin-bottom: 20px
+.intro-event-title
+  font-size: 56px
+  font-family: $MontB
+  line-height: 1.1
+  color: #fff
+  margin-bottom: 15px
+.intro-slide.odd-second
+  background-color: #e2d6d1
+  background: url(../img/introbgm.png) no-repeat center
+  background-size: cover
+.slider-dots li button
+  background: none
+  border: none
+  font-size: 0
+  outline: none
+.intro-content .full-link
+  font-size: 25px
+  font-family: $MontB
+  color: #fff
+.intro-content .full-link .fa
+  font-weight: normal
+  font-size: 20px
+/*page-section technology*/
+.page-section.technology
+  text-align: center
+  background-color: #fff
+.page-section.technology .section-title
+  margin-bottom: 38px
+.technology-image img
+  max-width: 100%
+  margin: 0 32px
+.technology-image 
+  margin-bottom: 40px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+.page-section.technology p
+  margin-bottom: 32px
+  line-height: 1.8
+  color: #818181
+.technology-links
+  margin-top: 55px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.technology-links .btn
+  width: 45%
+  padding: 10px 
+/*page-section study*/
+.course-card
+  max-width: 300px
+  min-height: 337px
+  padding: 26px 26px 50px 26px
+  margin-top: 95px
+  background-color: #fff
+  margin-left: 0
+  color: #323232
+  margin-right: 17px
+  vertical-align: top
+  white-space: normal
+  cursor: pointer
+  transition: all .25s ease-out
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.mCSB_container
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: flex-start
+  width: 150% !important // up this count if you need more cards
+.course-card:hover
+  transform: translateY(-16px)
+.study-right-side
+  overflow-x: auto
+  white-space: nowrap
+  height: 516px
+.course-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  font-family: $MontL
+  font-size: 14px
+  margin-bottom: 15px
+.course-title
+  font-size: 18px
+  font-family: $MontL
+.course-description
+  font-size: 12px
+  margin-bottom: 20px
+  max-height: 36px
+  overflow: hidden
+  text-overflow: ellipsis
+.course-miniature
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: flex-end
+  margin-top: auto
+.course-miniature .course-image
+  width: 55%
+.course-miniature img
+  max-width: 100%
+  height: auto
+.course-miniature .link
+  font-size: 12px
+  color: inherit
+  text-transform: uppercase
+  text-decoration: underline
+.course-miniature .link:hover
+  text-decoration: none
+//Custom horizontal scroll
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger
+  width: 140px !important
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail
+  background: #e5e4e9 !important
+  opacity: 1 !important
+.mCSB_scrollTools .mCSB_draggerRail,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  border-radius: 0 !important
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  background: #cecdd1 !important
+.mCSB_scrollTools.mCSB_scrollTools_horizontal
+  bottom: -1px !important
+
+/*page-section blog*/
+.page-section.blog
+  text-align: center
+  background: #fff
+.page-section.blog .section-title
+  text-transform: none
+.page-section.blog .section-subtitle
+  display: block
+  margin-bottom: 5px
+  color: #212121
+  line-height: 1.7
+.blog-tabs,
+.inner-blog-tabs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  margin: 45px 0
+.blog-tabs .blog-tab,
+.inner-blog-tabs .inner-blog-tab
+  padding: 12px 15px  
+  border: 1px solid transparent
+  color: #212122
+  text-transform: uppercase
+  cursor: pointer
+  line-height: 1
+  transition: all .25s ease-out
+.blog-tabs .blog-tab.active,
+.inner-blog-tabs .inner-blog-tab.active
+  border: 1px solid #2d2d2d
+.blog-tabs .blog-tab:first-of-type,
+.inner-blog-tabs .inner-blog-tab:first-of-type
+  text-transform: none
+.blog-card
+ display: none
+ font-size: 12px
+ text-align: left
+ margin-bottom: 30px
+.blog-card.active
+  display: block
+.blog-card-image
+  margin-bottom: 22px
+  height: 232px
+  width: 100%
+  background: #e8e8e8
+.blog-card-image img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.blog-card h4
+  margin-bottom: 0
+  font-family: $MontB
+  font-size: 16px
+.blog-breadcrumb
+  list-style-type: none
+  margin: 0
+  padding: 0
+  font-family: $MontS
+.blog-breadcrumb-item
+  display: inline-block
+.blog-breadcrumb-item:first-of-type
+  color: #909090
+.blog-breadcrumb-item + .blog-breadcrumb-item::before
+  display: inline-block
+  padding: 0 .2rem
+  color: #ccc
+  content: "/"
+  font-family: $MontS
+.blog-card-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+.blog-date a
+  color: #909090
+.blog-card .full-article-link
+  color: #323232
+  text-transform: uppercase
+  text-decoration: underline
+.blog-card .full-article-link:hover
+  text-decoration: none
+.blog-card-description p
+  margin-bottom: 10px
+  height: 54px
+  overflow: hidden
+  text-overflow: ellipsis
+.blog-cards .btn
+  margin: 0 auto
+  margin-top: 41px
+  cursor: pointer
+  padding: 10px 127px
+  display: block
+/*page-section vote*/
+.page-section.vote
+  padding: 0
+.vote-wrap,
+.study-wrap
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  min-height: 516px
+.vote-left-side
+  width: 57%
+  background-color: #f1f0f5
+  padding: 95px 30px 80px 0
+.vote-right-side
+  width: 43%
+  background-color: #e8e1db
+  padding: 95px 0 80px 97px
+.study-left-side
+  width: 43%
+  background-color: #e8e1db
+  padding: 95px 97px 80px 0
+.study-right-side
+  width: 57%
+  background-color: #f1f0f5
+  padding: 0px 0 0 30px
+  position: relative
+.vote-card
+  max-width: 585px
+  height: 100%
+  padding: 26px
+  background-color: #fff
+  margin-left: auto
+  color: #323232
+.vote-card .vote-name
+  margin-bottom: 20px
+  font-size: 18px
+  font-family: $MontL
+/*=======Vote-form=======*/
+.vote-form .vote-list
+  list-style-type: none
+  margin: 0 0 20px 0
+  padding: 0
+  font-size: 14px
+  line-height: 1
+.vote-form label
+  position: relative
+.vote-form .radio:not(checked) + label::before
+  content: ''
+  position: absolute
+  top: 50%
+  left: -20px
+  width: 12px
+  height: 12px
+  background: #fff
+  border: 2px solid rgb(152, 152, 152)
+  box-sizing: border-box
+  border-radius: 50%
+  transform: translateY(-50%)
+.vote-form .radio:not(checked)
+  position: absolute
+  opacity: 0
+.vote-form .radio:not(checked) + label::after
+  content: ''
+  position: absolute
+  top: 50%
+  left: -20px
+  width: 12px
+  height: 12px
+  background: #fff
+  box-sizing: border-box
+  border-radius: 50%
+  transform: translateY(-50%)
+  opacity: 0
+.vote-form .radio:checked + label::after  
+  opacity: 1
+  border: 4px solid rgb(50, 50, 50)
+.vote-form .btn
+  padding: 8px 38px
+  font-size: 12px
+  cursor: pointer
+.vote-list li
+  padding-left: 24px
+  margin-bottom: 10px
+/*=======Vote-result=======*/
+.vote-result,
+.study-result
+  max-width: 265px
+  height: 100%
+  margin-right: auto
+  text-align: center
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.study-result
+  margin-right: 0
+  margin-left: auto
+.vote-title,
+.vote-subtitle,
+.study-title,
+.study-subtitle
+  font-family: $MontB
+  text-transform: uppercase
+.vote-subtitle,
+.study-subtitle
+  display: block
+  margin-bottom: 45px
+  font-size: 30px
+  line-height: 1.33
+.vote-cathegory,
+.study-cathegory
+  margin-bottom: 20px
+  word-wrap: break-word
+  color: #818181
+.vote-result .btn,
+.study-result .btn
+  padding: 10px
+  width: 100%
+  margin-top: auto
+  font-size: 14px
+.vote-result .btn:hover,
+.study-result .btn:hover
+  background-color: transparent
+/*page-section feedback*/
+.page-section.feedback
+  background-color: #f8f8f8
+  padding: 58px 0 110px 0
+.page-section.feedback .section-title
+  margin-bottom: 50px
+.feedback-links
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+.feedback-links .btn
+  max-width: 360px
+  width: 100%
+  padding: 17px 10px
+  margin: 0 15px
+  color: inherit
+  font-family: $MontB
+.feedback-links .btn:hover
+  background: #323232
+  color: #fff
+.inner-page.forum .feedback-links .btn
+  color: #fff
+.inner-page.forum .feedback-links .btn:hover
+  color: #323232
+  background: transparent
+/*Yandex map*/
+.map
+  min-height: 475px
+  width: 100%
+/*page footer*/
+.page-footer
+  padding: 58px 0
+  background-color: #000000
+  color: #fff
+  font-size: 14px
+.footer-logo
+  text-align: center
+.footer-logo img
+  max-width: 228px
+  width: 100%
+  height: auto
+.footer-info
+  padding-left: 38px
+.footer-address
+  margin-bottom: 5px
+.page-footer .phone-link
+  color: inherit 
+  transition: all .2s ease-out
+.page-footer .phone-link:hover
+  text-decoration: none
+  color: #c41137
+.footer-top
+  margin-bottom: 28px
+.footer-navigation
+  text-align: right
+.footer-navigation .link
+  color: inherit
+  text-transform: uppercase
+  text-decoration: underline
+.footer-navigation .link:not(:first-of-type)
+  margin-left: 50px
+.footer-navigation .link:hover
+  text-decoration: none
+.footer-info .social-links
+  display: inline-block
+  margin-left: 8px
+.footer-info .social-link
+  display: inline-block
+  width: 20px
+  height: 20px
+.footer-info .social-link:not(:last-of-type)
+.social-link.instagram 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)
+  background-clip: text
+.social-link.instagram i
+  font-size: 16px
+  color: transparent
+  display: block
+.social-link.facebook
+  color: #3b5998
+.social-link.vkontakte
+  color: #5b88bd
+/*Popup*/
+.form-popup
+  position: relative
+  max-width: 630px
+  margin: 0 auto
+  padding: 30px 57px
+  background-color: #fff
+.mfp-close-btn-in .mfp-close
+  right: 10px
+  font-size: 50px
+  font-family: $MontB
+  color: #000
+.form-popup .form-heading
+  font-size: 28px
+  font-family: $MontS
+  text-align: center
+  line-height: 1.3
+  margin-bottom: 30px
+.form-popup .form-field
+  height: 52px
+.form-popup .form-field:not(:last-of-type)
+  margin-bottom: 28px
+.form-popup .form-field input
+  padding: 2px 10px
+  height: 100%
+  width: 100%
+  color: #5E5E5E
+  text-overflow: ellipsis
+  background-color: rgba(236, 241, 245, 1)
+  border: none
+  border-radius: 3px
+  font-size: 14px
+
+.form-popup .btn
+  margin: 0 auto
+  padding: 10px 66px
+  display: block
+  cursor: pointer
+  background-color: rgba(14, 0, 0, 1)
+  border-radius: 0
+  font-size: 13px
+  font-family: $MontS
+  letter-spacing: 0
+  margin-bottom: 24px
+.form-popup .btn:hover
+  background: transparent
+  color: #000
+.form-popup .help-text
+  font-size: 14px
+  text-align: center
+//.mCSB_scrollTools .mCSB_draggerRail
+  //height: 12px !important
+  //margin: 2px 0 !important
+//Custom horizontal scroll end
+
+/*=============Inner pages=============*/
+.site-navigation
+  margin: 42px 0 10px 0
+  text-align: center
+.site-navigation .breadcrumb
+  list-style-type: none
+  margin: 0
+  padding: 0
+  margin-bottom: 12px
+.site-navigation .breadcrumb li 
+  display: inline-block
+.breadcrumb-item + .breadcrumb-item::before
+  display: inline-block
+  padding: 0 0.5rem
+  content: "/"
+.site-navigation .breadcrumb li,
+.site-navigation .breadcrumb a
+  font-size: 11.5px
+  font-family: $MontR
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 0.8px
+  color: #000000
+.site-navigation .breadcrumb-item.active
+  color: #818181
+/*inner-page login-page*/
+.login-page .page-title,
+.dashboard-page .page-title
+  text-transform: none
+.page-section.authorize
+  padding: 18px 0 40px 0
+.authorize-form-wrap
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+.authorize-form
+  max-width: 363px
+  width: 100%
+  text-align: center
+  display: none
+#authorize-form,
+#reg-form
+  display: none
+#authorize-form.active,
+#reg-form.active
+  display: block
+.authorize-form .form-heading
+  font-size: 30px
+  font-family: $MontB
+  text-align: center
+  margin-bottom: 25px
+.authorize-form .form-field
+  height: 50px
+.authorize-form .form-field:not(:last-of-type)
+  margin-bottom: 16px
+.authorize-form .form-field input
+  height: 100%
+  width: 100%
+  padding: 0 30px
+  border: 1px solid #323232
+  font-size: 12px
+  text-overflow: ellipsis
+.authorize-form .btn
+  font-size: 14px
+  width: 100%
+  cursor: pointer
+  margin: 8px 0 20px 0
+  text-align: center
+.authorize-form .help-text
+  text-transform: uppercase
+  font-size: 14px
+.authorize-form .help-text .link
+  color: #204dcd
+  text-decoration: underline
+  letter-spacing: 1.4px
+.authorize-form .help-text .link:hover
+  text-decoration: none
+/*inner-page dashboard-page*/
+.page-section.dashboard .toolbar-user
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  height: 100%
+  align-items: center
+.page-section.dashboard .toolbar
+  min-height: 67px
+  background-color: #f1f0f5
+  margin-bottom: 55px
+.page-section.dashboard
+  padding: 20px 0 63px 0
+.toolbar .user-picture
+  display: inline-block
+  width: 41px
+  height: 41px
+  border-radius: 50%
+  line-height: 1
+  margin-right: 44px
+.toolbar .user-picture img
+  width: 100%
+  height: auto
+  object-fit: cover
+  border-radius: 50%
+.toolbar .user-name
+  font-size: 18px
+  font-family: $MontS
+.toolbar-nav ul
+  list-style: none
+  margin: 0
+  padding: 0
+  font-size: 0
+.toolbar-nav li
+  display: inline-block
+  font-size: 16px
+.toolbar .link
+  display: block
+  height: 67px
+  line-height: 67px
+  color: inherit
+  padding: 0 20px
+  transition: all .25s ease-out
+.toolbar-nav li .link:hover,
+.toolbar-nav li .link.active
+  text-decoration: none
+  background-color: #f9f9f9
+.toolbar-logout
+  text-align: right
+  font-size: 18px
+  font-family: $MontS
+.toolbar-logout .link
+  text-decoration: underline
+  padding: 0
+.toolbar-logout .link:hover
+  text-decoration: none
+.toolbar-logout .logout-link .fa
+  margin-right: 5px
+.page-section.dashboard .tabs .selector
+  display: none
+.page-section.dashboard .tabs-content
+  display: none
+.page-section.dashboard .tabs-content#user-tab1
+  display: block
+.page-section.dashboard .tabs-title
+  margin-bottom: 37px
+  width: 100%
+  text-transform: none
+  letter-spacing: 0
+.tabs-content .tabs-card
+  margin-bottom: 32px
+  min-height: 144px
+.tabs-content .tabs-card
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  padding: 20px 16px 15px 16px
+  background-color: #f3f3f3
+.tabs-content.achieve .tabs-card
+  background: none
+  border: 3px solid transparent
+  align-items: center
+  padding: 20px 16px 20px 30px
+  min-height: 143px
+.tabs-content.achieve .card-content
+  padding-top: 0
+.tabs-content.achieve .card-picture
+  background-color: transparent
+  width: 108px
+  height: 85px
+  margin-right: 24px
+.tabs-content .card-description
+  font-size: 12px
+.tabs-content.achieve .achieve-card-g
+  border-color: #fee54b
+.tabs-content.achieve .achieve-card-g .card-picture
+  background: url(../img/page-dashboard/Xg.png) no-repeat center
+  background-size: contain
+.tabs-content.achieve .achieve-card-s
+  border-color: #d4d4d4
+.tabs-content.achieve .achieve-card-s .card-picture
+  background: url(../img/page-dashboard/Xs.png) no-repeat center
+  background-size: contain
+.tabs-content.achieve .achieve-card-b
+  border-color: #c37c39
+.tabs-content.achieve .achieve-card-b .card-picture
+  background: url(../img/page-dashboard/Xb.png) no-repeat center
+  background-size: contain
+.tabs-content .card-picture
+  min-width: 109px
+  width: 109px
+  height: 109px
+  display: block
+  margin-right: 15px
+  background-color: #f8f8f8
+.tabs-content .card-content
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  padding-top: 5px
+  width: 100%
+.tabs-content .media-card .card-content
+  justify-content: center
+  align-items: center
+.tabs-content .media-card button
+  background: none
+  border: none
+  font-size: 45px
+  font-family: $MontL
+  cursor: pointer
+  margin-right: 5px
+.tabs-content .more-items
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  font-family: $MontB
+  color: #929293
+  letter-spacing: .8px
+.tabs-content .card-title
+  font-size: 18px
+  font-family: $MontS
+  margin-bottom: 12px
+.tabs-content .card-subtitle
+  font-size: 12px
+.tabs-content .card-content .link
+  font-size: 12px
+  text-transform: uppercase
+  color: inherit
+  margin-top: auto
+  text-decoration: underline
+.tabs-content .card-content .link:hover
+  text-decoration: none
+.tabs-content .card-picture img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.user-date .user-picture
+  width: 100%
+  max-width: 263px
+  height: 254px
+  position: relative
+  background-color: #f0f0f0
+  cursor: pointer
+.user-date .user-picture img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.user-picture-change
+  width: 0
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  background-color: #f3f3f3
+  opacity: .9
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  text-align: center
+  opacity: 0
+  transform: scale(0)
+  transition: all .25s ease-out
+  transform-origin: right left
+.user-date .user-picture:hover .user-picture-change
+  width: 100%
+  opacity: .9
+  transform: scale(1)
+.user-picture-change .change-icon
+  display: block
+  width: 32px
+  height: 25px
+  background: url(../img/page-dashboard/photo.svg) no-repeat center
+  background-size: contain
+  margin-bottom: 8px
+.user-picture-change .link
+  font-size: 12px
+  color: inherit
+  line-height: 1.2
+  text-decoration: none
+.user-private-date
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  margin-top: -12px
+.user-private-date span
+  display: block
+  font-size: 12px
+.user-private-date .date-cathegory
+  display: block
+  padding: 12px 16px
+  min-height: 65px
+  color: inherit
+  text-decoration: none
+  position: relative
+  transition: all .2s ease-out
+.user-private-date .date-cathegory:hover
+  background-color: #f3f3f3
+.user-private-date .date-cathegory:hover:after
+  opacity: .4
+.user-private-date .change-param
+  font-family: $MontS
+  font-size: 18px
+.user-private-date .date-cathegory::after
+  content: "\f040"
+  position: absolute
+  right: 30px
+  top: 50%
+  transform: translateY(-50%)
+  font-size: 20px
+  font-family: "fontawesome"
+  opacity: 0
+  transition: all .2s ease-out
+/*inner-page vacancy*/
+.page-section.vacancy
+  padding: 15px 0 45px 0
+.vacancy-intro
+  margin-bottom: 60px
+  color: #818181
+  text-align: center
+.vacancy-intro p 
+  margin-bottom: 58px
+  text-align: left
+.vacancy-menu
+  max-width: 100%
+  border: 2px solid #f3f3f3
+  border-bottom: none
+  overflow: hidden
+.vacancy-menu ul
+  margin: 0
+  padding: 0
+  list-style: disc
+.vacancy-menu ul li ul
+  margin-bottom: 46px
+  margin-left: 15px
+.vacancy-menu ul li ul li
+  margin-bottom: 5px
+.vacancy-menu > ul > li
+  position: relative
+  font-size: 14px
+.vacancy-menu > ul > li > a
+  display: flex
+  padding: 15px 65px
+  font-size: 18px
+  font-family: $MontS
+  background: #fff
+  border-bottom: 2px solid #f3f3f3
+  text-transform: uppercase
+  text-decoration: none
+  color: #323232
+  outline: 0 
+  position: relative
+  align-items: center
+.vacancy-menu > ul > li > a span
+  position: absolute
+  right: 90px
+  transition: all .25s ease-out
+.vacancy-menu > ul > li > a span:hover
+  border-bottom: 1px solid transparent
+.vacancy-menu .active .show-list
+  display: none
+.vacancy-menu .hide-list
+  display: none
+.vacancy-menu .show-list
+  display: block
+.vacancy-menu .active .hide-list
+  display: block
+.vacancy-menu span
+  font-size: 12px
+  border-bottom: 1px solid #7f7f7f
+.vacancy-menu .hide-list
+  display: none
+.vacancy-menu > ul > li > a .fa
+  margin-left: auto
+  font-size: 22px
+  line-height: 1
+  transition: all .25s ease-out
+.vacancy-menu > ul > li > a.active .fa 
+  transform: rotate(180deg)
+.vacancy-menu .sub .vacancy-info
+  display: none
+  overflow: hidden
+  background: #eee
+  padding: 43px 65px 45px 65px
+.vacancy-info .list-title
+  font-size: 14px
+  font-family: $MontB
+  text-transform: uppercase
+.vacancy-info .btn
+  display: block
+  max-width: 360px
+  margin: 0 auto
+/*inner-page review*/
+.page-section.review
+  padding: 10px 0 60px 0
+.page-section.review .review-intro
+  line-height: 1.875
+  color: #818181
+.page-section.review .hrline
+  border: 0
+  border-top: 1px solid #eeeeee
+  margin: 30px 0 48px 0
+.page-section.review .review-card
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 40px
+.page-section.review .review-card.reply-card
+  padding-left: 30px
+.review-card .review-card-image
+  min-width: 90px
+  height: 90px
+  max-width: 90px
+  margin-right: 30px
+  background: url(../img/page-review/defbg.png )
+  background-repeat: no-repeat
+  background-position: center 
+  background-size: cover
+.review-card .review-card-image img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.review-card .review-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 18px
+  line-height: 1
+.review-card-body
+  max-width: 625px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.review-card.reply-card .review-card-body
+  max-width: 540px
+.review-card .review-text
+  font-size: 12px
+  color: #818181
+  line-height: 2
+  margin-bottom: 5px
+.review-card .review-author
+  margin-right: 50px
+  font-size: 14px
+  font-family: $MontB
+.review-card .review-date
+  font-size: 14px
+.amount-field
+  width: 90px
+  height: 28px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  background: #f2f2f2
+.review-vote
+  margin-left: auto
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+.amount-field button  
+  width: 33.33%
+  -webkit-box-flex: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+  border: none
+  font-size: 18px
+  line-height: 1.7
+  font-weight: 700
+  color: #323232
+  background: none
+  outline: none
+.amount-field button:hover
+  background: #dcdcdc
+.amount-field .amount
+  width: 33.33%
+  -webkit-box-flex: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+  border: none
+  line-height: inherit
+  text-align: center
+  background: #fff
+  z-index: 2
+  font-size: 12px
+  font-family: $MontB
+input[type="number"] 
+  -moz-appearance: textfield
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button       
+  -webkit-appearance: none
+  margin: 0
+.review-reply
+  font-size: 12px
+  text-transform: uppercase
+  text-decoration: underline
+  transform: scale(0)
+  opacity: 0
+  transition: all .25s ease-out
+  margin-top: auto
+.review-reply .btn-reply
+  color: inherit
+.review-reply .fa
+  margin-right: 5px
+.review-card-body:hover .review-reply
+  transform: scale(1)
+  opacity: 1
+.review-form-wrap
+  max-width: 602px
+.review-form
+  color: #818181
+.review-form .form-row
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.review-form .form-field
+  width: 49.5%
+  height: 50px
+  margin-bottom: 8px
+.review-form .form-field.textarea
+  width: 100%
+  height: 138px
+.review-form .form-field input
+  height: 100%
+  width: 100%
+  background: #eeeeee
+  border: none
+  font-size: 12px
+  padding: 0 20px
+  text-overflow: ellipsis
+.review-form textarea
+  width: 100%
+  height: 100%
+  background: #eeeeee
+  border: none
+  padding: 20px 
+  font-size: 12px
+  resize: none
+.review-form .load-field
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  background-color: #eeeeee
+  font-size: 12px
+  position: relative
+.review-form .load-field-icon
+  display: inline-block
+  width: 24px
+  height: 18px
+  background: url(../img/page-review/load-icon.svg) no-repeat center
+  background-size: cover
+  margin-right: 10px
+.review-form .load-field input
+  position: absolute
+  left: 0
+  top: 0
+  opacity: 0
+  cursor: pointer
+.review-form .example-captcha
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  font-size: 12px
+  text-transform: uppercase
+  background: #eeeeee
+.review-form .btn
+  border-radius: 0
+  margin-top: 12px
+  cursor: pointer
+.review-form-title
+  font-size: 18px
+  text-transform: uppercase
+  margin-bottom: 30px
+/*inner-page contacts*/
+.inner-page.contacts .map
+  height: 370px
+  min-height: 370px
+  margin-top: 16px
+.page-section.contacts
+  background-color: #f2f2f2
+  padding: 55px 0
+.page-section.contacts .section-title
+  text-transform: none
+  text-align: left
+  margin-bottom: 26px
+.contacts-form-wrap
+  max-width: 570px
+.contacts-form-wrap .form-title
+  font-size: 30px
+  font-family: $MontB
+  margin-bottom: 28px
+.contacts-question-form
+  font-size: 12px
+  color: #818181
+.form-row
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.contacts-question-form .form-field
+  height: 50px
+  width: 48%
+  margin-bottom: 26px
+.contacts-question-form .form-field input
+  height: 100%
+  width: 100%
+  background-color: transparent
+  border: 2px solid #323232
+  padding: 0 20px
+  text-overflow: ellipsis
+.contacts-question-form .form-field.textarea
+  height: 142px
+  width: 100%
+.contacts-question-form textarea
+  height: 100%
+  width: 100%
+  resize: none
+  background-color: transparent
+  border: 2px solid #323232
+  padding: 15px 20px
+.contacts-content
+  padding-right: 80px
+.contacts-row
+  margin-bottom: 30px
+.contacts-row h4
+  font-size: 18px
+  font-family: $MontS
+  margin-bottom: 0
+.contacts-row .link
+  color: inherit
+  text-decoration: none
+  transition: all .2s ease
+.contacts-row .link:hover
+  color: $accent
+.contacts-social-links
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.contacts-social-links .social-link
+  width: 29px
+  height: 29px
+  border: 1px solid #323232
+  border-radius: 50%
+  color: #322323
+  text-align: center
+  line-height: 1
+  position: relative
+  transition: all .25s ease-out
+  box-shadow: 0 0 0px 0px rgba(0,0,0,0.5)
+.contacts-social-links .social-link:hover
+  background: #323232
+  box-shadow: 0 0 20px 2px rgba(0,0,0,0.6)
+.contacts-social-links .social-link:hover i
+  color: #fff
+.contacts-social-links .social-link:not(:last-of-type)
+  margin-right: 11px
+.contacts-social-links .instagram
+  background: transparent  
+.contacts-social-links .social-link.instagram i
+  color: #323232
+.contacts-social-links .social-link.instagram:hover i
+  color: #fff
+.contacts-social-links .social-link i
+  position: absolute
+  right: 50%
+  top: 50%
+  transform: translate(50%,-50%)
+.contacts-question-form .btn:hover
+  background-color: transparent
+/*inner-page forum*/
+.forum-sidebar
+  padding: 45px 50px 32px 52px
+  background-color: #f3f3f3
+  font-size: 14px
+  text-transform: uppercase
+.forum-sidebar .themes-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+.forum-sidebar .themes-list .link,
+.seminar-cat-list .link
+  padding: 8px 20px
+  font-family: $MontL
+  color: inherit
+  display: block
+  text-decoration: none
+  transition: all .25s ease
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  margin-bottom: 8px
+.forum-sidebar .themes-list .link span,
+.seminar-cat-list .link span
+  margin-left: auto
+  display: none
+  font-size: 18px
+  line-height: 1
+  transition: all .25s ease
+.forum-sidebar .themes-list .link span:hover,
+.seminar-cat-list .link span:hover
+  color: $accent
+.forum-sidebar .themes-list .link.active,
+.seminar-cat-list .link.active
+  background: #323232
+  color: #fff
+.forum-sidebar .themes-list .link.active span,
+.seminar-cat-list .link.active span
+  display: block
+.page-section.forum
+  padding: 45px 0 60px
+.themes-filter h4
+  letter-spacing: 0.07
+  margin-bottom: 19px
+.themes-sorting
+  padding: 25px 40px 25px 30px
+  margin-bottom: 30px
+  background-color: #f3f3f3
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+.themes-sorting .btn
+  font-size: 12px
+  padding: 9px 48px
+.themes-sorting .btn:hover
+  background-color: transparent
+.forum-body
+  padding-left: 85px
+.sorting-box .sort-old
+  display: none
+.sorting-box span
+  font-size: 12px
+  text-transform: uppercase
+  cursor: pointer
+  letter-spacing: 1.2px
+.sorting-box span .fa
+  margin-left: 10px
+.themes-list
+  border: 2px solid #f3f3f3
+.themes-list-item
+  padding: 20px 30px 25px 30px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+.theme-footer
+  margin-left: auto
+  font-size: 16px
+.theme-footer .link
+  color: inherit
+.theme-footer .fa
+  font-size: 22px
+  margin-right: 10px
+.themes-list-item .theme-body
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.themes-list-item .theme-title
+  margin-bottom: 10px
+  font-size: 16px
+  font-family: $MontB
+  color: inherit
+.themes-list-item .theme-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  font-size: 12px
+.themes-list-item .theme-author
+  margin-right: 25px
+  color: #818181
+.themes-list-item:not(:last-of-type)
+  border-bottom: 2px solid #f3f3f3
+.pagination 
+  width: 100%
+  text-align: right
+  padding: 40px 0 0 0
+  font-size: 0
+.pagination a
+  display: inline-block
+  width: 42px
+  height: 42px
+  line-height: 42px
+  text-align: center
+  vertical-align: middle
+  -webkit-transition: all .2s ease
+  -o-transition: all .2s ease
+  transition: all .2s ease
+  background-color: transparent
+  border: 1px solid #f4f4f4
+  border-right: none
+  font-size: 12px
+  font-family: $MontS
+  color: #323232
+  text-decoration: none
+.pagination a.fa
+  font-size: 18px
+.pagination a:hover,
+.pagination a.active
+  background: #323232
+  color: #fff
+  border-color: #323232
+.pagination a:first-of-type
+  border-top-left-radius: 4px
+  border-bottom-left-radius: 4px
+.pagination a:last-of-type
+  border-right: 1px solid #f4f4f4
+  border-top-right-radius: 4px
+  border-bottom-right-radius: 4px
+/*inner-page seminar*/
+.page-section.seminar,
+.page-section.webinar
+  padding-top: 24px
+.seminar-post figure
+  height: 422px
+  width: 100%
+  margin-bottom: 50px
+.seminar-post figure img
+  max-width: 100%
+  height: auto
+  object-fit: cover
+.seminar-post-content h2,
+.seminar-post-sidebar h2,
+.webinar-post-content h2,
+.webinar-post-sidebar h2
+  text-transform: none
+  margin-bottom: 30px
+  letter-spacing: -0.5px
+.seminar-post-sidebar h2,
+.webinar-post-sidebar h2
+  margin-bottom: 45px
+.seminar-post-content p,
+.webinar-post-content p
+  color: #818181
+  line-height:  1.875
+  margin-bottom: 30px
+.seminar-post-content p strong,
+.webinar-post-content p strong
+  font-family: $MontB
+  font-weight: normal
+  letter-spacing: 0.8px
+  color: #323232
+.seminar-post-content h4,
+.webinar-post-content h4
+  margin-bottom: 35px
+  font-family: $MontB
+  font-weight: normal
+  color: #323232
+.seminar-post-content ul li,
+.webinar-post-content ul li
+  margin-bottom: 24px
+  color: #818181
+.seminar-post-content ul,
+.webinar-post-content ul
+  padding-left: 50px
+  margin-bottom: 54px
+.seminar-speaker,
+.webinar-speaker
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 60px
+.speaker-pic
+  min-width: 109px
+  width: 109px
+  height: 109px
+  margin-right: 20px
+  background-color: #f8f8f8
+.speaker-pic img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.seminar-speaker h4,
+.webinar-speaker h4
+  font-size: 16px
+  font-family: $MontB
+  font-weight: normal
+.seminar-speaker p,
+.webinar-speaker p  
+  font-size: 12px
+  color: #818181
+.seminar-registration,
+.webinar-registration
+  padding: 42px 25px 60px 25px
+  background-color: #f3f3f3
+.seminar-registration .form-heading,
+.webinar-registration .form-heading
+  font-size: 18px
+  font-family: $MontL
+  text-transform: uppercase
+  margin-bottom: 18px
+.seminar-registration p,
+.webinar-registration p 
+  font-size: 12px
+  margin-bottom: 65px
+.speaker-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.speaker-info h4
+  margin-bottom: 
+  line-height: 1.3
+.speaker-info p
+  margin-top: auto
+  margin-bottom: 0
+.seminar-registration .form-field,
+.webinar-registration .form-field
+  height: 50px
+  margin-bottom: 17px
+.seminar-registration .form-field input,
+.webinar-registration .form-field input
+  padding: 0 20px
+  height: 100%
+  width: 100%
+  border: none
+  font-size: 12px
+  color: #818181
+.seminar-registration .btn,
+.webinar-registration .btn
+  padding: 10px
+  width: 100%
+  background-color: transparent
+  border-radius: 0
+  margin-top: 5px
+.webinar-registration .btn:hover,
+.seminar-registration .btn:hover
+  background-color: #323232
+/*inner-page webinar*/
+.page-section.webinar
+  padding-top: 24px
+.webinar-intro
+  min-height: 422px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 50px
+.webinar-video-box
+  width: 66%
+  background: url(../img/page-webinar/videofallback.png) no-repeat center
+  background-size: cover
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.webinar-video-box .play-control
+  width: 51px
+  height: 51px
+  background: #fff
+  position: relative
+  cursor: pointer
+  transition: all .2s ease-out
+.webinar-video-box .play-control:hover
+  opacity: .9
+.webinar-video-box .play-control .fa
+  position: absolute
+  right: 50%
+  top: 50%
+  transform: translate(50%,-50%)
+  font-size: 14px
+.webinar-video-box .play-control.active .fa:before
+  content: '\f04c' !important
+.webinar-chat
+  width: 34%
+.broadcast-control
+  position: absolute
+  background: #fff
+  font-size: 11px
+  right: 0
+  top: 0
+.broadcast-control span
+  width: 145px
+  height: 38px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.broadcast-control span::before
+  content: ""
+  position: absolute
+  width: 6px
+  height: 6px
+  background-color: #c41137
+  left: 20px
+.broadcast-control .b-offline
+  display: none
+.webinar-chat .chat-tabs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  background-color: #f3f3f3
+.webinar-chat .chat-tab
+  min-height: 38px
+  padding: 10px
+  width: 50%
+  border-bottom: 2px solid #dfdfdf
+  font-size: 12px
+  font-family: $MontS
+  color: #bababa
+  text-transform: uppercase
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  text-decoration: none
+.webinar-chat .chat-tab.active
+  border-color: #323232
+  color: #323232
+.webinar-chat .chat-body
+  height: 313px
+  overflow-y: auto
+  padding: 0 30px
+.chat-body .mCSB_scrollTools
+  opacity: 1
+  width: 5px
+  right: 1px !important
+.chat-body .mCSB_container
+  width: 100% !important
+.chat-body .mCSB_dragger
+  max-height: 94px !important
+  height: 100% !important
+.chat-body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  background: #000 !important
+.chat-body .chat-tab-content
+  display: none
+  width: 100%
+.chat-body .chat-tab-content#chat-tab1
+  display: block
+.chat-message
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 20px
+.chat-message .message-body
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  width: 100%
+.chat-message:first-of-type
+  margin-top: 40px
+.chat-message .message-text
+  font-size: 10px
+  color: #818181
+  margin-top: auto
+  max-width: 230px
+.chat-message .message-author
+  max-width: 160px
+  overflow: hidden
+  text-overflow: ellipsis
+.message-pic-author
+  min-width: 35px
+  width: 35px
+  height: 35px
+  margin-right: 15px
+  background-color: #f8f8f8
+.message-pic-author img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.chat-message .message-info
+  font-size: 12px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  line-height: 1
+  height: 12px
+  overflow: hidden
+  margin-bottom: 8px
+.send-message-form-wrap
+  padding: 10px 30px
+  background-color: #f3f3f3
+.send-message-form .form-field
+  height: 50px
+  position: relative
+.send-message-form .form-field input
+  height: 100%
+  border: none
+  padding: 0 60px 0 15px
+  font-size: 12px
+  width: 100%
+  text-overflow: ellipsis
+.send-message-form .form-field .btn-send
+  position: absolute
+  right: 0
+  top: 0
+  width: 50px
+  height: 50px
+  border: none
+  outline: none
+  background: url(../img/page-webinar/send.svg) no-repeat center #323232
+  transition: all .2s ease
+.send-message-form .form-field .btn-send:active
+  transform: scale(.95)
+/*inner-page blog*/
+.page-section.inner-blog
+  padding: 18px 0 45px 0
+.inner-blog-tabs 
+  margin: 0 0 74px 0
+.inner-blog-tab:hover
+  text-decoration: none
+.inner-blog-tabs .inner-blog-tab:not(:last-of-type)
+  margin-right: 5px
+.inner-blog-card
+  height: 445px
+  padding: 30px 35px 54px 38px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  background-color: #fff
+.inner-blog-card.c-gray
+  background-color: #ececec
+.inner-blog-card.card-w-bg
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 20% 50%
+.inner-blog-card .blog-name
+  font-size: 18px
+.inner-blog-card .blog-date
+  font-size: 14px
+.inner-blog-card .blog-card-info
+  font-family: $MontL
+  line-height: 1
+  align-items: center
+  margin-bottom: 30px
+.inner-blog-card .blog-text
+  height: 100%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.inner-blog-card.card-w-bg .blog-text
+  max-width: 185px
+.inner-blog-card h4
+  margin-bottom: 15px
+  font-family: $MontB
+  font-weight: normal
+  letter-spacing: 0.8px
+.inner-blog-card p
+  font-size: 12px
+  color: #818181
+.inner-blog-card .full-link
+  margin-top: auto
+  font-size: 12px
+  color: #000
+  text-transform: uppercase
+  text-decoration: underline
+.inner-blog-card .full-link:hover
+  text-decoration: none
+.inner-blog-card.card-w-img
+  background-color: #f5f5f5
+  flex-direction: row
+  padding: 0
+.inner-blog-card.card-w-img .blog-card-content
+  width: 55%
+  padding: 30px 38px 54px 55px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.inner-blog-card.card-w-img .blog-card-image
+  width: 45%
+  height: 100%
+  background-color: #000000
+  margin-bottom: 0
+.inner-blog-card.card-w-img .blog-card-image img
+  max-width: 100%
+  height: 100%
+  object-fit: cover
+.inner-blog-card.card-w-img .blog-text
+  max-width: 100%
+.inner-blog-card .blog-text
+  max-height: 235px
+  overflow: hidden
+.inner-blog-tab-content
+  display: none
+.inner-blog-tab-content.active
+  display: block
+.page-section.inner-blog .pagination
+  text-align: center
+  padding: 80px 0 40px 0
+/*inner-page webinars*/
+.web-card
+  min-height: 100%
+  background-color: #f3f3f3
+  padding-bottom: 60px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.webinars-cards
+  margin-bottom: 25px
+.webinars-cards .web-card-image
+  margin-bottom: 30px
+  height: 259px
+  background-color: #e2e2e2
+  background-size: cover
+  background-position: center 
+.webinars-cards .web-card-image img
+  max-width: 100%
+  height: 100%
+  object-fit: cover
+.webinars-cards .web-card-body
+  padding: 0 30px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.web-card h4
+  margin-bottom: 13px
+  font-size: 18px
+  font-family: $MontS
+  font-weight: normal
+.web-card p
+  margin-bottom: 35px
+  font-size: 12px
+.web-card-footer
+  padding: 0 30px
+  margin-top: auto
+.web-card .btn
+  padding: 8px 10px
+  width: 100%
+  font-size: 12px
+.web-card .btn:hover
+  background-color: transparent
+.page-section.webinars
+  padding-top: 60px
+.web-card-wrap,
+.web-lector-card-wrap,
+.web-speaker-card-wrap
+  margin-bottom: 30px
+.web-card.link-card
+  justify-content: center
+  align-items: center
+  transition: all .25s ease-out
+  text-decoration: none
+  padding-bottom: 0
+.web-card.link-card svg
+  transition: all .25s ease-out
+  opacity: .5
+.web-card.link-card b
+  font-size: 16px
+  font-family: $MontB
+  font-weight: normal
+  opacity: .5
+  color: #323232
+  transition: all .25s ease-out
+  margin-top: 15px
+.web-card.link-card:hover
+  background-color: #e2e2e2
+.web-card.link-card:hover b
+  color: $accent
+.web-card.link-card:hover svg
+  fill: $accent
+  opacity: 1
+.page-section.webinars .row-title
+  text-transform: none
+  margin-bottom: 40px
+.web-lector-card,
+.web-speaker-card
+  background: url(../img/page-webinars/fallback.png)
+  background-repeat: no-repeat
+  background-position: 150% bottom
+.web-lector-card,
+.web-speaker-card
+  min-height: 446px
+  padding: 55px 35px 0 35px
+  background-color: #f3f3f5
+.lector-card-body h4,
+.speaker-card-body h4
+  max-width: 80%
+.lector-card-body p,
+.speaker-card-body p
+  max-width: 160px
+  font-size: 12px
+  color: #818181
+.row.web-lector
+  margin-bottom: 16px
+/*inner-page schedule*/
+.page-section.schedule
+  padding-top: 60px
+.schedule-calendar
+  margin-bottom: 50px
+.cathegory-list-wrap
+  padding: 42px 48px 4px 54px
+  background-color: #f3f3f3
+.schedule-sidebar ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+.schedule-sidebar .link
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  text-transform: uppercase
+  font-size: 14px
+  font-family: $MontL
+  color: #323232
+  align-items: center
+  cursor: pointer
+.schedule-sidebar .submenu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  margin-top: 20px
+.schedule-sidebar .submenu a
+  font-size: 14px
+  font-family: $MontL
+  line-height: 1
+  text-transform: uppercase
+  text-decoration: none
+  padding: 11px 20px
+  color: #323232
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+.schedule-sidebar .submenu a span
+  margin-left: auto
+.schedule-sidebar .submenu a.active
+  background-color: #323232
+  color: #fff
+.schedule-sidebar .submenu a .fa
+  display: none
+  transition: all .2s ease-out
+.schedule-sidebar .submenu a .fa:hover
+  color: $accent
+.schedule-sidebar .submenu a.active .fa
+  display: block
+.schedule-sidebar .link .fa
+  margin-left: auto
+.schedule-sidebar li.open .link .fa::before
+  content: "\f067" !important
+.cathegory-list-wrap > ul
+  margin-bottom: 20px !important
+  padding-bottom: 14px
+  border-bottom: 1px solid #e9e9e9
+.brand-list
+  border-bottom: none !important
+.schedule-seminar-item 
+  background-color: #f3f3f3
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 30px
+.schedule-seminar-item  .seminar-item-body
+  width: 48%
+  padding: 45px 0 48px 28px
+.schedule-seminar-item  .seminar-item-image
+  width: 52%
+  background: #fff
+  border: 10px solid #f3f3f3
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  padding: 45px 20px 20px 20px
+.schedule-seminar-item  .seminar-item-image img
+  max-width: 100%
+  height: auto
+.seminar-item-body h4
+  margin-bottom: 14px
+  font-size: 18px 
+  font-family: $MontS
+  font-weight: normal
+.seminar-item-body p
+  margin-bottom: 18px
+  font-size: 12px
+.seminar-item-body .btn
+  font-size: 12px
+  padding: 8px 46px
+  margin-top: 30px
+.seminar-item-body .btn:hover
+  background-color: transparent
+.schedule-body
+  padding-left: 85px
+.schedule-body .btn-full
+  display: block
+  max-width: 260px
+  margin: 0 auto
+  margin-top: 60px
+  padding: 10px
+  border: 2px solid transparent
+  border-radius: 0
+  background: #eeeeee
+  color: #323232
+  transition: all .25s ease-out
+.schedule-body .btn-full:hover
+  border-color: #eeeeee
+  background: none
+.schedule-body .btn-full .fa
+  margin-left: 8px
+.seminar-date
+  font-size: 14px
+  font-family: $MontL
+  line-height: 1
+  margin-bottom: 6px
+  align-self: flex-start
+  padding-left: 30px
+//Customize datepicker calendare 
+.ui-datepicker
+  width: 100%
+  font-size: 14px
+.ui-widget.ui-widget-content
+  padding: 24px 44px 28px 44px
+  border: none
+  background: #f3f3f3
+  overflow: hidden
+.ui-widget
+  font-family: $MontS
+  font-weight: normal
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev
+  display: none
+.ui-widget-header
+  background: none
+  border: none
+.ui-datepicker .ui-datepicker-title
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  margin: 0
+  padding-bottom: 14px
+  margin-bottom: 30px
+  position: relative
+  opacity: .7
+.ui-datepicker table
+  font-size: 14px
+.ui-datepicker-title::after
+  content: ""
+  position: absolute
+  width: 140%
+  height: 1px
+  left: -20%
+  bottom: 0
+  background: #e1e1e1
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year
+  width: auto
+  min-width: 55px
+  border: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  position: relative
+  background: url(../img/page-schedule/index.svg) no-repeat right center
+  background-size: 14px 14px
+  font-family: $MontR
+  font-weight: bold
+  color: #323232
+  padding-right: 20px
+.ui-datepicker-month
+  order: 2
+.ui-datepicker td
+  padding: 0
+.ui-datepicker th
+  text-transform: uppercase
+  font-family: $MontL
+  opacity: .7
+.ui-datepicker td a, .ui-datepicker td span
+  padding: 4px 0
+.ui-button, .ui-state-default, .ui-widget-content .ui-state-default
+  border: none
+  color: #3d3d3d
+  text-align: center
+  background: none
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight,
+.ui-button.ui-state-active:hover, .ui-button:active, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active
+  background: #323232
+  color: #fff
+/*inner-page seminar-cat*/
+.page-section.seminar-cat
+  padding-top: 60px
+.seminar-cat-filter
+  padding: 45px 50px 32px 52px
+  background-color: #f3f3f3
+.seminar-cat-filter h4
+  margin-bottom: 19px
+  text-transform: uppercase
+
+[class*="ground-pane"]
+  filter: grayscale(1)
+
+
+@import "media" // Always at the end
