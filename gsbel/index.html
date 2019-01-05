@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>gsbel</title>
+	<title>Главная</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,7 @@
 	
 	<link rel="stylesheet" href="css/main.min.css">
 
+
 </head>
 
 <body>
@@ -33,16 +34,16 @@
 			<div class="row">
 				<div class="header-panel">
 					<div class="col-lg-2 col-sm-3 col-4">
-						<a href="#" class="text-logo">golos.<span>bel</span></a>
+						<a href="index.html" class="text-logo">golos.<span>bel</span></a>
 					</div>
 					<div class="col-lg-6 col-sm-9 d-none d-sm-block">
 						<div class="header-nav-container">
 							<nav class="site-navigation">
-								<a href="#" class="active">Каталог фирм</a>
-								<a href="#">Цены</a>
-								<a href="#">Скидки</a>
-								<a href="#">Отзывы</a>
-								<a href="#">Новости</a>
+								<a href="companies.html">Каталог фирм</a>
+								<a href="prices.html">Цены</a>
+								<a href="sales.html">Скидки</a>
+								<a href="reviews.html">Отзывы</a>
+								<a href="news.html">Новости</a>
 							</nav>
 						</div>
 					</div>
@@ -58,11 +59,11 @@
 					<div class="mobile-menu-btn"><span></span></div>
 					<div class="mobile-menu">
 						<ul class="mobile-list">
-							<li><a href="#">Новости</a></li>
-							<li><a href="#">Цены</a></li>
-							<li><a href="#">Скидки</a></li>
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Каталог фирм</a></li>
+							<li><a href="news.html">Новости</a></li>
+							<li><a href="prices.html">Цены</a></li>
+							<li><a href="sales.html">Скидки</a></li>
+							<li><a href="reviews.html">Отзывы</a></li>
+							<li><a href="companies.html">Каталог фирм</a></li>
 							<li><a href="#">Погода</a></li>
 							<li><a href="#">Курсы валют</a></li>							
 						</ul>
@@ -174,11 +175,11 @@
 											<h2>Авторизация <i class="fas fa-sign-in-alt"></i></h2>
 											<p>
 												<label for="user-email" class="visually-hidden">E-mail</label>
-												<input class="email-user" id="user-email" type="email" name="email" placeholder="E-mail" required>
+												<input class="email-user" id="user-email-auto" type="email" name="email" placeholder="E-mail" required>
 											</p>
 											<p>
 												<label for="user-password" class="visually-hidden">Пароль</label>
-												<input class="password-user" id="user-password" type="password" name="password" placeholder="Пароль" required>
+												<input class="password-user" id="user-password-auto" type="password" name="password" placeholder="Пароль" required>
 											</p>
 											<p class="login-help">
 												<label class="login-checkbox">
@@ -193,14 +194,14 @@
 										<div class="login-description">
 											<h2>Войти с помощью социальных сетей</h2>
 											<p class="login-text">Вы можете аворизоваться на сайте одним кликом по значку из ваших социальных сетей</p>
-											<p class="login-socialnetworking">
+											<div class="login-socialnetworking">
 												<ul class="socialnetworking">
 													<li><a href="#" class="socialnetworking-facebook" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
 													<li><a href="#" class="socialnetworking-vkontakte" title="vkontakte"><i class="fab fa-vk"></i></a></li>
 													<li><a href="#" class="socialnetworking-twitter" title="twitter"><i class="fab fa-twitter"></i></a></li>
 													<li><a href="#" class="socialnetworking-telegram" title="telegram"><i class="fab fa-telegram-plane"></i></a></li>
 												</ul>							
-											</p>
+											</div>
 											<a href="#" class="inner-registration-link">Регистрация <span>→</span></a>
 										</div>
 
@@ -346,73 +347,73 @@
 						<div class="organizations-list">
 							<a class="organization-item list" title="Открыть весь список">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/dots.svg" alt="Cписок всех организаций">
+									<img src="img/sect_organizations/dots.svg" width="31" height="6" alt="Cписок всех организаций">
 								</span>
 								<span class="org-item-text">Все рубрики</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/banks.svg" alt="Банки">
+									<img src="img/sect_organizations/banks.svg" width="58" height="69" alt="Банки">
 								</span>
 								<span class="org-item-text">Банки</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/vet.svg" alt="Ветклиники">
+									<img src="img/sect_organizations/vet.svg" width="69" height="70" alt="Ветклиники">
 								</span>
 								<span class="org-item-text">Ветклиники</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/med.svg" alt="Медцентры">
+									<img src="img/sect_organizations/med.svg" width="67" height="69" alt="Медцентры">
 								</span>
 								<span class="org-item-text">Медцентры</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/not.svg" alt="Нотариусы">
+									<img src="img/sect_organizations/not.svg" width="69" height="69" alt="Нотариусы">
 								</span>
 								<span class="org-item-text">Нотариусы</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/tax.svg" alt="Такси">
+									<img src="img/sect_organizations/tax.svg" width="69" height="53" alt="Такси">
 								</span>
 								<span class="org-item-text">Такси</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/mag.svg" alt="Супермаркеты">
+									<img src="img/sect_organizations/mag.svg" width="53" height="70" alt="Супермаркеты">
 								</span>
 								<span class="org-item-text">Супермаркеты</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/res.svg" alt="Рестораны">
+									<img src="img/sect_organizations/res.svg" width="68" height="68" alt="Рестораны">
 								</span>
 								<span class="org-item-text">Рестораны</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/bea.svg" alt="Салоны красоты">
+									<img src="img/sect_organizations/bea.svg" width="69" height="69" alt="Салоны красоты">
 								</span>
 								<span class="org-item-text">Салоны красоты</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/den.svg" alt="Стоматология">
+									<img src="img/sect_organizations/den.svg" width="69" height="69" alt="Стоматология">
 								</span>
 								<span class="org-item-text">Стоматологии</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/save.svg" alt="Страховые компании">
+									<img src="img/sect_organizations/save.svg" width="69" height="69" alt="Страховые компании">
 								</span>
 								<span class="org-item-text">Страховые компании</span>
 							</a>
 							<a href="#" class="organization-item">
 								<span class="org-item-image">
-									<img src="img/sect_organizations/drugs.svg" alt="Аптеки">
+									<img src="img/sect_organizations/drugs.svg" width="69" height="69" alt="Аптеки">
 								</span>
 								<span class="org-item-text">Аптеки</span>
 							</a>
@@ -564,7 +565,6 @@
 				</div>
 				<div class="row">
 					<div class="popular-spheres">
-						<div class="heading">Популярные сферы</div>
 						<div class="col-lg-3 col-md-6 col-6">
 							<div class="popular-spheres-item">
 								<span class="spheres-summ">169</span>
@@ -675,7 +675,7 @@
 					<div class="col-xl-3">
 						<div class="promotions-right-side">
 							<div class="promotions-item big">
-								<a href="#" class="promotions-item-image" style="background-image: url(img/sect_promotions/aquaniqua.jpg">
+								<a href="#" class="promotions-item-image" style="background-image: url(img/sect_promotions/aquaniqua.jpg);">
 									<p><span>Ле</span>бяжий скидка 63% на целый день посещения аквапарка!</p>
 								</a>
 							</div>
@@ -857,13 +857,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-							<ul class="socialnetworking">
-								<span class="socialnetworking-descr">Следите за нами</span>
-								<li><a href="#" class="socialnetworking-facebook" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" class="socialnetworking-vkontakte" title="vkontakte"><i class="fab fa-vk"></i></a></li>
-								<li><a href="#" class="socialnetworking-twitter" title="twitter"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" class="socialnetworking-telegram" title="telegram"><i class="fab fa-telegram-plane"></i></a></li>								
-							</ul>
+						<ul class="socialnetworking">
+							<span class="socialnetworking-descr">Следите за нами</span>
+							<li><a href="#" class="socialnetworking-facebook" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" class="socialnetworking-vkontakte" title="vkontakte"><i class="fab fa-vk"></i></a></li>
+							<li><a href="#" class="socialnetworking-twitter" title="twitter"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" class="socialnetworking-telegram" title="telegram"><i class="fab fa-telegram-plane"></i></a></li>								
+						</ul>
 					</div>
 				</div>
 			</div>
