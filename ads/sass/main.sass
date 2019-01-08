@@ -1,0 +1,1644 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: #1f1a1f
+  input, textarea, select, option
+      border: #666 1px solid
+      outline: none
+      &:focus:required:invalid
+        border-color: red
+      &:required:valid
+        border-color: green
+select
+  appearance: none
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+a 
+  outline: none
+  cursor: default
+button
+  outline: none
+.text-center
+  text-align: center
+
+.btn
+  display: block
+  height: 50px
+  text-align: center
+  line-height: 50px
+  transition: all .2s ease
+.btn:hover
+  text-decoration: none
+.btn-orange
+  background-color: #feb825
+.btn-orange:hover
+  background-color: #c5221b
+.accent-text
+  color: #feb825
+.btn-red
+  border: 2px solid $accent
+  color: $accent
+  text-transform: uppercase
+  line-height: 47px
+  transition: all .2s ease
+.btn-red:hover
+  background-color: $accent
+  color: #fff
+  font-family: "FiraMed", sans-serif
+/*Customize header*/
+.page
+  min-height: 530px
+  background: url(../img/map.png) no-repeat center top
+.page.inner-page
+  background: none
+.header-top
+  height: 46px
+  background-color: #1f1a1f
+  text-align: right
+  color: #fff
+.header-top a 
+  display: inline-block
+  height: 46px
+  line-height: 46px
+  color: #fff
+  transition: color .2s ease
+.header-top a:hover 
+  color: #feb825
+  text-decoration: none
+.header-bottom
+  min-height: 145px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 12px
+.header-bottom .logo 
+  margin-top: -20px
+.navigation ul 
+  list-style-type: none
+  margin: 0
+  padding: 0
+.navigation a 
+  display: block
+  font-family: "FiraBold", sans-serif
+  color: #1f1a1f
+  text-transform: uppercase
+  transition: color .2s ease
+.navigation a:hover 
+  color: $accent
+  text-decoration: none
+.navigation li 
+  display: inline-block
+.navigation li:not(:first-of-type)
+  margin-left: 26px
+.navigation i 
+  display: none
+.mobile-menu-btn
+  display: none
+  position: relative
+  width: 30px
+  height: 20px
+  text-align: center
+  cursor: pointer
+  &:hover
+    span,
+    span::before,
+    span::after
+      background-color: $accent
+  span,
+  span::before,
+  span::after
+    display: block
+    content: ""
+    width: 100%
+    height: 1px
+    background-color: $accent
+    transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+  span::before
+    transform: translateY(-8px)
+  span::after
+    transform: translateY(6px)
+  span
+    position: relative
+    top: 8px
+.mobile-menu-btn.active span::before,
+.mobile-menu-btn.active span::after
+  width: 100%
+  background-color: $accent
+.mobile-menu-btn.active span 
+  background-color: transparent!important
+.mobile-menu-btn.active span::before
+  transform: rotate(45deg) translate(2px,1px)
+.mobile-menu-btn.active span::after
+  transform: rotate(-45deg) translate(0px,1px)
+
+
+/*Анимация мобильного меню*/
+/*Customize main*/
+.advertising
+  margin-bottom: 28px
+.advertising .container
+  position: relative
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.advertising-bnr-wrap
+  max-width: 430px
+  width: 100%
+.advertising-bnr
+  width: 100%
+  padding: 20px 30px 15px 24px
+  background: #fff
+  box-shadow: 0 0 20px rgba(000,000,000,0.1)
+.advertising-bnr h3
+  margin-bottom: 5px
+  font-family: "FiraHeavy", sans-serif
+  font-size: 30px
+  color: $accent
+  text-transform: uppercase
+  line-height: 1
+.advertising-bnr p
+  margin-bottom: 0
+  font-size: 18px
+  color: #1f1a1f
+  line-height: 1.4
+.advertising-bnr strong
+  font-size: 17px
+  font-family: "FiraBold", sans-serif
+  color: #1f1a1f
+  line-height: 1
+.advertising h2 
+  margin-top: 35px
+  font-size: 70px
+  font-family: "FiraHeavy", sans-serif
+  color: #efe5e6
+  text-transform: uppercase
+  line-height: 1
+  position: relative
+  right: -45px
+.advertising-bnr-wrap .btn
+  margin-top: 28px
+  font-size: 25px
+  font-family: "FiraMed", sans-serif
+  color: #1f1a1f
+.advertising-bnr-wrap .btn:hover
+  background-color: $accent
+/*Customize search-form*/
+.categories-filter
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  width: 88.88%
+  height: 50px
+  align-items: center
+  border: 2px solid #efe5e6
+  border-right: none
+.categories-filter .form-select
+  position: relative
+.categories-filter .form-arrow
+  width: 30px
+  height: 14px
+  position: absolute
+  top: 50%
+  right: 1%
+  border-left: 1px solid #1f1a1f
+  transform: translateY(-50%)
+  text-align: center
+  pointer-events: none
+  font-size: 18px
+  z-index: 100
+  background: transparent
+.categories-filter .form-arrow .fa
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 13px
+.categories-filter .form-field
+  height: 50px
+  padding: 0 0 0 15px
+  border: none
+  border: 2px solid transparent
+  border-right: 1px solid #efe5e6
+  transition: all .2s ease
+  background: none
+.form-select.area .form-field 
+  border-right-color: transparent
+.categories-filter .form-field:hover
+  border: 2px solid $accent
+  color: $accent
+.categories-filter .form-field:hover option
+  color: #1f1a1f
+.categories-filter .form-field:hover ~ .form-arrow
+  border-color: $accent
+.categories-filter .form-field:hover ~ .form-arrow .fa  
+  color: $accent
+.categories-filter .form-search
+  width: 34%
+  padding-right: 15px
+  border-left-color: transparent
+.categories-filter .form-search input
+  width: 100%
+  height: 100%
+  border: none
+  color: #786e76
+  background: none
+.categories-filter .form-select.city
+  width: 21%
+.categories-filter .form-select.area
+  width: 21.5%
+.categories-filter .form-select.area
+  border-right: 2px solid #efe5e6
+.categories-filter .form-select.area:hover
+  border-right-color: transparent
+.categories-filter .form-select .form-field
+  max-width: 100%
+  width: 100%
+.search-form
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  margin-bottom: 60px
+.search-form .form-btn
+  min-width: 98px
+  background: none
+  border: 2px solid $accent
+  color: $accent
+  text-transform: uppercase
+  line-height: 48px
+  transition: all .2s ease
+.search-form .form-btn:hover
+  background-color: $accent
+  color: #fff
+  font-family: "FiraMed", sans-serif
+.advertising-categories
+  padding-bottom: 55px
+.advertising-categories .categories
+  width: 100%
+  display: table
+  border-collapse: collapse
+.advertising-categories .category-item
+  max-width: 25%
+  width: 25%
+  height: 120px
+  min-width: 25%
+  border: 2px solid #efe5e6
+  text-align: center
+  display: table-cell
+  padding: 19px 17px 10px 17px
+  position: relative
+.table-row
+  display: table-row
+  width: 100%
+.cat-item-image
+  width: 55px
+  height: 50px
+  display: block
+  margin: 0 auto
+  margin-bottom: 8px
+  border-bottom: 2px solid #efe5e6
+.cat-item-image img
+  display: block
+  margin: 0 auto
+.cat-item-title
+  font-size: 15px
+  font-family: "FiraMed", sans-serif
+  text-transform: uppercase
+.cat-item-content a
+  font-size: 0
+  text-transform: uppercase
+  color: $accent
+  pointer-events: none
+.cat-item-content .more-link
+  font-size: 0
+  opacity: 0
+  width: 0
+  display: inline-block
+.cat-item-content
+  position: absolute
+  left: -1%
+  top: -20%
+  padding-top: 19px
+  background: #fff
+  width: 102%
+  height: 0
+  border: 4px solid transparent
+  border-image-source: linear-gradient(to bottom, #fcb825, #e9781b, #c6221a)
+  border-image-slice: 1
+  transition: all .2s ease-in-out
+  opacity: 0
+  pointer-events: none
+.advertising-categories .category-item:hover
+  border-color: transparent 
+.advertising-categories .category-item:hover .cat-item-content
+  height: 102%
+  top: -2%
+  opacity: 1
+  pointer-events: auto
+.advertising-categories .category-item:hover .cat-item-content a 
+  font-size: 13px
+  pointer-events: auto
+.advertising-categories .category-item:hover .cat-item-content .more-link
+  font-size: 14px
+  width: 100%
+  opacity: 1
+.cat-item-content .more-link
+  display: block
+  font-size: 14px
+  font-family: "FiraItalic", sans-serif
+  text-transform: lowercase
+.cat-item-content a:hover 
+  text-decoration: none
+/*Customize section auction*/
+.auction
+  min-height: 300px
+  padding: 30px 0
+  background-color: #1f1a1f
+.auction .section-title
+  margin-top: 90px
+  font-size: 26px
+  font-family: "FiraHeavy", sans-serif
+  text-transform: uppercase
+  color: #feb825
+.auction .section-text
+  min-height: 105px
+  position: relative
+  margin-top: 64px
+  font-size: 16px
+  color: #fff
+  column-count: 2
+  column-gap: 150px
+  padding: 0 60px
+  line-height: 1.35
+  background: url(../img/bash.png) no-repeat center
+.auction .section-text::before
+  content: ""
+  position: absolute
+  left: 12px
+  top: 50%
+  transform: translateY(-50%)
+  width: 39px
+  height: 172px
+  background: url(../img/auction-corner.png) no-repeat center
+  background-size: contain
+.auction .section-text::after
+  content: ""
+  position: absolute
+  left: auto
+  right: 8px
+  top: 50%
+  transform: translateY(-50%) rotate(180deg)
+  width: 39px
+  height: 172px
+  background: url(../img/auction-corner.png) no-repeat center
+  background-size: contain
+/*Customize section partnership*/
+.partnership
+  min-height: 305px
+.partnership .container
+  background: url(../img/partner-bg.png) no-repeat 18%
+  min-height: 305px
+  height: 100%
+  padding-top: 55px
+.partnership-text h3
+  font-size: 30px
+  font-family: "FiraHeavy", sans-serif
+  color: $accent
+  text-transform: uppercase
+.partnership-text p
+  font-size: 18px
+  font-family: "FiraLight", sans-serif
+  line-height: 1.35
+.partnership-image
+  padding-left: 50px
+.partnership-text
+  padding-left: 55px
+/*Customize footer*/  
+.page-footer
+  background-color: #1f1a1f
+.footer-navigation
+  padding-top: 30px
+.footer-navigation-column h3
+  font-size: 14px
+  font-family: "FiraMed", sans-serif
+  margin-bottom: 0
+.footer-navigation-column ul
+  margin: 0
+  padding: 0
+.footer-navigation-column ul li
+  display: block
+  padding: 2px 0
+.footer-navigation-column ul a
+  color: #efe5e6
+  font-size: 14px
+  transition: all .2s ease
+.footer-navigation-column ul a:hover
+  color: $accent
+  text-decoration: none
+.footer-navigation-column ul a.accent-text
+  color: #feb825
+.footer-social-links
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: flex-end
+/*Cоциальные иконки*/
+.social-link
+  display: block
+  width: 26px
+  height: 26px
+  border-radius: 50%
+.social-link:not(:first-of-type)
+  margin-left: 6px
+.social-link.vk 
+  background: url(../img/vk.svg) no-repeat center
+  background-size: contain
+  animation: pulseShadowvk 2s infinite ease-in-out
+.social-link.ok
+  background: url(../img/ok.svg) no-repeat center
+  background-size: contain
+  animation: pulseShadowok 2s infinite ease-in-out
+.social-link.fb
+  background: url(../img/fb.svg) no-repeat center
+  background-size: contain
+  animation: pulseShadowfb 2s infinite ease-in-out
+.social-link.tw
+  background: url(../img/tw.svg) no-repeat center
+  background-size: contain
+  animation: pulseShadowtw 2s infinite ease-in-out
+.footer-social-links .social-link.in
+  background: url(../img/in.svg) no-repeat center
+  background-size: contain
+  animation: pulseShadowin 2s infinite ease-in-out
+/*Cоциальные иконки при наведении*/
+.social-link.vk:hover
+  background: url(../img/vkontakte.svg) no-repeat center
+  background-size: contain
+  animation: none
+.social-link.ok:hover
+  background: url(../img/odnok.svg) no-repeat center
+  background-size: contain
+  animation: none
+.social-link.fb:hover
+  background: url(../img/facebook.svg) no-repeat center
+  background-size: contain
+  animation: none
+.social-link.tw:hover
+  background: url(../img/twitter.svg) no-repeat center transparent
+  background-size: contain
+  animation: none
+.social-link.in:hover
+  background: url(../img/instagram.svg) no-repeat center transparent
+  background-size: contain
+  animation: none
+/*Анимация социальных иконок*/
+@keyframes pulseShadowvk
+  0%
+    box-shadow: 0 0 0 0 rgba(76, 117, 163, .4)
+  70%
+    box-shadow: 0 0 0 14px rgba(231,63,217,0)
+  100%
+    box-shadow: 0 0 0 0 rgba(231,63,217,0)
+@keyframes pulseShadowok
+  0%
+    box-shadow: 0 0 0 0 rgba(237, 149, 59, .4)
+  70%
+    box-shadow: 0 0 0 14px rgba(231,63,217,0)
+  100%
+    box-shadow: 0 0 0 0 
+@keyframes pulseShadowfb
+  0%
+    box-shadow: 0 0 0 0 rgba(59, 89, 153, .4)
+  70%
+    box-shadow: 0 0 0 14px rgba(231,63,217,0)
+  100%
+    box-shadow: 0 0 0 0   
+@keyframes pulseShadowtw
+  0%
+    box-shadow: 0 0 0 0 rgba(85, 172, 238, .4)
+  70%
+    box-shadow: 0 0 0 14px rgba(231,63,217,0)
+  100%
+    box-shadow: 0 0 0 0 
+@keyframes pulseShadowin
+  0%
+    box-shadow: 0 0 0 0 rgba(225, 27, 128, .4)
+  70%
+    box-shadow: 0 0 0 14px rgba(231,63,217,0)
+  100%
+    box-shadow: 0 0 0 0       
+    
+.footer-statistics
+  padding: 10px 0 24px 0
+.footer-statistics a 
+  font-size: 14px
+  font-family: "FiraMed", sans-serif
+  color: $accent
+.footer-statistics a:hover
+  text-decoration: none
+
+/*Форма регистрации и входа*/
+.form-popup
+  max-width: 470px
+  width: 100%
+  margin: 0 auto
+  padding: 30px 70px
+  position: relative
+  background: #fff
+.form-popup h4
+  font-size: 25px
+  font-family: "FiraMed", sans-serif
+  text-align: center
+  text-transform: uppercase
+.form-popup .form-field
+  height: 40px
+  margin-bottom: 14px
+.form-popup input
+  width: 100%
+  height: 100%
+  padding: 0 12px
+  font-size: 16px
+  color: #786e76
+  border: 2px solid #efe5e6
+.visually-hidden
+  display: none
+.login-help
+  margin-bottom: 10px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  position: relative
+  justify-content: space-between
+  padding-left: 23px
+  line-height: 1.2
+  font-size: 15px
+.login-help a
+  color: $accent
+.checkbox-indicator
+  position: absolute
+  left: 0
+  top: 0
+  width: 17px
+  height: 17px
+  background: #fff
+  border: 1px solid #786e76
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  content: ""
+  position: absolute
+  height: 1px
+  background: #050401
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  transform: rotate(45deg)
+  left: 4px
+  width: 4px
+  top: 55%
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  transform: rotate(-45deg)
+  left: 6px
+  width: 8px
+  top: 45%
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator
+  background: #feb825
+  border: none
+.form-popup .btn 
+  width: 100%
+  font-size: 20px
+  font-family: "FiraMed", sans-serif
+  border: none
+  color: #1f1a1f
+  cursor: pointer
+  transition: all .2s ease
+  margin-bottom: 10px
+.form-popup .btn:hover 
+  background: $accent
+.another-way /*xD xD xD*/
+  display: block
+  font-size: 14px
+  color: #786e76
+  text-align: center
+.form-popup .social-network-login
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 80px
+  border-bottom: 2px solid #efe5e6
+.form-popup .social-link
+  width: 40px
+  height: 40px
+.form-popup .social-link.tw:hover
+  background: url(../img/twitter-form.svg) no-repeat center transparent
+.form-popup .registration-link
+  display: block
+  padding: 15px 0
+  font-size: 20px
+  color: $accent
+  text-align: center
+.form-popup .form-legal
+  padding: 0 20px
+  font-size: 12px
+  font-family: "FiraMed", sans-serif
+  color: #786e76
+  text-align: center
+  margin-bottom: 0
+.form-popup .legal-link
+  color: #1f1a1f
+  text-decoration: underline
+  transition: all .2s ease
+.form-popup .legal-link:hover
+  text-decoration: none
+/*ReCustomize magnific elements*/
+.mfp-close
+  color: #ffffff !important
+  right: -40px !important
+  top: -15px !important
+  font-size: 35px
+  outline: none !important
+
+
+
+/*Inner page's styles*/
+.page.inner-page .navigation a,
+.page.inner-page .btn
+  font-size: 14px
+.page.inner-page .btn
+  padding: 0 10px
+  font-family: "FiraMed", sans-serif
+  text-transform: uppercase
+  color: #1f1a1f
+.page.adv-search .form-btn
+  color: #c40d24  
+.page.adv-search .form-btn:hover
+  color: #fff
+.advertising-categories-filter
+  padding-bottom: 12px
+.page.adv-search .search-form
+  margin-bottom: 0
+.page.inner-page .header-bottom
+  min-height: 135px
+  margin-bottom: 0
+.breadcrumb
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  margin: 0
+  padding: 7px 0
+.breadcrumb-item + .breadcrumb-item
+  padding-left: .3rem
+.breadcrumb-item + .breadcrumb-item::before 
+  display: inline-block
+  padding-right: .3rem
+  color: #6c757d
+  content: "/"
+.breadcrumb-item 
+  color: #1f1a1f
+  font-size: 12px
+.breadcrumb-item  a
+  color: #1f1a1f
+  transition: color .2s ease
+.breadcrumb-item  a:hover
+  color: $accent
+  text-decoration: none
+.found-content-info 
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  font-size: 12px
+  margin-bottom: 5px
+.action-item
+  margin-left: auto
+.info-item.info-time
+  margin-right: 18px
+.info-item.info-views
+  color: #c40e26
+.found-content-info .action-item
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  color: #1f1a1f
+.found-content-info .action-item:hover
+  text-decoration: none
+  color: #c5221b
+  cursor: pointer
+.found-content-info .action-item:hover .like-btn
+  background: url(../img/like-icon-full.png) no-repeat 50% 
+  background-size: 80%
+.action-item .like-btn
+  display: block
+  width: 21px
+  height: 20px
+  margin-right: 5px
+  background: url(../img/like-icon.svg) no-repeat 50% 
+.found-content
+  border: 2px solid #efe5e6
+  padding: 20px 32px
+  margin-bottom: 40px
+.page.inner-page .content-box
+  padding: 0 10px 0px 10px
+  width: 68.6%
+  max-width: 68.6%
+.sidebar-box
+  padding: 0 10px
+  width: 27.5%
+  margin-left: auto
+.found-content-descr
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  font-family: "FiraMed", sans-serif
+  line-height: 1.1
+  margin-bottom: 10px
+.found-content-label
+  margin-bottom: 0
+  font-size: 25px
+  font-weight: 400
+.found-content-price
+  font-weight: 400
+  font-size: 25px
+.slider-for
+  margin-bottom: 10px
+.slider-for,
+.slider-nav
+  width: 100%
+  height: 100%
+  min-height: 1px
+.slider-nav
+  margin-bottom: 15px
+.slider-for-slide
+  position: relative
+.slider-for-slide .photo-count
+  bottom: 3%
+  left: 2%
+  position: absolute
+  min-width: 92px
+  height: 33px
+  padding-left: 30px
+  line-height: 33px
+  background: url(../img/photo-icon.png) no-repeat 5px 
+  background-size: 20%
+  background-color: rgba(000,000,000,0.4)
+  color: #fff
+.slider-for img
+  height: 410px
+  object-fit: cover
+  border: 1px solid #e7e0d9
+.slider-nav-slide
+  width: 74px !important
+  height: 100%
+  margin-right: 6px
+.slider-nav img
+  width: 100%
+  height: 72px
+  object-fit: cover
+  border: 1px solid #e7e0d9
+.slide-arrow
+  position: absolute
+  width: 30px
+  height: 35px
+  top: 21%
+  background-color: transparent
+  border: none
+  cursor: pointer
+.slider-nav .slide-arrow-left
+  left: -4%
+.slider-nav .slide-arrow-right
+  right: -4%
+.slide-arrow.slide-arrow-left.slick-arrow,
+.slide-arrow.slide-arrow-right.slick-arrow
+  outline: none
+.slider-nav .slide-arrow-left::before
+  position: absolute
+  content: ""
+  left: 50%
+  top: 10px
+  background: #8b8289
+  width: 2px
+  height: 8px
+  -webkit-transform: skewX(138deg)
+  transform: skewX(138deg)
+.slider-nav .slide-arrow-left::after
+  position: absolute
+  content: ""
+  left: 50%
+  top: 50%
+  background: #8b8289
+  width: 2px
+  height: 8px
+  -webkit-transform: skewX(-138deg)
+  transform: skewX(-138deg)
+.slider-nav .slide-arrow-right::before
+  position: absolute
+  content: ""
+  top: 50%
+  right: 50%
+  background: #8b8289
+  width: 2px
+  height: 8px
+  -webkit-transform: skewX(-38deg)
+  transform: skewX(-38deg)
+.slider-nav .slide-arrow-right::after
+  position: absolute
+  content: ""
+  right: 50%
+  top: 10px
+  background: #8b8289
+  width: 2px
+  height: 8px
+  -webkit-transform: skewX(38deg)
+  transform: skewX(38deg)
+.found-info
+  display: table
+.found-info-row
+  display: table-row
+  line-height: 1.58
+.full-info .found-info-cell
+  padding: 30px 0 15px 0
+.found-info-cell
+  display: table-cell
+  padding: 7px 0
+  color: #786e76
+  white-space: nowrap
+.found-info-cell.cell-right
+  padding-left: 40px
+  color: #1f1a1f
+  white-space: normal
+.found-info-cell a
+  color: #1f1a1f
+.found-info .full-info .btn
+  display: inline-block
+  padding: 0 11px
+  height: 44px
+  font-size: 12px
+  line-height: 44px
+.found-info .full-info .btn-orange
+  margin-right: 6px
+  border: 2px solid transparent
+.found-info .full-info .btn-red:hover
+  color: #fff
+.similar-content h3
+  font-size: 19px
+  font-family: "FiraBold", sans-serif
+  text-transform: uppercase
+  padding-left: 18px
+  margin-bottom: 10px
+.similar-content-box
+  padding: 14px 14px 0px 14px
+  border: 2px solid #efe5e6
+.similar-content-item
+  display: block
+  width: 100%
+  max-width: 145px
+  color: #1f1a1f
+  margin-bottom: 18px
+.similar-item-image
+  position: relative
+  margin-bottom: 7px
+.photo-count-small
+  min-width: 47px
+  height: 27px
+  font-size: 14px
+  line-height: 27px
+  padding: 0px 5px 0px 26px
+  position: absolute
+  left: 8%
+  bottom: 3%
+  color: #fff
+  background: url(../img/photo-icon.png) no-repeat 5px / 29%
+  background-color: rgba(000,000,000,0.5)
+.photo-count-small:hover
+  color: #fff
+.similar-item-image img
+  height: 142px
+  width: 100%
+  object-fit: cover
+.similar-content
+  padding: 0 10px
+  width: 68.6%
+  margin-bottom: 38px
+.similar-item-link
+  cursor: pointer
+.similar-content-box
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+.similar-item-heading,
+.sidebar-item-heading
+  font-size: 12px
+  font-weight: normal
+  margin-bottom: 0
+.similar-item-price,
+.sidebar-item-price
+  font-size: 14px
+  font-family: "FiraBold", sans-serif
+  line-height: 1
+.page-sidebar
+  width: 100%
+  height: 100%
+.page-sidebar h3
+  font-size: 20px
+  font-family: "FiraBold", sans-serif
+  text-transform: uppercase
+  text-align: center
+  line-height: 1
+  margin-bottom: 5px
+.sidebar-content-item
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 12px
+.sidebar-item-image
+  position: relative
+  width: 40%
+.sidebar-item-text
+  width: 60%
+  padding: 2px 2px 2px 10px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  border: 2px solid #efe5e6
+  border-left: none
+.sidebar-item-image img
+  height: 98px
+  width: 100%
+  object-fit: cover
+.sidebar-item-coords
+  font-size: 11px
+  font-family: "FiraMed", sans-serif
+  color: #786e76
+.sidebar-item-info
+  margin-top: auto
+  font-size: 12px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.sidebar-content-item .photo-count-small
+  min-width: 32px
+  padding-left: 20px
+  height: 19px
+  line-height: 19px
+  font-size: 11px
+.sidebar-item-info .like-btn
+  display: block
+  width: 19px
+  height: 18px
+  margin-right: 5px
+  background: url(../img/like-icon.svg) no-repeat 50% / contain
+  cursor: pointer
+.sidebar-item-info .like-btn:hover
+  background: url(../img/like-icon-full.png) no-repeat 50%
+  background-size: 80%
+.sidebar-content-box
+  margin-bottom: 38px
+.form-field,
+input
+  text-overflow: ellipsis
+/*Page user*/
+.user-page .sidebar-box
+  margin-left: 0
+  width: 27%
+.page.user-page .content-box
+  margin-left: auto
+  max-width: 71%
+  width: 100%
+  padding-bottom: 60px
+.user-page .user-card-avatar
+  display: block
+  cursor: pointer
+  width: 51px
+  height: 51px
+  margin-right: 10px
+.user-page .user-card-avatar img
+  width: 51px
+  height: 51px
+  object-fit: cover
+  border-radius: 50%
+.user-page .user-id
+  font-size: 14px
+  text-transform: uppercase
+.user-page .user-reg-date
+  font-size: 12px
+  color: #786e76
+.user-page .user-card
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  padding: 10px 10px 10px 12px
+  border: 2px solid #efe5e6
+  margin-bottom: 10px
+.user-page .user-nav-panel
+  padding: 10px
+  border: 2px solid #efe5e6
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+.user-nav-panel ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+.user-nav-panel ul li
+  padding: 6px 0
+.user-nav-panel .user-nav-link
+  position: relative
+  color: #1f1a1f
+  transition: all .2s ease
+.user-nav-panel .user-nav-link:hover
+  color: #c40e26
+  text-decoration: none
+.user-nav-panel .user-nav-link::before
+  content: ""
+  display: inline-block
+  width: 16px
+  height: 16px
+  margin-right: 10px
+  transform: translateY(10%)
+.user-nav-link.adv-link::before
+  background: url(../img/inner-pages-img/adv.svg) no-repeat center / contain
+.user-nav-link.msg-link::before
+  background: url(../img/inner-pages-img/msg.svg) no-repeat center / contain
+  width: 16px
+  height: 12px
+.user-nav-link.fav-link::before
+  background: url(../img/inner-pages-img/fav.svg) no-repeat center / contain
+.user-nav-link.sub-link::before
+  background: url(../img/inner-pages-img/sub.svg) no-repeat center / contain
+.user-nav-link.options-link::before
+  background: url(../img/inner-pages-img/options.svg) no-repeat center / contain
+.adv-content .adv-tabs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.adv-tabs .tab
+  border: 2px solid #efe5e6
+  font-size: 14px
+  padding: 11px 16px
+  transition: all .2s ease
+  cursor: pointer
+  margin-bottom: 12px
+.adv-tabs .tab span
+  color: #1f1a1f
+.adv-tabs .tab.active
+  color: #c40e26
+.adv-tabs .tab:hover span
+  color: #1f1a1f
+.adv-tabs .tab.var1,
+.adv-tabs .tab.var2
+  border-right: none
+.adv-panel-tabs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  position: relative
+  padding-left: 8px
+  margin-bottom: 15px
+.adv-tab
+  margin-right: 26px
+  font-size: 14px
+  color: #786e76
+  position: relative
+  cursor: pointer
+.adv-tab::before
+  display: inline-block
+  content: ""
+  width: 15px
+  height: 16px
+  transform: translateY(20%)
+  margin: 0 8px
+.adv-tab:hover,
+.adv-tab.active
+  color: #c40e26
+.adv-tab.adv-var1::before
+  background: url(../img/inner-pages-img/prem.svg) no-repeat center / contain
+.adv-tab.adv-var1:hover:before,
+.adv-tab.adv-var1.active
+  background: url(../img/inner-pages-img/prem-active.png) no-repeat center / contain
+.adv-tab.adv-var2::before
+  background: url(../img/inner-pages-img/vip.svg) no-repeat center / contain
+.adv-tab.adv-var2:hover:before,
+.adv-tab.adv-var2.active
+  background: url(../img/inner-pages-img/vip-active.png) no-repeat center / contain
+.adv-tab.adv-var3::before
+  background: url(../img/inner-pages-img/up.svg) no-repeat center / contain
+.adv-tab.adv-var3:hover:before,
+.adv-tab.adv-var3.active
+  background: url(../img/inner-pages-img/up-active.svg) no-repeat center / contain
+.adv-tab.adv-var4::before
+  background: url(../img/inner-pages-img/cross.svg) no-repeat center / contain
+  width: 10px
+  height: 10px
+  transform: translateY(0%)
+.adv-tab.adv-var4:hover:before,
+.adv-tab.adv-var4.active
+  background: url(../img/inner-pages-img/cross-active.svg) no-repeat center / contain
+.adv-checkbox
+  position: absolute
+  left: -26px
+  top: 5px
+  z-index: 2
+.adv-card-checkbox
+  position: absolute
+  left: -26px
+  top: 0px
+  z-index: 2
+.adv-checkbox .checkbox-indicator,
+.adv-card-checkbox .checkbox-indicator
+  width: 13px
+  height: 13px
+  border: 1px solid #786e76
+.adv-panel-tabs .adv-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  content: ""
+  position: absolute
+  height: 2px
+  background: #c40e26
+.adv-panel-tabs .adv-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  right: 50%
+  width: 4px
+  top: 50%
+  transform: translate(50%, -50%)
+.adv-checkbox input[type="checkbox"]:checked + .checkbox-indicator,
+.adv-card-checkbox input[type="checkbox"]:checked + .checkbox-indicator
+  border: 1px solid #c40e26
+.adv-card
+  position: relative
+.adv-card-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.adv-card-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  content: ""
+  position: absolute
+  height: 1px
+  background: #c40e26
+.adv-card-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  transform: rotate(45deg)
+  left: 1px
+  width: 4px
+  top: 55%
+.adv-card-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  transform: rotate(-45deg)
+  left: 3px
+  width: 8px
+  top: 45%
+.adv-card
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 15px
+.adv-card-image
+  width: 25%
+  height: 100%
+  position: relative
+.adv-card-image img
+  width: 100%
+  height: 165px
+  cursor: pointer
+.adv-card-text
+  padding: 12px 20px 20px 20px
+  border: 2px solid #efe5e6
+  border-left: none
+  width: 75%
+  line-height: 1
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+.adv-card-heading
+  font-size: 27px
+  margin: 0px 0 5px 0
+.adv-card-price
+  font-size: 27px 
+  font-family: "FiraBold", sans-serif
+.adv-card-text .adv-card-text-bottom .btn
+  display: inline-block
+  height: auto
+  line-height: 1.5
+  padding: 5px 12px
+.adv-card-text .adv-card-text-bottom .btn-orange
+  border: 1px solid transparent
+  margin-right: 10px
+.adv-card-text .adv-card-text-bottom .btn-red
+  border: 1px solid #c5221b
+.adv-card-text .adv-card-text-bottom .btn-red:hover
+  color: #fff
+.adv-card-text-bottom
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-top: auto
+.adv-card-info
+  margin-left: auto
+  text-align: right
+.info-view-all
+  color: #786e76
+  font-size: 14px
+  margin-bottom: 5px
+.info-views
+  color: #c40e26
+  font-size: 14px
+.adv-card-marks
+  margin-left: auto
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.mark
+  width: 16px
+  height: 16px
+  cursor: pointer
+.mark.vip-mark
+  margin-left: 8px
+.mark.prem-mark.active
+  background: url(../img/inner-pages-img/prem-mark.svg) no-repeat center / contain
+.mark.vip-mark.active 
+  background: url(../img/inner-pages-img/star-mark.svg) no-repeat center / contain
+.mark.prem-mark.active.select
+  background: url(../img/inner-pages-img/prem-active.png) no-repeat center / contain
+.mark.vip-mark.active.select
+  background: url(../img/inner-pages-img/vip-active.png) no-repeat center / contain
+.adv-cards
+  display: none
+.adv-cards.active
+  display: block
+.pagination
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-top: 50px
+.pagination a
+  display: block
+  width: 29px
+  height: 29px
+  text-align: center
+  border: 2px solid transparent
+  color: #1f1a1f
+  cursor: pointer
+  margin-right: 1px
+.pagination a.active
+  border: 2px solid #c40e26
+  color: #c40e26
+.pagination a:hover
+  text-decoration: none
+/*page ad-search*/
+.ad-search .search-form
+  flex-wrap: wrap
+.ad-search .categories-filter
+  margin-bottom: 13px
+.categories-filter.filter-bottom
+  border: none
+  width: 100%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 0
+.categories-filter.filter-bottom .form-field
+  border: 2px solid #efe5e6
+  font-size: 14px
+  padding: 0 30px 0 5px
+.categories-filter.filter-bottom .form-field:hover
+  border-color: #c5221b
+.range1,
+.range2 
+  width: 166px
+  border: none
+  height: 8px
+  margin-right: 25px
+#range1,
+#range2
+  font-size: 0
+.range2 
+  margin-right: 0
+.range1 label,
+.range2 label
+  display: inline-block
+.irs-slider
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  border: 1px solid #c82037
+  background: #fff
+  font-size: 0
+  z-index: 2
+  top: -4px
+.irs-line
+  height: 6px
+  border: 2px solid #efe5e6
+.irs-bar
+  background-color: #f8b62c
+  height: 6px
+  top: 0
+.form-item input
+  border: none
+.irs-min,
+.irs-max
+  font-size: 0
+.irs-to,
+.irs-from,
+.irs-single
+  top: 10px
+  font-size: 14px
+  color: #786e76
+.form-range
+  margin: 0 17px 0 25px
+  font-size: 14px
+.form-select.drop
+  min-width: 283px
+.form-select .form-select-content.form-field
+  line-height: 44px
+  padding: 0 37px 0 8px
+.hidden-select-menu
+  display: none
+  position: absolute
+  border: 2px solid #efe5e6
+  width: 125px
+  z-index: 2
+  background: #fff
+  left: -22px
+  top: 60px
+  text-align: center
+  font-size: 14px
+  box-shadow: 0px 10px 16px 0px rgba(175, 164, 160, 0.6)
+.hidden-select-menu:before
+  content: ' '
+  border-color: #efe5e6 transparent transparent
+  border-style: solid
+  border-width: 10px
+  position: absolute
+  top: -20px
+  right: 4px
+  transform: rotate(180deg)
+.hidden-select-menu:after
+  content: ' '
+  border-color: #fff transparent transparent
+  border-style: solid
+  border-width: 7px
+  position: absolute
+  top: -14px
+  right: 7px
+  transform: rotate(180deg)
+.hidden-select-menu.opened
+  display: block
+.menu-select-item
+  padding: 4px 0 
+  transition: all .2s ease
+  position: relative
+.menu-select-item.active,
+.menu-select-item:hover
+  background: #f0c3c9
+.categories-filter .form-select.active .form-field
+  border-color: #c5221b
+  color: #c5221b
+.categories-filter .form-select.active .form-arrow .fa
+  color: #c5221b
+  transform: translate(-50%,-50%) rotate(180deg)
+.categories-filter .form-select.active .form-arrow
+  border-color: #c5221b
+.hidden-select-menu.room-type-select
+  width: 240px
+  left: auto
+  right: 0
+  padding: 10px
+  text-align: left
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-wrap: wrap
+  display: none
+  z-index: 999
+.hidden-select-menu.room-type-select.opened
+  display: flex
+.hidden-select-menu.room-type-select .menu-select-item:hover
+  background: #fff
+.hidden-select-menu.room-type-select .menu-select-item
+  width: 50%
+  padding: 4px 0
+.rooms-checkbox
+  padding-left: 25px
+  margin-bottom: 0
+.rooms-checkbox .checkbox-indicator
+  top: 8px
+  width: 14px
+  height: 14px
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  content: ""
+  position: absolute
+  height: 1px
+  background: #c40e26
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  transform: rotate(45deg)
+  left: 2px
+  width: 4px
+  top: 55%
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  transform: rotate(-45deg)
+  left: 4px
+  width: 8px
+  top: 45%
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator,
+.rooms-checkbox input[type="checkbox"]:checked + .checkbox-indicator
+  border: 1px solid #c40e26
+.rooms-checkbox input[type="checkbox"]:checked 
+  color: #c40e26 !important
+.page.ad-search .search-form
+  margin-bottom: 0
+.adv-control-panel
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+.adv-content.search .form-select
+  position: relative
+.adv-content.search .form-field
+  height: 50px
+  line-height: 44px
+  padding: 0 37px 0 8px
+  border: 2px solid #efe5e6
+  font-size: 14px
+.adv-content.search .form-arrow
+  width: 30px
+  height: 14px
+  position: absolute
+  top: 40%
+  right: 1%
+  border-left: 1px solid #1f1a1f
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+  text-align: center
+  pointer-events: none
+  font-size: 18px
+  z-index: 100
+  background: #fff
+.adv-content.search .form-arrow .fa
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%,-50%)
+  -ms-transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%)
+  font-size: 13px
+.select-heading
+  display: inline-block
+  margin-right: 10px
+  font-size: 14px
+  color: #786e76
+.page.inner-page .search-form .form-btn:hover
+  color: #fff
+.search-heading
+  font-size: 25px
+  font-family: "FiraMed", sans-serif
+  text-transform: uppercase
+  line-height: 1
+  margin-bottom: 10px
+.search-heading .search-total
+  color: #786e76
+.adv-content.search .adv-card-heading,
+.adv-content.search .adv-card-price
+  font-size: 20px
+.adv-content.search .adv-card-coords
+  font-size: 14px
+  color: #786e76
+.adv-content.search .adv-card-text
+  flex-direction: row
+  padding-bottom: 5px
+.text-left
+  width: 70%
+.text-left .adv-card-heading
+  margin-top: 17px
+.text-left .adv-card-text-bottom
+  margin-top: 20px
+.text-right
+  text-align: right
+  width: 30%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-end
+.text-right .info-item.info-city
+  font-size: 13px
+  font-family: "FiraLigh", sans-serif
+  margin-bottom: 7px
+.text-right .info-item.info-time
+  font-size: 12px
+  margin-right: 0
+.adv-content.search .btn.btn-market
+  font-size: 12px
+  color: #fcb825
+  border: 1px solid #f8b62c
+  padding: 2px 4px
+  max-width: 110px
+  line-height: normal
+  height: auto
+  transition: all .2s ease
+  text-transform: none
+  display: inline-block
+.adv-content.search .btn.btn-market:hover
+  background: #f8b62c
+  color: #fff
+.text-right .like-btn
+  display: inline-block
+  width: 25px
+  height: 24px
+  margin-right: 5px
+  background: url(../img/like-icon.svg) no-repeat 50%/contain
+  cursor: pointer
+  margin-right: 0
+.text-right .like-btn:hover
+  background: url(../img/like-icon-full.png) no-repeat 50%
+  background-size: 80%
+.adv-content.search .adv-tabs .tab.active
+  border: 2px solid #c40e26
+.empty-search
+  display: none
+.empty-message
+  font-size: 24px
+  font-family: "FiaraMed", sans-serif
+  color: #786e76
+  line-height: 1.4
+  margin-top: 35px
+.inner-page.ad-search .pagination
+  margin: 30px 0
+@import "media" // Always at the end

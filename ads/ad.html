@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>LineAds</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div class="page inner-page ad-search">
+		<header class="page-header">
+			<div class="header-top">
+				<div class="container">
+					<a href="#login-form-popup" class="link login-link open-popup-link">Вход</a>
+					<span>и</span>
+					<a href="#registration-form-popup" class="link reg-link open-popup-link">Регистрация</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="header-bottom">				
+					<a href="index.html" class="logo" title="LineAds">
+						<img src="img/lineads.svg" alt="LineAds" width="249" height="75">
+					</a>
+					<nav class="navigation">
+						<ul>
+							<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Недвижимость</a></li>
+							<li><a href="#"><i class="fa fa-car" aria-hidden="true"></i>Авто</a></li>
+							<li><a href="#"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>Вакансии и резюме</a></li>
+							<li><a href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>Услуги</a></li>
+							<li><a href="#"><i class="fa fa-question" aria-hidden="true"></i>Другое</a></li>
+						</ul>
+					</nav>
+					<div class="mobile-menu-btn"><span></span></div>
+					<a href="#" class="btn btn-orange reg-btn">Добавить объявление</a>
+				</div>
+			</div>
+		</header>
+		<div class="advertising-categories-filter">
+			<div class="container">
+				<form action="#" class="search-form" id="ad-search-form">
+					<div class="categories-filter">
+						<div class="form-select">
+							<select name="category" class="form-field">
+								<option disabled>Выберите категорию</option>
+								<option selected>Квартиры</option>
+								<option>Авто</option>
+								<option>Вакансии и резюме</option>
+								<option>Услуги</option>
+								<option>Для бизнеса</option>
+								<option>Бытовая техника</option>
+								<option>Горящие путевки и билеты</option>
+								<option>Разное</option>
+							</select>
+							<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+						</div>
+						<div class="form-search form-field">
+							<input type="search" placeholder="Поиск по объявлениям">
+						</div>
+						<div class="form-select city">
+							<select name="city" class="form-field">
+								<option disabled>Город</option>
+								<option>Москва</option>
+								<option>Саранск</option>
+								<option>Нефтекамск</option>
+								<option selected>Калининград</option>
+							</select>
+							<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+						</div>
+						<div class="form-select area">
+							<select name="area" class="form-field">
+								<option disabled>Район</option>
+								<option>Гольяново</option>
+								<option>Ленинский</option>
+								<option>Ташкиново</option>
+								<option selected >Ленинградский</option>
+							</select>
+							<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+						</div>
+					</div>
+					<button class="btn form-btn">Найти</button>
+					<div class="categories-filter filter-bottom">
+						<div class="form-select drop-mnu">
+							<div class="form-select-content form-field">Продажа</div>
+							<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+							<div class="hidden-select-menu apt-type-select">
+								<div class="menu-select-item">Покупка</div>
+								<div class="menu-select-item active">Продажа</div>
+								<div class="menu-select-item">Сдача</div>
+								<div class="menu-select-item">Аренда</div>
+								<div class="triangle"></div>
+							</div>
+						</div>
+						<label for="range1" class="form-range">Цена, руб.</label>
+						<div class="form-item range1">							
+							<input id="range1" class="irs-hidden-input" tabindex="-1" form="ad-search-form">
+						</div>
+						<div class="form-select drop">
+							<div class="form-select-content form-field">2 комнаты, 3 комнаты, Студия</div>
+							<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+							<div class="hidden-select-menu room-type-select">
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room1" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										1 комната
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room5" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										5 комнат
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room2" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										2 комнаты
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room6" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										6 и более
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room3" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										3 комнаты
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="penthouse" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										Пентхаус
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="room4" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										4 комнаты
+									</label>
+								</div>
+								<div class="menu-select-item">
+									<label class="rooms-checkbox">
+										<input name="studio" class="visually-hidden" type="checkbox" form="ad-search-form">
+										<span class="checkbox-indicator"></span>
+										Студия
+									</label>
+								</div>
+								<div class="triangle"></div>
+							</div>
+						</div>
+						<label for="range2" class="form-range">Площадь, м²</label>
+						<div class="form-item range2">							
+							<input id="range2" class="irs-hidden-input" tabindex="-1" form="ad-search-form">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<nav aria-label="breadcrumb">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Недвижимость</a></li>
+					<li class="breadcrumb-item"><a href="#">Квартиры</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Продажа</li>
+				</ol>
+			</div>
+		</nav>
+		<main class="page-content">
+			<div class="container">
+				<div class="row">
+					<div class="content-box">
+						<div class="adv-content search">
+							<div class="search-heading">Квартиры  <span class="search-total">9 751</span></div>
+							<div class="empty-search">
+								<div class="search-heading">Квартиры  <span class="search-total">0</span></div>
+								<div class="empty-message">Извините, по Вашему запросу ничего не найдено.<br>Попробуйте изменить условия поиска.</div>
+							</div>
+							<div class="adv-control-panel">
+								<div class="adv-tabs">
+									<div class="tab var1 active">Все</div>
+									<div class="tab var2">Частные</div>
+									<div class="tab var3">Компании</div>
+								</div>
+								<div class="form-select">
+									<div class="select-heading">Сортировать по</div>
+									<select name="category" class="form-field">
+										<option selected="">Дате</option>
+										<option>Релевантности</option>
+										<option>Цена убыв.</option>
+										<option>Цена возр.</option>											
+									</select>
+									<span class="form-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="adv-cards var1 active">
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+								<div class="adv-card">
+									<div class="adv-card-image">
+										<a href="#" class="adv-card-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="adv-card-text">
+										<div class="text-left">
+											<div class="adv-card-heading">2-к квартира, 52 м2, 2/3 эт.</div>
+											<div class="adv-card-price">3 500 000 р</div>
+											<div class="adv-card-coords">р-н Ленинградский</div>
+											<div class="adv-card-text-bottom">
+												<a href="" class="btn btn-red">Подробнее</a>
+											</div>
+										</div>
+										<div class="text-right">
+											<div class="adv-card-info">
+												<div class="info-item info-city">Калининград</div>
+												<div class="info-item info-time">11 сентября 14:01</div>
+											</div>
+											<a href="" class="btn btn-market">возможна реклама</a>
+											<a href="#" class="like-btn"></a>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="pagination">
+							<a href="javascript:void(0)" class="active">1</a>
+							<a href="javascript:void(0)">2</a>
+							<a href="javascript:void(0)">3</a>
+							<a href="javascript:void(0)">4</a>
+							<a href="javascript:void(0)">5</a>
+							<a href="javascript:void(0)">6</a>
+							<a href="javascript:void(0)">7</a>
+							<a href="javascript:void(0)">8</a>
+							<a href="javascript:void(0)">9</a>
+							<a href="javascript:void(0)">10</a>
+							<a href="javascript:void(0)">Последняя</a>
+						</div>
+					</div>
+					<div class="sidebar-box">
+						<aside class="page-sidebar">
+							<div class="sidebar-content-box">
+								<h3>Vip - объявления</h3>
+								<div class="sidebar-content-item">
+									<div class="sidebar-item-image">
+										<a href="#" class="sidebar-item-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="sidebar-item-text">
+										<h4 class="sidebar-item-heading">2-к квартира, 52 м2, 2/3 эт.</h4>
+										<div class="sidebar-item-price">3 500 000 р</div>
+										<div class="sidebar-item-coords">р-н Ленинградский</div>
+										<div class="sidebar-item-info">10 сентября 14:00 <a href="#" class="like-btn"></a></div>
+									</div>
+								</div>
+								<div class="sidebar-content-item">
+									<div class="sidebar-item-image">
+										<a href="#" class="sidebar-item-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="sidebar-item-text">
+										<h4 class="sidebar-item-heading">2-к квартира, 52 м2, 2/3 эт.</h4>
+										<div class="sidebar-item-price">3 500 000 р</div>
+										<div class="sidebar-item-coords">р-н Ленинградский</div>
+										<div class="sidebar-item-info">10 сентября 14:00 <a href="#" class="like-btn"></a></div>
+									</div>
+								</div>
+								<div class="sidebar-content-item">
+									<div class="sidebar-item-image">
+										<a href="#" class="sidebar-item-link"><img src="img/inner-pages-img/similar-bg1.png" alt=""></a>
+										<a href="#" class="photo-count-small">11</a>
+									</div>
+									<div class="sidebar-item-text">
+										<h4 class="sidebar-item-heading">2-к квартира, 52 м2, 2/3 эт.</h4>
+										<div class="sidebar-item-price">3 500 000 р</div>
+										<div class="sidebar-item-coords">р-н Ленинградский</div>
+										<div class="sidebar-item-info">10 сентября 14:00 <a href="#" class="like-btn"></a></div>
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer">
+			<div class="container">
+				<nav class="footer-navigation">
+					<div class="row">
+						<div class="col-xl-3 col-sm-4 col-6 footer-navigation-column">
+							<h3 class="accent-text">© 2018 - LineAds.ru</h3>
+							<ul>
+								<li><a href="#">Наши вакансии</a></li>
+								<li><a href="#">Партнерам</a></li>
+								<li><a href="#">Реклама на сайте</a></li>
+								<li><a href="#">API</a></li>
+								<li><a href="#">Мобильное приложение</a></li>
+								<li><a href="#">Мобильный сайт</a></li>
+							</ul>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-6 footer-navigation-column">
+							<ul>
+								<li><a href="#">Требования к ПО</a></li>
+								<li><a href="#">Защита персональных данных</a></li>
+								<h3 class="accent-text">Работодателям</h3>
+								<li><a href="#">Прайс-лист</a></li>
+								<li><a href="#">Производственный календарь</a></li>
+								<li><a href="#">HR-Digital</a></li>
+							</ul>
+						</div>
+						<div class="col-xl-3 col-sm-4 col-6 footer-navigation-column">
+							<ul>
+								<h3 class="accent-text">Соискателям</h3>
+								<li><a href="#">Продвижение резюме</a></li>
+								<li><a href="#">Работа в других городах</a></li>
+							</ul>
+						</div>
+						<div class="col-xl-3 col-md-12 footer-social-links">
+							<a href="#" class="social-link vk" target="_blank"></a>
+							<a href="#" class="social-link ok" target="_blank"></a>
+							<a href="#" class="social-link fb" target="_blank"></a>
+							<a href="#" class="social-link tw" target="_blank"></a>
+							<a href="#" class="social-link in" target="_blank"></a>
+						</div>
+					</div>
+				</nav>
+				<div class="footer-statistics">
+					<a href="#" class="statistics-link">Сегодня на сайте <span class="vacancy-count">636 337</span> вакансий, <span class="resume-count">34 424 889</span> резюме, <span class="company-count">841 079</span> компаний и за неделю <span class="invitations-count">1 078 469</span> приглашений</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!--Hidden popups-->
+	<div class="form-popup form mfp-hide" id="login-form-popup">
+		<form action="#" id="login-form">
+			<h4>Вход</h4>
+			<div class="form-field">
+				<input type="text" name="email" placeholder="Телефон или электронная почта" required>
+			</div>
+			<div class="form-field">
+				<input type="password" name="password" placeholder="Пароль" required>
+			</div>
+			<div class="login-help">
+				<label class="login-checkbox">
+					<input name="remember" class="visually-hidden" type="checkbox">
+					<span class="checkbox-indicator"></span>
+					Запомнить меня
+				</label>
+				<a class="restore" href="#" title="Нажмите для восстановления">Забыли пароль?</a>
+			</div>
+			<button class="btn btn-orange">Войти</button>
+			<span class="another-way">
+				или через
+			</span>
+			<div class="social-network-login">
+				<a href="#" class="social-link vk" target="_blank"></a>
+				<a href="#" class="social-link ok" target="_blank"></a>
+				<a href="#" class="social-link fb" target="_blank"></a>
+				<a href="#" class="social-link tw" target="_blank"></a>
+			</div>
+			<a href="#registration-form-popup" class="registration-link open-popup-link">Зарегистрироваться</a>
+			<p class="form-legal">При регистрации вы принимаете <a href="#" class="legal-link">пользовательское соглашение</a> и <a href="#" class="legal-link">политику о данных пользователей.</a></p>
+		</form>
+	</div>
+
+	<div class="form-popup form mfp-hide" id="registration-form-popup">
+		<form action="#" id="registration-form">
+			<h4>Регистрация</h4>
+			<div class="form-field">
+				<input type="text" name="email" placeholder="Телефон или электронная почта" required>
+			</div>
+			<div class="form-field">
+				<input type="password" name="password" placeholder="Пароль" required>
+			</div>
+			<button class="btn btn-orange">Зарегистрироваться</button>
+			<span class="another-way">
+				или через
+			</span>
+			<div class="social-network-login">
+				<a href="#" class="social-link vk" target="_blank"></a>
+				<a href="#" class="social-link ok" target="_blank"></a>
+				<a href="#" class="social-link fb" target="_blank"></a>
+				<a href="#" class="social-link tw" target="_blank"></a>
+			</div>
+			<a href="#login-form-popup" class="registration-link open-popup-link">Войти</a>
+			<p class="form-legal">При регистрации вы принимаете <a href="#" class="legal-link">пользовательское соглашение</a> и <a href="#" class="legal-link">политику о данных пользователей.</a></p>
+		</form>
+	</div>
+
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
