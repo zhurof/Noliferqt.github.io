@@ -1,5 +1,5 @@
 $(function() {
-	/*Slider*/
+	
 	$(".owl-carousel.main-slider").owlCarousel({
 		loop: true,
 		items: 1,
@@ -113,6 +113,7 @@ $(function() {
 		if (evt.keyCode === 27) {
 			if (mdfull.classList.contains("full-list-open")) {
 				mdfull.classList.remove("full-list-open");
+				$('.organization-item').removeClass('off');
 			}
 		}
 	});
