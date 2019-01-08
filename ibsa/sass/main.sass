@@ -1,0 +1,1825 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  font-family: $MontR
+  overflow-x: hidden
+  color: #000000
+  input, textarea
+      border: #666 1px solid
+      outline: none
+      &:focus:required:invalid
+        border-color: red
+      &:required:valid
+        border-color: green
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+/*General-styles*/
+
+.btn 
+  display: inline-block
+  position: relative
+  padding: 15px 67px
+  border-radius: 31px
+  box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.09)
+  font-size: 18px
+  font-family: $MontS
+  text-transform: uppercase
+  transition: all .25s ease-out
+.btn:hover
+  text-decoration: none
+.btn-white
+  background: #ffffff
+  color: #3d84de
+.btn-white:hover
+  background: #3d84de
+  color: #ffffff
+.btn-blue
+  background: #3d84de
+  color: #ffffff
+.btn-blue:hover
+  background: #ffffff
+  color: #3d84de
+.btn-flink::before
+  content: "\f0da"
+  position: absolute
+  font-family: "fontawesome"
+  left: 16%
+  top: 50%
+  transform: translateY(-50%)
+.page-section
+  padding: 60px 0
+
+/*Main-page*/
+.page-header
+  min-height: 176px
+  background: url(../img/header-bg.jpg) no-repeat top
+  background-size: cover
+.header-top
+  padding-top: 45px
+.header-top-nav ul,
+.header-bottom-nav ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+.header-top-nav ul li,
+.header-bottom-nav ul li
+  display: inline-block
+.header-top-nav ul li:not(:last-of-type)
+  margin-right: 60px
+.header-bottom-nav ul li:not(:last-of-type)
+  margin-right: 35px
+.header-top-nav a,
+.header-bottom-nav a
+  display: block
+  padding-bottom: 8px
+  color: #fff
+  text-transform: uppercase
+  text-decoration: none
+  transition: all .25s ease
+  border-bottom: 1px solid transparent
+.header-top-nav a:hover,
+.header-bottom-nav a:hover
+  border-bottom: 1px solid #fff
+.header-top-contacts
+  text-align: right
+.header-top-contacts .link
+  padding-bottom: 8px
+  color: #fff
+  text-transform: uppercase
+  transition: all .25s ease
+.header-top-contacts .link:hover
+  text-decoration: none
+  opacity: .8
+  border:none
+.header-top-contacts .link:last-of-type
+  margin-left: 40px
+  border-bottom: 2px dashed #fff
+.header-bottom
+  padding: 24px 0
+.header-bottom-nav
+  margin-left: -52px
+.logo,
+.footer-logo
+  width: 151px
+  transition: all 1s ease
+  display: block
+.logo img
+  height: auto
+  max-width: 100%
+.header-bottom-nav.show
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  height: 100%
+  align-items: center
+  padding-top: 10px
+.header-bottom-nav
+  display: none
+.header-search-box
+  position: relative
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 100%
+.header-search-box .btn
+  padding: 6px 39px
+  position: relative
+  font-family: $MontR 
+  margin-left: -60%
+  border: none
+  font-size: 14px
+  cursor: pointer
+  outline: none
+.header-close-btn
+  position: absolute
+  left: -78%
+  background: none
+  border: none
+  width: 20px
+  height: 20px
+  text-align: center
+  color: #fff
+  cursor: pointer
+  z-index: 2
+  outline: none
+  transform: scale(0)
+  transition: all .25s ease
+.header-search-box .header-close-btn .fa
+  font-size: 15px
+  margin-right: 0
+  position: absolute
+  right: 50%
+  top: 50%
+  transform: translate(50%,-50%)
+  outline: none
+.header-search-box .header-close-btn.active
+  transform: scale(1)
+.header-search-box .btn:hover
+  background: #ffffff
+  box-shadow: 0 0 15px #fff
+  color: #3d84de
+.header-search-box .fa
+  display: inline-block
+  margin-right: 8px
+  width: 14px
+  font-size: 10px
+  text-align: center
+  cursor: pointer
+.header-search-form
+  position: absolute
+  right: calc(160% + 10px)
+  top: 11px
+  transform: scale(0)
+  transition: all .25s ease
+  transform-origin: left
+.header-search-form.active
+  transform: scale(1)
+.header-search-form input
+  background: none
+  border: 0
+  border-bottom: 1px solid #fff
+  font-size: 14px
+  color: #fff
+  height: 30px
+  width: 646px
+  padding: 0 24px
+  text-overflow: ellipsis
+/*Page-section marketing*/
+.page-section.marketing
+  min-height: 652px
+  background: url(../img/marketing-bg.png) no-repeat center 60%/cover
+  border-bottom: 6px solid #fff
+.marketing-slider
+  position: relative
+.marketing-slide
+  min-height: 480px
+.slider-arrow
+  position: absolute
+  top: 50%
+  width: 30px
+  height: 50px
+  z-index: 100
+  transform: scale(1.3)
+  cursor: pointer
+  transition: all .25s ease
+.slider-arrow:hover
+  opacity: .8
+.slider-arrow-left
+  left: 2%
+.slider-arrow-right
+  right: 2%
+.slider-arrow-left::before 
+  position: absolute
+  content: ""
+  left: 50%
+  top: 10px
+  background: #4286e1
+  width: 2px
+  height: 15px
+  -webkit-transform: skewX(138deg)
+  transform: skewX(138deg)
+.slider-arrow-left::after
+  position: absolute
+  content: ""
+  left: 50%
+  top: 50%
+  background: #4286e1
+  width: 2px
+  height: 15px
+  -webkit-transform: skewX(-138deg)
+  transform: skewX(-138deg)
+.slider-arrow-right::before
+  position: absolute
+  content: ""
+  top: 50%
+  right: 50%
+  background: #4286e1
+  width: 2px
+  height: 15px
+  -webkit-transform: skewX(-38deg)
+  transform: skewX(-38deg)
+.slider-arrow-right::after
+  position: absolute
+  content: ""
+  right: 50%
+  top: 10px
+  background: #4286e1
+  width: 2px
+  height: 15px
+  -webkit-transform: skewX(38deg)
+  transform: skewX(38deg)
+.marketing-slide h2
+  margin-bottom: 22px
+  position: relative
+  left: 100%
+  font-size: 60px
+  font-family: $MontL
+  font-weight: normal
+  color: #3e84e0
+  text-transform: uppercase
+  line-height: 1.3
+  opacity: 0
+  transition: all .8s ease
+  transition-delay: .2s
+.marketing-slide.slick-active h2
+  opacity: 1
+  left: 0
+.marketing-slide p
+  position: relative
+  margin-bottom: 55px
+  font-size: 16px
+  left: 100%
+  opacity: 0
+  transition: all 1.1s ease
+  transition-delay: .2s
+.marketing-slide.slick-active p
+  opacity: 1
+  left: 0
+.slider-dots
+  margin: 0
+  padding: 0
+  list-style-type: none
+  text-align: center
+.slider-dots li
+  display: inline-block
+  margin: 0 3px
+  font-size: 0
+  width: 10px
+  height: 10px
+  background: #cccccc
+  border-radius: 50%
+.slider-dots li button
+  background: none
+  border: none
+  outline: none
+.slider-dots li.slick-active
+  background: #000
+.marketing-slide .btn
+  padding: 24px 37px 24px 97px
+  border-radius: 100px
+  color: #000
+.marketing-slide .btn:hover
+  color: #fff
+.marketing-slide .btn .btn-icon
+  position: absolute
+  left: 5%
+  top: 50%
+  display: inline-block
+  width: 54px
+  height: 54px
+  background: url(../img/inf.svg) no-repeat center #4085e2
+  border-radius: 50%
+  transform: translateY(-50%)
+  transition: all .25s ease-out
+.marketing-slide .btn:hover .btn-icon
+  background: url(../img/infh.svg) no-repeat center #fff
+.marketing-slide .slide-image
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: flex-end
+  opacity: 0
+  transition: all 1s ease
+  transition-delay: .25s 
+  transform: scale(.8)
+.marketing-slide.slick-active .slide-image
+  opacity: 1
+  transform: scale(1)
+.marketing-slide .slide-image img
+  max-width: 100%
+/*Page-section about*/
+.page-section.about
+  min-height: 711px
+  background: url(../img/about-bg.png) no-repeat right top
+  background-size: auto
+.about-text 
+  padding: 70px 82px  
+.about-text h3
+  margin-bottom: 25px
+  font-size: 32px
+  font-family: $MontL
+  line-height: 1.25
+.about-text p 
+  margin-bottom: 40px
+  font-size: 16px
+.about-item
+  position: relative
+  margin-top: 26px
+.about-item img
+  margin-left: -55px
+.about-item-image
+  min-height: 480px
+  background-repeat: no-repeat
+  background-position: 85% -20%
+.about-item-content
+  position: absolute
+  top: 0
+  width: 256px
+  min-height: 242px
+  background: #4684e5
+  padding: 40px 30px 20px 30px
+  border-radius: 2px
+.about-item-content h3
+  font-size: 18px
+  font-family: $MontM
+  color: #fff
+  text-transform: uppercase
+.about-item-content span
+  font-size: 30px
+  font-family: $MontL
+  color: #fff
+  line-height: 1.4
+.page-section.services
+  min-height: 450px
+  padding: 0
+  padding-left: calc(50vw - 559.5px)
+
+/*Page-section services*/
+.services-text
+  padding-top: 32px
+  padding-right: 20px
+.services-text h3
+  font-size: 18px
+  font-family: $MontM
+  color: #000
+  text-transform: uppercase
+.slider-wrap
+  position: relative
+.services-text span
+  display: block
+  margin-bottom: 10px
+  font-size: 36px
+  font-family: $MontL
+  color: #4184e2
+  line-height: 1.1
+.services-text p
+  font-size: 16px
+.services-slider
+  min-height: 420px
+  padding-left: 0
+  padding-top: 30px
+  margin-left: -60px
+.services-slider::before
+  content: ""
+  position: absolute
+  top: 0
+  width: 100%
+  min-height: 200px
+  background: #4184e2
+  border-top-left-radius: 6px
+  border-bottom-left-radius: 6px
+.services-slide
+  max-width: 314px
+  width: 314px
+  min-height: 334px
+  margin-left: 50px
+  padding: 80px 20px 20px 20px
+  border-radius: 6px
+  background-color: rgb(255, 255, 255)
+  box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.09)
+  margin-bottom: 125px
+  position: relative
+  text-align: center
+.services-slide-image
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  width: 100%
+  height: 130px
+  justify-content: center
+.services-slide-image img
+  max-width: 100%
+  height: auto
+  object-fit: contain
+.services-slide-title 
+  font-size: 18px
+  text-transform: uppercase
+  line-height: 1.3
+  margin-top: 33px
+.services-slide .full-link
+  position: absolute
+  display: block
+  width: 45px
+  height: 45px
+  line-height: 45px
+  bottom: -22.5px
+  right: 50%
+  background: #4284e3
+  border-radius: 50%
+  transform: translateX(50%) scale(0)
+  transition: all .25s ease-out
+  opacity: 0
+.services-slide:hover
+  outline: none
+.services-slide:hover .full-link
+  transform: translateX(50%) scale(1)
+  opacity: 1
+.services-slide .full-link:hover
+  background: #fff
+  box-shadow: 0 0 5px #4284e3
+.services-slide .full-link:hover .fa
+  color: #4284e3
+.services-slide .full-link .fa
+  color: #fff
+  font-size: 18px
+  transition: all .25s ease-out
+.services-arrow
+  position: absolute
+  display: block
+  width: 45px
+  height: 45px
+  border: 1px solid #d2d2d2
+  border-radius: 50%
+  cursor: pointer
+  bottom: 28%
+  transform: translateY(-28%)
+  transition: all .25s ease-out
+.services-arrow.services-arrow-right 
+  left: -28%
+.services-arrow.services-arrow-left
+  left: -36%
+.services-arrow.services-arrow-right::before
+  content: "\f061"
+  position: absolute
+  top: 50%
+  right: 50%
+  transform: translate(50%,-50%)
+  font-family: "fontawesome"
+  font-size: 17.6px
+.services-arrow.services-arrow-left::before
+  content: "\f061"
+  position: absolute
+  top: 50%
+  right: 50%
+  transform: translate(50%,-50%) rotate(180deg)
+  font-family: "fontawesome"
+  font-size: 17.6px
+.services-arrow:hover 
+  background: #4284e3
+  border: none
+.services-arrow:hover:before
+  color: #fff
+/*Page-section product*/
+.page-section.product
+  min-height: 570px
+  padding-top: 0
+.page-section.product .about-item-image
+  position: relative
+.page-section.product .about-item-image img
+  position: absolute
+  object-fit: contain
+.about-main-image
+  bottom: 0
+  z-index: 2
+.about-thumb-first-image
+  left: -30%
+  top: -6%
+.about-thumb-second-image
+  top: -8%
+  right: -20%
+.page-section.product .about-item-image .about-main-image
+  margin-left: -60px
+/*Page-section feedback*/
+.page-section.feedback
+  width: 80%
+  min-height: 366px
+  background: #4882e6
+  padding-top: 70px
+  padding-right: 100px
+  border-top-right-radius: 6px
+  border-bottom-right-radius: 6px
+  background: url(../img/feedback-bg.png) no-repeat center/cover
+.page-section.feedback .container
+  padding-left: 18%
+.feedback-content
+  width: 100%
+.feedback-content h2
+  font-size: 36px
+  font-family: $MontL
+  color: #fff
+.feedback-content p
+  margin-bottom: 40px
+  font-size: 18px
+  color: #fff
+.feedback-content .btn
+  padding-right: 35px
+.feedback-content .btn:hover
+  background: #fff
+  color: #3d84de
+  transform: scale(1.05)
+.feedback-content .fa
+  position: relative
+  margin-left: -25px
+  margin-right: 15px
+/*Page footer*/
+.page-footer
+  padding: 130px 0 50px 0
+.footer-top
+  padding: 24px 0
+.footer-alt-logo
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: flex-end
+  height: 100%
+  align-items: center
+.page-footer ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+.page-footer li 
+  display: inline-block
+.footer-top li a
+  font-size: 16px
+  font-family: $MontS
+  color: #d8d8d8
+  text-transform: uppercase
+  transition: all .25s ease
+.footer-top li a:hover
+  text-decoration: none
+  color: #3d84de
+.footer-top ul li:not(:last-of-type)
+  margin-right: 33px
+.footer-nav
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  height: 100%
+hr.container
+  border: 0
+  border-top: 1px solid #eee
+  width: 97%
+  margin: 25px 0
+.footer-bottom p
+  font-size: 16px
+  color: #7f7f7f
+.footer-bottom p a
+  color: #000
+  border-bottom: 1px dashed currentcolor
+  text-decoration: none
+  opacity: .5
+  transition: all .25s ease
+.footer-bottom p a:hover
+  color: #3d84de
+  opacity: 1
+.footer-bottom
+  padding: 18px 0
+.footer-social
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: flex-end
+.footer-social .social-links
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.footer-social-icon
+  width: 29px
+  height: 29px  
+  cursor: pointer
+  transition: all .25s ease-out
+  text-align: center
+  position: relative
+.footer-social-icon:hover
+  background: rgba(61, 132, 222, .2)
+  border-radius: 50%
+.footer-social-icon:hover .tooltip-links
+  transform: translateX(50%) scale(1)
+  opacity: 1
+.footer-social-icon:hover .fa
+  color: #477dc3
+.footer-social-icon:not(:first-of-type)
+  margin-left: 20px
+.footer-social-icon .fa
+  font-size: 18px
+  color: #bdbdbe
+.tooltip-links
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  position: absolute
+  min-width: 285px
+  padding: 10px 20px
+  background: #3d84de
+  box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.1)
+  top: -47px
+  right: 50%
+  transform: translateX(50%) scale(0)
+  border-radius: 100px
+  opacity: 0
+  transition: all .25s ease-out
+.tooltip-links::before
+  content: ' '
+  border-color: #3d84de transparent transparent
+  border-style: solid
+  border-width: 9px
+  position: absolute
+  bottom: -17px
+  right: 50%
+  transform: rotate(0deg) translateX(50%)
+.tooltip-links a
+  color: #fff
+  border-bottom: 1px dashed #fff
+  text-decoration: none
+.footer-copy
+  margin-top: 20px
+  font-size: 16px
+  color: #000
+  text-align: right
+  opacity: .5
+
+
+/*Customize mobile-menu*/  
+.mobile-list
+  display: none
+.mobile-menu-btn
+  display: none
+  position: relative
+  width: 30px
+  height: 20px
+  text-align: center
+  cursor: pointer
+  margin-left: 20px
+  &:hover
+    span,
+    span::before,
+    span::after
+      background-color: #fff
+  span,
+  span::before,
+  span::after
+    display: block
+    content: ""
+    width: 100%
+    height: 1px
+    background-color: #fff
+    transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+  span::before
+    transform: translateY(-8px)
+  span::after
+    transform: translateY(6px)
+  span
+    position: relative
+    top: 8px
+.mobile-menu-btn.active span::before,
+.mobile-menu-btn.active span::after
+  width: 100%
+  background-color: #fff
+.mobile-menu-btn.active span 
+  background-color: transparent!important
+.mobile-menu-btn.active span::before
+  transform: rotate(45deg) translate(2px,1px)
+.mobile-menu-btn.active span::after
+  transform: rotate(-45deg) translate(0px,1px)
+.mobile-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+  width: 100%
+  a, .link
+    position: relative
+    padding: 15px 10%
+    display: block
+    font-size: 13px
+    font-weight: bold
+    line-height: 1
+    color: $accent
+    border-left: 2px solid transparent
+    border-right: 2px solid transparent
+    transition: all .2s ease
+    position: relative
+    cursor: pointer
+    &:hover, &:active, &.active
+      border-left: 2px solid $accent
+      border-right: 2px solid $accent
+.mobile-list .link
+  border-bottom: 1px solid rgba(60, 131, 222, .1)
+.mobile-list .link.contacts
+  border-bottom: none
+.header-bottom .logo
+  position: relative
+.header-bottom .logo .maruga-logo
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+  opacity: 0
+@keyframes marugaChangelogo
+  0%
+    opacity: 1
+  33%
+    opacity: 1
+  50%
+    opacity: 0
+  90%
+    opacity: 0
+  100%
+    opacity: 1
+@keyframes IbsaChangelogo
+  0%
+    opacity: 0 
+  33%
+    opacity: 0 
+  50%
+    opacity: 1
+  90%
+    opacity: 1
+  100%
+    opacity: 0
+
+/*form-popup*/
+.form-popup
+  margin: 0 auto
+  padding: 86px 50px 45px 65px
+  max-width: 792px
+  background: #fff
+  border-radius: 10px
+  position: relative
+.form-popup form
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.form-popup .form-text
+  width: 48%
+.form-popup .form-fields
+  width: 52%
+.form-popup .form-heading
+  margin-bottom: 38px
+  font-size: 36px
+  font-family: $MontE
+  font-weight: bold
+  color: #3e84e0
+  line-height: 1.1
+.form-popup .help-text
+  max-width: 250px
+  font-size: 16px
+  color: #000000
+  line-height: 1.6
+.form-popup .form-field
+  height: 60px
+  margin-bottom: 10px
+  position: relative
+.valid-icon
+  position: absolute
+  right: 15px
+  top: 50%
+  transform: translateY(-50%)
+  color: #3e84e0
+  opacity: 0
+.form-popup .form-field input
+  height: 100%
+  width: 100%
+  padding: 0 15px
+  border: none
+  border-bottom: 2px solid transparent
+  background: #f5f5f5
+  font-size: 16px
+  color: #3e84e0
+.form-popup .form-field input:focus
+  border-bottom: 2px solid #3e84e0
+.form-popup .form-field input:valid + .valid-icon
+  opacity: 1
+.form-popup .form-field input:invalid + .valid-icon
+  opacity: 0
+.form-popup .form-fields .btn
+  padding: 12px 92px
+  border: none
+  font-size: 16px
+  cursor: pointer
+.humanity-checker
+  width: 60%
+  background: lightgray
+  min-height: 53px
+  margin: 20px 0
+  color: #fff
+  text-align: center
+  line-height: 50px
+.mfp-close
+  outline: none !important
+  right: 20px !important
+  top: 12px !important
+  font-size: 45px !important
+  font-family: MontR !important
+
+/*===================Inner pages===================*/
+/*Page about us*/
+.inner-page .site-navigation
+  padding: 60px 0
+.site-navigation .page-title
+  text-transform: none
+  color: #3e84e0
+.site-navigation .breadcrumb
+  list-style-type: none
+  margin: 0
+  padding: 0
+  margin-bottom: 20px
+.site-navigation .breadcrumb li 
+  display: inline-block
+.breadcrumb-item + .breadcrumb-item::before
+  display: inline-block
+  padding: 0 0.5rem
+  color: #cccccc
+  content: "\f054"
+  font-family: "fontawesome"
+.site-navigation .breadcrumb li,
+.site-navigation .breadcrumb a
+  font-size: 11px
+  font-family: $MontS
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 0.8px
+  color: #000000
+.site-navigation .breadcrumb-item.active
+  color: #a1a7bd
+.about-us-content img
+  max-width: 346px
+  width: 100%
+  height: auto
+  object-fit: cover
+.fleft
+  float: left
+  margin-right: 145px
+.fright
+  float: right
+  margin-top: 45px
+  margin-left: 92px
+  margin-right: 40px
+.about-us-content
+  padding: 0 112px
+.page-section.about-us
+  padding: 40px 0
+.about-us-content h3
+  font-size: 36px
+  line-height: 1
+.about-us-content p
+  margin-bottom: 30px
+  font-size: 16px
+.about-us-options h3
+  margin: 28px 0 40px 0
+.otions-list 
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 35px
+.otions-list .link
+  width: 49%
+  min-height: 118px
+  margin-bottom: 15px
+  padding: 30px 40px
+  border-radius: 5px
+  font-size: 24px
+  line-height: 1.2
+  color: #fff
+  transition: all .25s ease-out
+  text-decoration: none
+.otions-list .link:hover
+  transform: scale(1.05)
+.otions-list .link-theropy
+  background-image: url(../img/inner-page-about-us/line-bg.png), linear-gradient( 90deg, rgb(115,159,63) 0%, rgb(129,177,72) 100%)
+  background-repeat: no-repeat
+  background-position: 195% top
+.otions-list .link-skin
+  background-image: url(../img/inner-page-about-us/line-bg.png), linear-gradient( 90deg, rgb(111,111,139) 0%, rgb(127,128,161) 100%)
+  background-repeat: no-repeat
+  background-position: 195% top
+.otions-list .link-mod
+  background-image: url(../img/inner-page-about-us/line-bg.png), linear-gradient( 90deg, rgb(145,102,73) 0%, rgb(161,113,82) 100%)
+  background-repeat: no-repeat
+  background-position: 195% top
+.otions-list .link-plastic
+  background-image: url(../img/inner-page-about-us/line-bg.png), linear-gradient( 90deg, rgb(140,111,132) 0%, rgb(161,127,152) 100%)
+  background-repeat: no-repeat
+  background-position: 195% top
+.otions-list .link-post
+  background-image: url(../img/inner-page-about-us/line-bg.png), linear-gradient( 90deg, rgb(145,134,79) 0%, rgb(167,155,90) 100%)
+  background-repeat: no-repeat
+  background-position: 195% top
+.otions-list .link-vital
+  background: url(../img/inner-page-about-us/line-bg.png) #4284e3
+  background-repeat: no-repeat
+  background-position: 195% top
+  box-shadow: 0px 52px 85px 0px rgba(66, 132, 227, 0.3)
+
+.product-tabs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.product-tabs
+  border-radius: 100px
+  margin-bottom: 28px
+.product-tabs .product-tab
+  padding: 6px 32px
+  font-size: 11px
+  font-family: $MontS
+  text-transform: uppercase
+  cursor: pointer
+  border-bottom: 2px solid #e4e8f0
+  border-top: 2px solid #e4e8f0
+.product-tabs .product-tab:first-of-type
+  border-top-left-radius: 100px
+  border-bottom-left-radius: 100px
+.product-tabs .product-tab:last-of-type
+  border-top-right-radius: 100px
+  border-bottom-right-radius: 100px
+.product-tabs .product-tab.active
+  background: #e4e8f0
+.product-tabs .product-tab:not(:first-of-type)  
+  border-left: 2px solid #e4e8f0
+.product-description
+  padding-right: 50px
+.inner-page.product .site-navigation
+  padding-bottom: 40px
+.tabs-description
+  max-width: 92%
+  padding-right: 70px
+.tabs-description .product-tab
+  font-size: 16px
+.tabs-description b
+  font-family: $MontE
+  font-weight: lighter
+.tabs-description p
+  margin-bottom: 24px
+.tabs-description
+  padding-bottom: 10px
+  border-bottom: 1px solid #e5e5e5
+.product-image
+  text-align: center
+.product-image img
+  margin-top: -32%
+  max-width: 100%
+  height: auto
+  object-fit: cover
+.tabs-description .product-tab
+  display: none
+.tabs-description .product-tab.active
+  display: block
+.products-line
+  padding: 40px 0
+.products-line h3
+  font-size: 36px
+  font-family: $MontL
+.product-cards
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.other-products
+  padding-right: 70px
+.other-product-card
+  min-height: 375px
+  padding: 30px
+.other-product-image
+  margin-bottom: 15px
+  min-height: 200px
+  max-width: 100%
+  height: 100%
+  overflow: hidden
+  text-align: center
+.other-product-image img
+  max-width: 78px
+  height: auto
+.other-product-card
+  display: block
+  border-radius: 5px
+  color: #000
+  text-align: center
+  transition: all .25s ease-out
+.other-product-card:hover
+  box-shadow: 0px 1px 75px 0px rgba(0, 0, 0, 0.1)
+.other-product-card:hover
+  text-decoration: none
+  color: #000
+.other-product-cards
+  padding-top: 25px
+.other-product-card h4
+  font-size: 16px
+  font-family: $MontS
+  color: #1c1e23
+.other-product-description
+  font-size: 12px
+/*Page catalog*/
+.catalog-image img
+  margin-top: -65px
+  margin-left: -75px
+  max-width: 819px
+.catalog-text h3
+  margin-bottom: 35px
+  font-size: 36px
+  font-family: $MontL
+  line-height: 1.1
+.catalog-text p
+  font-size: 16px
+.catalog-text
+  padding: 8px 60px 0 112px
+.catalog-items
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.catalog-item h4
+  margin-bottom: 20px
+  font-size: 24px
+  font-family: $MontL
+  color: #fff
+  line-height: 1.2
+.catalog-item p
+  font-size: 16px
+  color: #fff
+.catalog-item .btn-wrap
+  margin-top: auto
+.catalog-item
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  margin-bottom: 30px
+.catalog-item .btn
+  box-shadow: 0px 30px 40px 0px rgba(28, 30, 35, 0.4)
+  position: relative
+.catalog-item .btn::before
+  content: "\f0da"
+  position: absolute
+  font-family: fontawesome
+  left: 16%
+  top: 50%
+  transform: translateY(-50%)
+.catalog-items .catalog-item
+  min-height: 375px
+  width: 48.5%
+  padding: 48px 45px 40px 160px
+  border-radius: 10px 
+.catalog-item.theropy
+  background: url(../img/inner-page-catalog/theropybg.png) no-repeat center
+  background-size: cover
+  color: #7e9c15
+.catalog-item.theropy .btn
+  color: #7e9c15
+.catalog-item.remod
+  background: url(../img/inner-page-catalog/remodbg.png) no-repeat center
+  background-size: cover
+  color: #4284e3
+.catalog-item.remod .btn
+  color: #4284e3
+.catalog-item.skin
+  background: url(../img/inner-page-catalog/skinbg.png) no-repeat center
+  background-size: cover
+  color: #7e7e9f
+.catalog-item.skin .btn 
+  color: #7e7e9f
+.catalog-item.mod
+  background: url(../img/inner-page-catalog/mod.png) no-repeat center
+  background-size: cover
+  color: #a19657
+.catalog-item.mod .btn 
+  color: #a19657
+.catalog-item.plastic
+  background: url(../img/inner-page-catalog/plasticbg.png) no-repeat center
+  background-size: cover
+  color: #7e7e9f
+.catalog-item.plastic .btn
+  color: #7e7e9f
+.catalog-item.post
+  background: url(../img/inner-page-catalog/postbg.png) no-repeat center
+  background-size: cover
+  color: #a07052
+.catalog-item.post .btn
+  color: #a07052
+.catalog-item .btn
+  position: relative
+  margin-left: -23px
+.catalog-item span
+  display: inline-block
+  padding: 8px 25px 8px 20px
+  background: #fff
+  border-radius: 100px
+  line-height: 1
+  vertical-align: middle
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+.catalog-item .btn:hover
+  background: #fff
+  transform: scale(1.05)
+.catalog-item .btn-wrap svg
+  fill: currentColor
+.catalog-item p
+  padding-bottom: 4px
+
+/*Page reviews*/
+.page-section.reviews
+  padding-top: 20px
+.review-item
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  margin-bottom: 42px
+.review-item.review-left 
+  justify-content: flex-start
+.review-item.review-right
+  justify-content: flex-end
+.review-item .review-text
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  max-width: 467px
+  padding: 45px 85px 40px 45px
+  align-items: center
+  border-radius: 5px
+  box-shadow: 0px 1px 75px 0px rgba(0, 0, 0, 0.1)
+  justify-content: center
+  font-size: 16px
+.review-author
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+  margin: 0 30px
+.review-right .review-author-avatar
+  order: 1
+.review-author-avatar
+  width: 98px
+  height: 98px
+  border-radius: 50%
+.review-author-avatar img
+  max-width: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+  border-radius: 50%
+  display: block
+.author-r
+  margin-right: 26px
+.author-l
+  margin-left: 26px
+.review-right .review-text
+  order: 1
+.review-author .author-name
+  font-size: 16px
+  font-family: $MontS
+  color: #3e84e0
+.review-right .author-name
+  color: #8935c3
+.pagination
+  width: 100%
+  text-align: right
+  padding: 40px 0
+.pagination a, .pagination span 
+  display: inline-block
+  width: 48px
+  height: 48px
+  line-height: 48px
+  text-align: center
+  vertical-align: middle
+  margin: 0 2px
+  transition: all .2s ease
+  background-color: transparent
+  border-radius: 50%
+  font-size: 14px
+  font-family: $MontS
+  color: #3a405b
+.pagination a.active
+  color: #bbbbbb
+  background-color: #fff
+  box-shadow: 0px 20px 40px 0px rgba(168, 172, 185, 0.62)
+.pagination a.fa
+  font-size: 18px
+  font-weight: bold
+.reviews-btn-wrapper
+  text-align: center
+  margin-top: 60px
+.reviews-btn-wrapper .btn::before
+  content: "\f075"
+  position: absolute
+  font-family: fontawesome
+  left: 10%
+  top: 50%
+  transform: translateY(-50%)
+.inner-page.reviews .page-footer
+  padding-top: 20px
+/*Page article*/
+.inner-page.article .site-navigation
+  padding-bottom: 5px
+.page-section.article
+  padding-top: 0
+  position: relative
+.inner-page.article .breadcrumb
+  text-align: center
+.page-section.article h3
+  width: 100%
+  font-size: 36px
+  font-family: $MontL
+  text-align: center
+.article-date
+  text-align: center
+  margin-bottom: 35px
+.article-date .article-link
+  font-size: 11px
+  font-family: $MontS
+  color: #b6b6b6
+  text-transform: uppercase
+.post 
+  padding: 0 70px
+  position: relative
+.post figure
+  box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.1)
+  height: 420px
+  display: block
+  margin-bottom: 28px
+.post .main-post-image
+  max-width: 100%
+  max-height: 100%
+  width: 100%
+  height: 100%
+  object-fit: cover
+.photo-author a
+  font-size: 12px
+  color: #bebebe
+  letter-spacing: 1px
+.photo-author
+  text-align: center
+  margin-bottom: 28px
+.article-text
+  padding: 0 40px
+.article-text p
+  font-size: 16px
+  margin-bottom: 35px
+.article-text .fleft
+  float: left
+  margin-right: 40px
+  margin-left: 20px
+  margin-bottom: 10px
+.article-text .fright
+  float: right
+  margin-left: 40px
+  margin-right: 20px
+  margin-bottom: 10px
+.article-text img
+  max-width: 373px
+  height: auto
+.article-info
+  padding: 15px 40px 30px 40px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.article-tags .tags-list
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-wrap: wrap
+.article-info .article-author
+  margin-right: 82px
+.article-author 
+  font-size: 16px
+  font-family: $MontS
+  color: #000000
+.article-author span,
+.article-tags span
+  display: block
+  font-size: 16px
+  font-family: $MontR
+  color: #999999
+.article-tags
+  max-width: 340px
+.article-tags .tag
+  padding: 2px 15px
+  margin: 0 5px 3px 0
+  border: 1px solid #e5e5e5
+  border-radius: 5px
+  font-size: 10px
+  font-family: $MontS
+  color: #585858
+  text-transform: uppercase
+  text-decoration: none
+  transition: all .25s ease-out
+.article-tags .tag:hover
+  background: #e5e5e5
+  color: #fff
+.topcontrol
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  background: #f1f1f1
+  width: 107px
+  height: 292px
+  font-size: 12px
+  font-family: $MontS
+  text-transform: uppercase
+  text-align: center
+  border-radius: 3px
+  line-height: 1.4
+  color: #919191
+  z-index: 10
+  transition: all .25s ease-out
+  cursor: pointer
+  position: fixed
+  left: 10px
+  top: 60%
+  transform: translateY(-60%)
+  display: none
+.topcontrol i
+  font-size: 36px
+.topcontrol:hover
+  opacity: .6
+.topcontrol.active
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+/*Page publication*/
+.page-section.publication
+  padding-top: 0
+.publication-filter
+  margin-bottom: 40px
+  position: relative
+.publication-filter-btn
+  padding: 15px 18px
+  width: 270px
+  background: #ebecee
+  border-radius: 5px
+  font-size: 14px
+  color: #3a405b
+  cursor: pointer
+  line-height: 1
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.publication-filter-btn i
+  margin-left: auto
+  font-weight: bold
+  transition: all .25s ease-out
+.publication-filter-btn.active i
+  transform: rotate(180deg)
+.inner-page.publication .site-navigation
+  padding-bottom: 34px
+.publication-filter-form
+  width: 270px
+  min-height: 1px
+  box-shadow: 0px 20px 40px 0px rgba(34, 35, 40, 0.25)
+  margin-top: 15px
+  position: absolute
+  top: 52px
+  z-index: 10
+  background: #fff
+  opacity: 0
+  pointer-events: none
+.publication-filter-form.active
+  opacity: 1
+  pointer-events: auto
+.publication-filter-form .form-search
+  height: 42px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  border-bottom: 1px solid #f2f2f2
+  padding: 0 16px 0 18px
+.publication-filter-form .form-select
+  padding: 0 14px 
+  margin-top: 10px
+  margin-bottom: 20px
+.publication-filter-form .form-search input
+  height: 100%
+  width: 100%
+  border: none
+.publication-filter-form .form-search .btn-search
+  background: none
+  border: none
+  margin: 0
+  padding: 0
+  cursor: pointer
+.publication-filter-form .form-search .btn-search i
+  color: #cccccc
+
+
+.publication-list
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  width: 100%
+  justify-content: space-between
+  flex-wrap: wrap
+.publication-head
+  height: 150px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center 
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  padding: 19px 10px 10px 19px
+  display: block
+.publication-type
+  padding: 3px 19px
+  font-size: 10px
+  font-family: $MontL
+  color: #fff
+  text-transform: uppercase
+  background: rgba(000,000,000,0.3)
+  border-radius: 5px
+  text-decoration: none
+  transition: all .25s ease-out
+  display: inline-block
+  vertical-align: top
+.publication-type:hover
+  color: #fff
+  background: rgba(000,000,000,1)
+  text-decoration: none
+.publication-share
+  width: 36px
+  height: 36px
+  background: rgba(000,000,000,0.1)
+  border-radius: 50%
+  display: inline-block
+  float: right
+  transition: all .25s ease-out
+  text-align: center
+  line-height: 36px
+  color: #fff
+  vertical-align: middle
+.publication-share:hover
+  color: #fff
+  background: rgba(000,000,000,0.3)
+.publication-share i
+  font-size: 14px
+.publication-body
+  padding: 28px 19px
+  border-bottom: 2px solid #f7f7f7
+  height: 120px
+  overflow: hidden
+.publication-title
+  font-size: 16px
+  font-family: $MontL
+  color: #666666
+  line-height: 1.2
+  max-height: 77px
+  overflow: hidden
+  text-overflow: ellipsis
+.publication-item
+  min-height: 330px
+  margin-bottom: 40px
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.08)
+  width: 23%
+  border-radius: 5px
+  display: block
+  text-decoration: none
+  color: #666666
+.publication-item:hover
+  color: inherit
+  text-decoration: none
+.publication-footer
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  padding: 19px 25px 19px 19px
+  justify-content: space-between
+  font-size: 12px
+  font-family: $MontS
+  color: #b3b3b3
+  align-items: center
+.publication-footer svg
+  fill: currentColor
+  display: inline-block
+  vertical-align: bottom
+  margin-right: 15px
+.publication-item.item-big
+  width: 49%
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center 35%
+  position: relative
+  border-radius: 5px
+.publication-item.item-big::before
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  background: #000
+  opacity: .2
+.publication-item.item-big .publication-head
+  padding: 30px
+  padding-top: 62px
+  height: 270px
+  position: relative
+  text-align: center
+  border-bottom: 2px solid rgba(255,255,255,0.1)
+.publication-item.item-big .publication-footer
+  position: relative
+  color: #fff
+.publication-item.item-big .publication-title
+  font-size: 24px
+  font-family: $MontL
+  text-transform: uppercase
+  color: #fff
+  font-weight: lighter
+  line-height: 1.6
+.publication-item.item-big .publication-type
+  margin-bottom: 40px
+.publication-item.item-big .publication-footer
+  padding: 19px 8%
+  font-family: $MontL
+.publication-info
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.publication-views,
+.publication-item.item-big .publication-comment
+  margin: 0 15px
+.publication-views svg
+  vertical-align: top
+  transition: all .25s ease-out
+.publication-comment svg
+  transition: all .25s ease-out
+.publication-views:hover svg,
+.publication-comment:hover svg
+  opacity: .5
+.page-section.publication .pagination
+  padding-top: 0px
+/*Page product-line*/
+.page-section.product-line
+  padding-top: 0
+.page-section.product-line .product-list
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.page-section.product-line .other-product-card
+  width: 23%
+  box-shadow: 0 1px 75px 0 rgba(0,0,0,.1)
+  background: #fff
+.page-section.product-line .other-product-card:not(:last-of-type)
+  margin-right: 30px
+.page-section.product-line .other-product-card:hover
+  background: none
+  box-shadow: none
+.page-section.product-line .other-product-card:hover h4
+  color: #3e84e0  
+.page-section.product-line .other-product-image
+  height: auto
+.product-line-description
+  padding: 35px 0
+.product-line-description p
+  font-size: 16px
+  margin-bottom: 25px
+/*Page acid*/
+.page-section.acid
+  padding-top: 25px
+.acid-content
+  padding-left: 112px
+.acid-text h3
+  margin-bottom: 35px
+  font-size: 36px
+  font-family: $MontL
+  line-height: 1.1
+.acid-text p
+  font-size: 16px
+  margin-bottom: 26px
+.acid-text-right .acid-image img
+  margin-left: -150px
+  max-width: 819px
+.acid-text-right
+  margin-bottom: 50px
+.acid-text-left
+  margin-bottom: 15px
+.acid-text-right .acid-text 
+  padding: 0px 25px 0 20px
+.acid-text-left .acid-item-text
+  order: -1
+.acid-text-left .acid-image
+  text-align: center
+.acid-text-left .acid-image img
+  margin-top: 70px
+.acid-text-left .acid-text 
+  padding: 0px 90px 0 0
+.acid-text-right .acid-item-img .fix-image
+  text-align: center
+  margin-top: 160px
+  margin-left: 0
+.acid-text-right .acid-image .fix-image
+  max-width: 430px
+.parametr-list  
+  font-size: 12px
+.parametr-list td,
+.parametr-list th
+  vertical-align: top
+  padding: 20px 20px 15px 20px
+.parametr-list td
+  background: #f3f3f3
+.parametr-list th
+  font-family: $MontS
+  background: #eeeeee
+.parametr-list td:not(:first-of-type)
+  border-left: 1px solid #e3e3e3
+.parametr-list 
+  margin-bottom: 20px
+.term
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  font-size: 12px
+  font-style: italic
+.acid-description
+  column-count: 2
+  column-gap: 70px
+  margin-top: 65px
+  margin-bottom: 35px
+.acid-description h3
+  margin-bottom: 40px
+  font-size: 36px
+  font-family: Montserrat-Light,sans-serif
+  line-height: 1.1
+.acid-description p
+  font-size: 16px
+.acid-description ul
+  list-style-type: none
+.acid-description li
+  position: relative
+.acid-description li::before
+  content: ""
+  position: absolute
+  left: -18px
+  top: 8px
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  background: #d0d0d0
+/*Page contacts*/
+.page-section.contacts
+  padding-top: 35px
+.page-section.contacts h3
+  margin-bottom: 70px
+  font-size: 36px
+  font-family: $MontL
+  font-weight: normal
+  line-height: 1.1
+.page-section.contacts .contact-text
+  max-width: 400px
+.page-section.contacts .contact-text p
+  font-size: 16px
+.page-section.contacts .form-popup
+  padding: 0
+.page-section.contacts .form-popup .form-fields
+  width: 80%
+.page-section.contacts .contacts-form h3
+  margin-bottom: 35px
+.page-section.contacts .contacts-form textarea
+  width: 100%
+  padding: 30px 15px
+  height: 100%
+  border: none
+  background: #f5f5f5
+  resize: none
+  color: #3e84e0
+.form-field.textarea
+  height: 188px
+.form-field input,textarea
+  &::-webkit-input-placeholder
+    color: #3e84e0
+
+  &::-moz-placeholder
+     color: #3e84e0
+     opacity: 1
+.page-section.contacts .logo-box
+  padding: 20px 0 38px 0
+.page-section.contacts .logo-box img:not(:last-of-type)
+  margin-right: 60px
+.map
+  height: 460px
+  width: 100%
+  margin-top: 20px
+  background: url(../img/inner-page-contacts/map-fallback.png) no-repeat center
+  background-size: cover
+.inner-page.contacts .page-footer
+  padding-top: 60px
+
+/*Filter*/
+.js-example-basic-multiple
+  width: 100% !important
+
+@import "media" // Always at the end
+
+
