@@ -1599,6 +1599,7 @@ input, select, textarea {
 		cursor: pointer;
 		outline: 0;
 		padding: 0.7em 1.5em 0.7em 1.5em;
+		color: #fff;
 	}
 
 		input[type="button"]:hover,
