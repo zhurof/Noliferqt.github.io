@@ -1,0 +1,767 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+::marker
+	display: none
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $PFSR
+	overflow-x: hidden
+	color: #111
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+a
+	color: inherit
+	transition: all .2s ease-out
+img
+	max-width: 100%
+label
+	margin-bottom: 0
+button
+	border: 0
+	background: none
+	cursor: pointer
+	transition: all .2s ease-out
+.icon
+	display: inline-block
+	vertical-align: middle
+.btn
+	display: inline-block
+	text-align: center
+	border-radius: 6px
+	padding: 11px 20px
+.btn:hover
+	text-decoration: none
+
+.btn .icon
+	margin-right: 10px
+.btn:active
+	transform: scale(.98)
+.btn-accent
+	background-color: #009C4D
+	color: #fff
+	border-radius: 0
+.btn-accent:hover,
+.btn-accent:active
+	background-color: darken($accent, 2%)
+.btn-white
+	background-color: #fff
+	border: 2px solid #C4C4C4
+.btn-load
+	border: 1px solid #009C4D
+	border-radius: 0
+	cursor: pointer
+.btn-white:hover
+
+
+
+/*icons*/
+.spa-icon
+	display: block
+	min-width: 24px
+	width: 24px
+	height: 24px
+	border-radius: 15px
+	margin-right: 15px
+.spa-icon.spa-italy
+	background: url("../img/country-icons/italy.svg") no-repeat center/contain
+.spa-icon.spa-russia
+	background: url("../img/country-icons/russia.svg") no-repeat center/contain
+.spa-icon.spa-spain
+	background: url("../img/country-icons/spain.svg") no-repeat center/contain
+.spa-icon.spa-brazil
+	background: url("../img/country-icons/brazil.svg") no-repeat center/contain
+.spa-icon.spa-greece
+	background: url("../img/country-icons/greece.svg") no-repeat center/contain
+.spa-icon.spa-cuba
+	background: url("../img/country-icons/cuba.svg") no-repeat center/contain
+.spa-icon.spa-israel
+	background: url("../img/country-icons/israel.svg") no-repeat center/contain
+.spa-icon.spa-india
+	background: url("../img/country-icons/india.svg") no-repeat center/contain
+.spa-icon.spa-norway
+	background: url("../img/country-icons/norway.svg") no-repeat center/contain
+.spa-icon.spa-turkey
+	background: url("../img/country-icons/turkey.svg") no-repeat center/contain
+.spa-icon.spa-vietnam
+	background: url("../img/country-icons/vietnam.svg") no-repeat center/contain
+.spa-icon.spa-georgia
+	background: url("../img/country-icons/georgia.svg") no-repeat center/contain
+.spa-icon.spa-switzerland
+	background: url("../img/country-icons/switzerland.svg") no-repeat center/contain
+.spa-icon.spa-thailand
+	background: url("../img/country-icons/thailand.svg") no-repeat center/contain
+.spa-icon.spa-sweden
+	background: url("../img/country-icons/sweden.svg") no-repeat center/contain
+
+/*mobile-menu-btn*/
+.mobile-menu-btn
+	min-width: 26px
+	width: 26px
+	height: 22px
+	text-align: center
+	cursor: pointer
+	float: right
+	&:hover
+		span,
+		span::before,
+		span::after
+			background-color: $accent
+	span,
+	span::before,
+	span::after
+		display: block
+		content: ""
+		width: 100%
+		height: 3px
+		background-color: $accent
+		transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+    border-radius: 100px
+	span::before
+		transform: translateY(-9px)
+		border-radius: 100px
+	span::after
+		transform: translateY(6px)
+		border-radius: 100px
+	span
+		position: relative
+		top: 8px
+		border-radius: 100px
+.mobile-menu-btn.active span::before,
+.mobile-menu-btn.active span::after
+	width: 100%
+	background-color: #fff
+.mobile-menu-btn.active span 
+	background-color: transparent!important
+.mobile-menu-btn.active span::before
+	transform: rotate(45deg) translate(3px,2px)
+.mobile-menu-btn.active span::after
+	transform: rotate(-45deg) translate(0px,1px)
+.mobile-menu .icon
+	margin-right: 15px
+.mobile-menu
+	color: #fff
+	font-size: 18px
+	padding-top: 40px
+.mobile-navigation
+	display: none
+	position: absolute
+	width: 100%
+	top: 60px
+	left: 0
+	text-align: center
+	height: calc(100vh - 60px)
+	background-color: #009C4D
+	z-index: 5
+	overflow: auto
+.mobile-navigation.active
+	display: flex
+	flex-direction: column
+.mobile-login.header-login
+	font-size: 18px
+	text-align: center
+	margin-top: auto
+	margin-bottom: 35px
+	color: #fff
+.mobile-login.header-login .icon-login
+	font-size: 22px
+	margin-right: 10px
+	vertical-align: top
+
+/*STYLES FOR OPEN MOBILE MENU*/
+
+.is-open .header-contacts .icon
+	color: #fff
+.is-open .header-logo	
+	filter: grayscale(1) brightness(20) 
+.is-open .header-bottom
+	border-bottom-color: transparent
+
+/*PAGE HEADER*/
+.page-header
+	font-family: $PFSM
+	margin-bottom: 48px
+.header-menu
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.header-logo
+	display: block
+	transition: none
+.header-menu li:not(:last-of-type)
+	margin-right: 30px
+.header-top
+	padding: 40px 0 20px 0
+.header-bottom
+	padding: 20px 0
+	position: relative
+.header-top a:hover
+	color: $accent
+	text-decoration: none
+.header-login
+	text-align: right
+.header-login .icon-login
+	font-size: 30px
+	margin-right: 4px
+.header-reg
+	margin-left: 20px
+	position: relative	
+.header-login a:not(:first-of-type):before
+	content: "/"
+	position: absolute
+	left: -15px
+	top: 50%
+	transform: translateY(-50%)
+.header-contacts
+	text-align: right
+.header-phone
+	font-size: 22px
+.header-phone:hover
+	color: #DD0707
+	text-decoration: none
+.header-contacts a:not(:first-of-type)
+	margin-left: 25px
+/*PAGE NAVIGATION*/
+.page-navigation
+	text-align: center
+	margin-bottom: 50px
+.navigation-place
+	line-height: 1.3
+.page-title
+	font-size: 60px
+	font-family: $PFSM
+	font-weight: normal
+	line-height: 1.1
+.place-heading
+	font-family: $PFSM
+	font-size: 18px
+.place-heading span
+	display: inline-block
+.place-body
+	font-size: 14px
+.page-heading
+	position: relative
+/*PAGE CONTENT*/
+//main-search-form
+.main-search-form
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	font-family: $PFSM
+	flex-wrap: wrap
+.main-search-form .form-field
+	height: 70px
+	position: relative
+.search-tour-form .form-field input
+	border: 0
+	border-right: 1px solid #DEE2E0
+	padding: 0 30px
+.search-tour-form .tour-date-field input
+	padding-right: 60px
+.search-tour-form input
+	background: #F0F4F2
+.tour-place-field,
+.tour-date-field
+	max-width: 287px
+	min-width: 287px
+	width: 100%
+	position: relative
+.tour-place-from
+	position: absolute
+	width: 100%
+	top: -30px
+.select-list
+	z-index: 2
+	position: absolute
+	left: 0
+	width: 100%
+	background-color: #fff
+	box-shadow: 2px -2px 10px rgba(0, 0, 0, 0.1)
+	padding: 5px 20px 5px 30px
+	max-height: 344px
+	overflow: auto
+.spa-list 
+.tour-place-from .select-list
+	top: 30px
+.spa-list .select-list-content h4
+	font-size: 12px
+	font-weight: normal
+	font-style: italic
+	margin: 20px 0 
+.tour-place-to .select-list
+	top: 70px
+.select-list.active
+	display: block
+.select-list-option
+	padding: 10px 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	cursor: pointer
+.visa-status
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	color: #fff
+	min-width: 72px
+	padding: 4px 8px
+	font-size: 14px
+	font-family: $PFSR
+	border-radius: 4px
+	margin-left: auto
+	line-height: 1
+	border: 1px solid transparent
+.with-visa
+	background-color: #009C4D
+.without-visa
+	background-color: #F0F4F2
+	color: #111
+.online-visa
+	background-color: #9AC8B1
+.select-list::-webkit-scrollbar-thumb
+	background-color: #C4C4C4
+	border-radius: 4px
+.select-list::-webkit-scrollbar-track-piece
+	background-color: #ffffff
+.select-list::-webkit-scrollbar-track
+	background-color: #999
+.select-list::-webkit-resizer
+	background-color: #666
+.select-list::-webkit-scrollbar
+	width: 5px
+	height: 3px
+.select-list
+	display: none
+.search-tour-form .icon,
+.search-tour-form .fa
+	position: absolute
+	right: 30px
+	top: 50%
+	transform: translateY(-50%)
+	color: #BABABA
+.search-tour-form input:focus ~ .icon,
+.search-tour-form input:focus ~ .fa
+	color: #009C4D
+.tour-duration-field,
+.tour-people-field
+	max-width: 180px
+	min-width: 180px
+.tour-people-field .form-field input
+	border: 0
+.select-list-item
+	padding: 15px 0 20px 0
+.select-list-item h4
+	font-size: 12px
+	font-weight: normal
+	font-style: italic
+	font-family: $PFSR
+	margin-bottom: 11px
+.select-list-item:not(:last-of-type)
+	border-bottom: 1px solid #C4C4C4
+.amount-field
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+.amount-field button  
+  width: 24px
+  height: 24px
+  line-height: 0
+  border: none
+  border-radius: 50%
+  font-size: 18px
+  color: #fff
+  background: #9AC8B1
+  outline: none
+  font-family: $PFSR
+  padding: 0
+.amount-field button:hover
+  background: #008D46
+.amount-field .amount
+  border: none
+  text-align: center
+  background: #fff
+  z-index: 2
+  font-size: 18px
+.select-list-item .amount-field .amount
+  padding: 0
+  max-width: 70px
+  border: 0
+input[type="number"] 
+  -moz-appearance: textfield
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button       
+  -webkit-appearance: none
+  margin: 0
+.search-tour-form .btn .icon
+	position: relative
+	right: auto
+	top: auto
+	transform: none
+	margin-right: 0
+	margin-left: 10px
+	color: #fff
+.main-search-form .btn
+	width: 100%
+	max-width: 176px
+	text-transform: uppercase
+
+//datepicker recustomize
+.daterangepicker::after
+	display: none
+.daterangepicker
+	font-family: $PFSM
+	margin-top: 0
+	padding: 15px 30px 35px 30px
+	box-shadow: 2px -2px 10px rgba(0, 0, 0, 0.1)
+	border: 0
+	border-radius: 0
+.datepicker-list
+	width: auto
+	padding: 0
+	display: block
+.datepicker-list.active
+	width: 647px
+	height: 344px
+.daterangepicker::before
+	content: ""
+	position: absolute
+	width: calc(100% - 60px)
+	height: 1px
+	left: 30px
+	top: 65px
+	background-color: #E6E6E6
+	border: 0
+.daterangepicker.opensright::before
+	left: 30px
+.daterangepicker .drp-calendar.left .calendar-table
+	padding-right: 0
+.daterangepicker .calendar-table .prev,
+.daterangepicker .calendar-table .next
+	width: 35px
+	height: 35px
+	border-radius: 50%
+	background-color: #F0F4F2
+	padding: 0
+	border: 0
+	line-height: 1
+	color: #111
+.daterangepicker .calendar-table .prev:hover,
+.daterangepicker .calendar-table .next:hover
+	background-color: #009C4D
+	color: #fff
+.daterangepicker .calendar-table .prev span,
+.daterangepicker .calendar-table .next span
+	border: 0
+	transform: none
+	position: relative
+	font-weight: normal
+.calendar-table .prev span::before,
+.calendar-table .next span::before
+	position: absolute
+	right: 50%
+	top: 50%
+	transform: translate(50%,-50%)
+	font-family: "icomoon"
+	color: #111
+.calendar-table .prev:hover span::before,
+.calendar-table .next:hover span::before
+	color: #fff
+.calendar-table .prev span::before
+	content: "\e56"
+.calendar-table .next span::before
+	content: "\e57"
+.daterangepicker.show-calendar .drp-buttons
+	display: none
+.daterangepicker .drp-calendar.left,
+.daterangepicker .drp-calendar.right
+	padding: 0
+.daterangepicker .drp-calendar.left
+	margin-right: 66px
+.daterangepicker thead tr:last-of-type th
+	font-size: 11px
+	color: #ADADAD
+.daterangepicker .calendar-table td, 
+.daterangepicker .calendar-table th
+	min-width: 37px
+	height: 31px
+	border-radius: 0
+.daterangepicker .calendar-table .month
+	font-size: 16px
+.daterangepicker .calendar-table td
+	border: 1px solid #fff
+	font-size: 14px
+.calendar-table thead tr:last-of-type th
+	padding: 25px 0 20px 0
+.daterangepicker td.active, .daterangepicker td.active:hover
+	background-color: #009C4D
+.daterangepicker td.start-date,
+.daterangepicker td.end-date,
+.daterangepicker td.start-date.end-date
+	border-radius: 0
+.daterangepicker td.in-range
+	background-color: #F0F4F2
+.daterangepicker td.active.in-range
+	background-color: #009C4D
+	color: #fff
+
+//scrollbar recustomize MUST BE DELETE
+.select-list .mCSB_outside + .mCSB_scrollTools
+	right: 0
+.select-list .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+	background-color: #C4C4C4
+	width: 4px
+	border-radius: 4px
+.select-list .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail
+	background: none
+
+/*PAGE FOOTER*/
+.footer-top
+	font-size: 14px
+	font-family: $PFSM
+	margin-bottom: 60px
+.page-footer
+	padding: 55px 0
+	background-color: #1D2320
+	margin-top: auto
+.footer-column
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	color: #fff
+.footer-logo
+	max-width: 160px
+	filter: grayscale(1) brightness(20) 
+.footer-column p
+	margin-bottom: 60px
+.footer-column a
+	color: #fff
+	display: block
+.footer-logo
+	margin-bottom: 36px
+.footer-menu li:not(:last-of-type)
+	margin-bottom: 8px
+.footer-social-links
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.footer-social-link
+	width: 44px
+	height: 44px
+	border: 1.5px solid #252C28
+	border-radius: 50%
+	margin: 0 10px
+	position: relative
+.footer-social-link i
+	position: absolute
+	right: 50%
+	top: 50%
+	transform: translate(50%,-50%)
+.footer-social-link .icon-facebook
+	font-size: 14px
+.footer-social-link .icon-instagram
+	font-size: 16px
+.footer-social-link .icon-vk
+	font-size: 18px
+.footer-social-link:hover,
+.btn-top:hover
+	border-color: white
+	box-shadow: inset 0 5px 15px rgba(255,255,255,0.5)
+.footer-bottom
+	color: #5B605D
+	font-size: 12px
+.footer-bottom p
+	margin-bottom: 0
+.footer-pay
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.footer-pay img
+	margin: 0 15px
+.btn-top
+	display: block
+	width: 60px
+	height: 60px
+	border: 1.5px solid #252C28
+	border-radius: 50%
+	background: url("../img/icons/arrow-top.svg") no-repeat center
+	position: relative
+.btn-top .fa
+	position: absolute
+	right: 50%
+	top: 50%
+	transform: translate(50%,-50%)
+	font-size: 30px
+.full-site-link a
+	text-decoration: underline
+
+
+/*POPUPS AND FORMS*/
+.popup
+	display: none
+	max-width: 600px
+	width: 100%
+	padding: 40px 80px
+	font-family: $PFSB
+.popup .form-field
+	height: 50px	
+.popup h4
+	font-size: 24px
+	font-weight: normal
+	text-align: center
+	margin-bottom: 30px
+.form-row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.popup .form-row
+	margin-bottom: 20px
+.form-row .form-field
+	width: 100%
+.form-row .field-name
+	max-width: 32%
+	width: 100%
+	margin-right: 25px
+	line-height: 1.25
+.form-row .field-name.field-check
+	min-width: 38%
+	margin-right: 0
+.form-field input
+	height: 100%
+	max-width: 100%
+	width: 100%
+	border: 1px solid #C4C4C4
+	padding: 0 15px
+.form-field input:focus
+	border-color: #009C4D
+.form-field input[type="checkbox"]
+	width: auto
+	height: auto
+//bird checkbox
+.checkbox
+	position: relative
+	display: block
+.checkbox-indicator
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 20px
+  height: 20px
+  background: #fff
+  border: 1px solid #C4C4C4
+  color: #fff
+.popup .checkbox-indicator
+	right: -20px
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  content: "\f107"
+  position: absolute
+  right: 50%
+  top: 50%
+  transform: translate(50%,-50%)
+  font-family: fontawesome
+  line-height: 1
+  font-size: 20px
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator
+  background: #009C4D
+  border: none
+.visually-hidden 
+  display: none
+.login-form .form-footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 40px
+.popup .form-footer
+	text-align: right
+.form-footer .btn
+	min-width: 180px
+	padding: 18px 22px
+.forgot-link
+	font-size: 14px
+	font-family: $PFSR
+.registration-form h4
+	margin-bottom: 18px
+.registration-form p
+	font-family: $PFSR
+	margin-bottom: 25px
+	line-height: 1.185
+.load-field input
+	display: none
+.registration-form .btn-load
+	min-width: 160px
+.captcha-field .captcha
+	max-width: 160px
+	height: 100%
+	background: url("../img/captcha.png") no-repeat center/100% 100%
+.form-help
+	font-size: 12px
+	font-family: $PFSR
+	margin-bottom: 8px
+
+
+
+//fancybox recustomize
+.fancybox-slide--html .fancybox-close-small
+	color: #9AC8B1
+	padding: 8px
+	right: 12px
+	top: 12px
+.fancybox-slide--html .fancybox-close-small:hover
+	color: $accent
+.fancybox-is-open .fancybox-bg
+	background: #111
+	opacity: .7
+.fancybox-slide--html
+	padding: 0
+@import "media" // Always at the end

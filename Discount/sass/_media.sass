@@ -1,0 +1,351 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.inner-page
+		background-color: #fff
+	/*PAGE HEADER*/
+	.page-header
+		margin-bottom: 0
+	.header-logo,
+	.footer-logo
+		width: 120px
+	.header-phone
+		display: none
+	.header-contacts
+		text-align: left
+	.header-logo
+		margin: 0 auto
+	.header-bottom
+		padding: 15px 0 16px 0
+		border-bottom: 1px solid #DEE2E0
+	.header-contacts .btn
+		font-size: 0
+		padding: 0
+		background: none
+		border: 0
+		margin-right: 0
+	.header-contacts .icon
+		font-size: 20px
+		margin-right: 0
+		color: $accent
+	.header-contacts .phone-icon
+		width: 20px
+		height: 20px
+		background: url("../img/icons/phoneg.svg") no-repeat center/contain
+		margin-right: 0
+	/*PAGE NAVIGATION*/
+	.page-navigation
+		padding: 10px 0
+		background-color: #F0F4F2
+		min-height: auto
+	.inner-page-results .header-bottom
+		border: 0
+	.navigation-back-btn
+		position: absolute
+		min-width: 20px
+		height: 20px
+		line-height: 18px
+		font-size: 22px
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+	.navigation-map-btn
+		position: absolute
+		font-size: 22px
+		width: 24px
+		height: 24px
+		line-height: 22px
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+	/*PAGE CONTENT*/
+	//main-search-form
+	.main-search-form .form-field
+		height: 60px
+	.tour-date-field, .tour-place-field,
+	.tour-duration-field, .tour-people-field
+		max-width: 100%
+		width: 48%
+		margin-bottom: 20px
+	.main-search-form
+		justify-content: space-between
+	.search-tour-form .form-field input
+		border: 0
+	.main-search-form .btn
+		max-width: 290px
+		margin: 0 auto
+		padding: 18px 20px
+	.select-list,
+	.datepicker-list.active
+		position: fixed
+		width: 100vw
+		height: 100vh
+		max-height: 100%
+		left: 0
+		top: 0
+		padding-top: 36px
+		background-color: #008241
+		color: #fff
+	.select-list.active
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		width: 100%
+	.spa-icon
+		display: none
+	.with-visa
+		background-color: #fff
+		color: #009C4D
+	.without-visa
+		background-color: transparent
+		color: #fff
+		border-color: #fff
+	.datepicker-list
+		display: none
+	.tour-place-to .select-list
+		left: 0
+		top: 0
+	.spa-list .select-list-content
+		max-width: 450px
+		margin: 0 auto
+		padding-bottom: 35px
+	.select-list-content
+		width: 100%
+	.select-list-navigation .navigation-back-btn .fa,
+	.select-list-navigation .navigation-back-btn .icon
+		right: auto
+		color: #fff
+		position: relative
+		transform: none
+		top: auto
+		margin-right: 10px
+		font-size: 20px
+	.select-list-navigation 
+		position: relative
+		padding: 0 80px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		margin-bottom: 25px
+		min-height: 20px
+		line-height: 1
+		margin-left: 30px
+		margin-right: 30px
+	.select-list-navigation h4
+		margin-bottom: 0
+	.spa-list .select-list-content h4
+		margin-bottom: 5px
+	.select-list-navigation .navigation-back-btn
+		font-size: 16px
+	.select-list-fields .form-field input
+		padding: 0 30px 0 15px
+		background-color: #fff
+	.tour-place-fields .fa,
+	.tour-place-fields .icon
+		right: 15px
+		font-size: 18px
+		color: #009C4D
+	.datepicker-list .select-list-content,
+	.tour-date-fields
+		position: relative
+		margin: 0 auto
+		max-width: 670px
+		width: 100%
+	.datepicker-list .select-list-content
+		min-height: 344px
+		margin-bottom: 30px
+	.daterangepicker
+		left: 0 !important
+		top: 0 !important
+		color: #111
+	.daterangepicker .drp-calendar.left
+		margin-right: 89px
+	.tour-date-fields 
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+	.tour-date-fields .form-field
+		max-width: 48%	
+		width: 100%
+	.tour-date-fields .form-field input
+		padding: 0 15px 0 45px
+	.tour-date-fields .fa,
+	.tour-date-fields .icon
+		color: #009C4D
+		right: auto
+		left: 30px
+	.tour-date-fields .form-field:last-of-type .icon
+		transform: translateY(-40%) rotate(-180deg)
+		left: 15px
+	.datepicker-list .btn
+		background-color: #1D2320
+		width: 100%
+		max-width: 100%
+		margin-top: auto
+	/*PAGE FOOTER*/
+	.page-footer
+		padding: 40px 0 75px 0
+	.footer-social-links
+		margin-bottom: 25px
+	.footer-top
+		margin-bottom: 0
+	.footer-column p
+		margin-bottom: 50px
+	.footer-social-link
+		width: 40px
+		height: 40px
+	.is-open .page-header
+		background-color: #009C4D
+	.mobile-menu a
+		display: block
+		padding: 8px 0
+	/*POPUP*/
+	.popup
+		background-color: #008241
+		color: #fff
+		max-width: 100%
+		height: 100%
+		padding: 40px 0 0 0
+	.fancybox-slide--html .fancybox-close-small,
+	.fancybox-slide--html .fancybox-close-small:hover
+		color: #fff
+	.form-body
+		max-width: 450px
+		margin: 0 auto
+	.popup .form-row
+		margin-bottom: 16px
+	.form-row,
+	.popup .form-footer
+		flex-wrap: wrap
+	.form-row .field-name
+		max-width: 100%
+		margin-right: 0
+		margin-bottom: 5px
+	.popup h4
+		margin-bottom: 45px
+	.popup .form-field
+		height: 60px
+	.form-field input
+		border: 0
+	.form-row .field-name.field-check
+		min-width: 1px
+		text-align: center
+	.checkbox
+		display: inline-block
+		margin-right: 30px
+	.popup .checkbox-indicator
+		right: -30px
+		border: 1px solid #FFFFFF
+		background: none
+	.checkbox input[type="checkbox"]:checked + .checkbox-indicator
+		background: none
+		border: 1px solid #FFFFFF 
+	.form-footer .btn
+		width: 100%
+		background-color:  #1D2320
+		text-transform: uppercase
+		margin-top: auto
+	.popup form
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		height: 100%
+	.popup .form-footer
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+	.login-form .form-footer
+		margin-top: 10px
+	.forgot-link
+		display: block
+		margin-bottom: 25px
+	.registration-form h4
+		margin-bottom: 10px
+	.registration-form p
+		text-align: center
+	.btn-load
+		border-color: #fff
+	.fancybox-slide--html .fancybox-close-small
+		padding: 2px
+	.form-help
+		margin-bottom: 33px
+		text-align: center
+
++media-breakpoint-down(md)
++media-breakpoint-down(sm)
++media-breakpoint-down(xs)
+	.footer-logo
+		margin-bottom: 28px
+	.footer-column p
+		margin-bottom: 26px
+	.is-open
+		background-color: #008241
+	.mobile-navigation
+		padding-left: 15px
+	.mobile-menu
+		text-align: left
+	.mobile-login.header-login
+		text-align: left
+	/*POPUPS*/
+	.form-body
+		max-width: 290px
+	.mobile-menu
+		margin-bottom: 20px
+	.popup .form-field
+		height: 50px
+	.fancybox-slide--html .fancybox-close-small
+		padding: 6px
+		right: 0
+		top: 0
+	.form-help
+		text-align: left
+	.registration-form p
+		margin-bottom: 12px
+		text-align: left
+	.popup h4
+		font-size: 18px
+	.form-row .field-name.field-check
+		text-align: left
+	.forgot-link
+		width: 100%
+		text-align: left
+		padding-left: calc(50% - 145px)
+	.login-form .form-footer
+		margin-top: 0
+	.mobile-login.header-login
+		padding-top: 30px
+	.select-list
+		padding-left: 15px
+		padding-right: 15px
+	.spa-list .select-list-content
+		padding-bottom: 25px
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)
